@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Géraldine Feron · Équicoach pour cavalières intuitives</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rust:       #8B2500;
+    --amber:      #C0622A;
+    --beige:      #F5EFE6;
+    --gray-warm:  #9C8C80;
+    --brown:      #2C1A10;
+    --off-white:  #FDFAF7;
+    --rust-light: #E8D5CC;
+    --rust-mid:   #D4785A;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--off-white);
+    color: var(--brown);
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* ── NAVIGATION ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(253,250,247,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--rust-light);
+    padding: 0.75rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--rust);
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+  .nav-logo span {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: var(--gray-warm);
+    display: block;
+    line-height: 1.1;
+    margin-top: -2px;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.88rem;
+    color: var(--brown);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    transition: opacity 0.2s, color 0.2s;
+  }
+  .nav-links a:hover { opacity: 1; color: var(--rust); }
+  .nav-cta {
+    background: var(--rust);
+    color: var(--off-white) !important;
+    padding: 0.5rem 1.25rem;
+    border-radius: 2px;
+    opacity: 1 !important;
+    font-weight: 700;
+    font-size: 0.82rem !important;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--amber) !important; }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 7rem 4rem 4rem;
+    background: var(--off-white);
+    position: relative;
+    overflow: hidden;
+  }
+  #hero::before {
+    content: '';
+    position: absolute;
+    right: -100px; top: -100px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, var(--rust-light) 0%, transparent 70%);
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  .hero-text { position: relative; z-index: 1; }
+  .hero-eyebrow {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3rem;
+    color: var(--amber);
+    margin-bottom: 1rem;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 4vw, 3.5rem);
+    line-height: 1.15;
+    color: var(--rust);
+    margin-bottom: 1.5rem;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--amber);
+  }
+  .hero-sub {
+    font-size: 1.1rem;
+    color: var(--brown);
+    opacity: 0.8;
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+  }
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-block;
+    background: var(--rust);
+    color: var(--off-white);
+    padding: 0.9rem 2rem;
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { background: var(--amber); transform: translateY(-1px); }
+  .btn-secondary {
+    display: inline-block;
+    border: 1.5px solid var(--rust-light);
+    color: var(--rust);
+    padding: 0.9rem 2rem;
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--amber); color: var(--amber); }
+
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .logo-placeholder {
+    width: 380px; height: 380px;
+    background: var(--beige);
+    border: 2px dashed var(--rust-light);
+    border-radius: 50%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  .logo-placeholder p {
+    font-size: 0.85rem;
+    color: var(--gray-warm);
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+  .logo-icon {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── POUR TOI ── */
+  #pour-toi {
+    background: var(--rust);
+    color: var(--off-white);
+    padding: 6rem 4rem;
+  }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-tag {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.1rem;
+    color: var(--rust-light);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 3rem;
+  }
+  #pour-toi .section-title { color: var(--off-white); }
+  .pour-toi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .pour-toi-items { list-style: none; }
+  .pour-toi-items li {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid rgba(253,250,247,0.15);
+    font-size: 1.05rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .pour-toi-items li:last-child { border-bottom: none; }
+  .check {
+    width: 22px; height: 22px;
+    background: var(--off-white);
+    color: var(--rust);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 900;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .pour-toi-quote {
+    background: rgba(253,250,247,0.08);
+    border-left: 3px solid var(--rust-light);
+    padding: 2rem 2rem;
+    border-radius: 0 4px 4px 0;
+    position: relative;
+  }
+  .pour-toi-quote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--off-white);
+    opacity: 0.95;
+  }
+  .pour-toi-quote .robert-note {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--rust-light);
+    border-top: 1px solid rgba(253,250,247,0.15);
+    padding-top: 1rem;
+  }
+  .pour-toi-quote .robert-note strong { color: var(--off-white); }
+
+  /* ── MÉTHODE ── */
+  #methode {
+    background: var(--beige);
+    padding: 6rem 4rem;
+  }
+  #methode .section-title { color: var(--rust); }
+  .methode-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  .methode-card {
+    background: var(--off-white);
+    border: 1px solid var(--rust-light);
+    padding: 2.5rem 2rem;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .methode-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(139,37,0,0.08); }
+  .methode-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    color: var(--rust-light);
+    line-height: 1;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+  .methode-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--rust);
+    margin-bottom: 0.75rem;
+  }
+  .methode-card p { color: var(--brown); opacity: 0.85; font-size: 0.95rem; }
+
+  /* ── OFFRE ── */
+  #offre {
+    background: var(--off-white);
+    padding: 6rem 4rem;
+  }
+  #offre .section-title { color: var(--rust); }
+  .offre-inner {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .offre-details h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--rust);
+    margin-bottom: 0.25rem;
+  }
+  .offre-tagline {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2rem;
+    color: var(--amber);
+    margin-bottom: 2rem;
+  }
+  .offre-list { list-style: none; margin-bottom: 2rem; }
+  .offre-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--rust-light);
+    font-size: 1rem;
+    display: flex; gap: 0.75rem; align-items: flex-start;
+  }
+  .offre-list li:last-child { border-bottom: none; }
+  .dot {
+    width: 8px; height: 8px;
+    background: var(--amber);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 8px;
+  }
+  .offre-card {
+    background: var(--beige);
+    border: 2px solid var(--rust-light);
+    padding: 3rem 2.5rem;
+    text-align: center;
+    position: relative;
+  }
+  .offre-card::before {
+    content: '✦';
+    position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+    background: var(--beige);
+    color: var(--amber);
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+  }
+  .prix {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: var(--rust);
+    font-weight: 700;
+    line-height: 1;
+  }
+  .prix-detail {
+    color: var(--gray-warm);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  .offre-card p {
+    font-size: 0.95rem;
+    color: var(--brown);
+    opacity: 0.8;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+
+  /* ── TÉMOIGNAGES ── */
+  #temoignages {
+    background: var(--beige);
+    padding: 6rem 4rem;
+  }
+  #temoignages .section-title { color: var(--rust); }
+  .temoignages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  .temo-card {
+    background: var(--off-white);
+    border: 1px solid var(--rust-light);
+    padding: 2rem;
+    position: relative;
+  }
+  .temo-card::before {
+    content: '"';
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: var(--rust-light);
+    position: absolute;
+    top: -0.5rem; left: 1.5rem;
+    line-height: 1;
+  }
+  .temo-text {
+    font-style: italic;
+    color: var(--brown);
+    opacity: 0.9;
+    padding-top: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+  .temo-author {
+    display: flex; align-items: center; gap: 0.75rem;
+    border-top: 1px solid var(--rust-light);
+    padding-top: 1rem;
+  }
+  .temo-avatar {
+    width: 42px; height: 42px;
+    background: var(--rust);
+    color: var(--off-white);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .temo-name { font-weight: 700; font-size: 0.9rem; color: var(--rust); }
+  .temo-desc { font-size: 0.8rem; color: var(--gray-warm); }
+  .temo-placeholder {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--gray-warm);
+    font-style: italic;
+    background: var(--off-white);
+    border: 1px dashed var(--rust-light);
+  }
+
+  /* ── À PROPOS ── */
+  #apropos {
+    background: var(--off-white);
+    padding: 6rem 4rem;
+  }
+  #apropos .section-title { color: var(--rust); }
+  .apropos-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .apropos-photo {
+    aspect-ratio: 3/4;
+    background: var(--beige);
+    border: 2px dashed var(--rust-light);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center; padding: 2rem;
+    font-size: 0.85rem; color: var(--gray-warm);
+    font-style: italic;
+  }
+  .apropos-photo-icon { font-size: 3.5rem; margin-bottom: 0.5rem; }
+  .apropos-text { }
+  .apropos-text p { margin-bottom: 1.25rem; opacity: 0.85; }
+  .credentials {
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  .cred-tag {
+    background: var(--beige);
+    border: 1px solid var(--rust-light);
+    color: var(--rust);
+    font-size: 0.8rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 2px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  /* ── CERCLE ── */
+  #cercle {
+    background: var(--rust);
+    padding: 6rem 4rem;
+    text-align: center;
+  }
+  #cercle .section-tag { color: var(--rust-light); display: block; margin-bottom: 0.5rem; }
+  #cercle .section-title { color: var(--off-white); margin-bottom: 1rem; }
+  #cercle .section-sub {
+    color: var(--off-white);
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-size: 1.05rem;
+  }
+  .cercle-lead {
+    background: rgba(253,250,247,0.08);
+    border: 1.5px solid rgba(253,250,247,0.25);
+    max-width: 480px;
+    margin: 3rem auto 0;
+    padding: 2.5rem;
+  }
+  .cercle-lead h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--off-white);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .cercle-lead p {
+    color: var(--rust-light);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  .form-row { display: flex; gap: 0.5rem; }
+  .form-row input {
+    flex: 1;
+    padding: 0.85rem 1rem;
+    background: rgba(253,250,247,0.12);
+    border: 1px solid rgba(253,250,247,0.3);
+    color: var(--off-white);
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    border-radius: 0;
+    outline: none;
+  }
+  .form-row input::placeholder { color: rgba(253,250,247,0.4); }
+  .form-row input:focus { border-color: var(--off-white); }
+  .btn-white {
+    background: var(--off-white);
+    color: var(--rust);
+    padding: 0.85rem 1.5rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+  .btn-white:hover { background: var(--rust-light); }
+  .ou-fb {
+    color: var(--rust-light);
+    font-size: 0.85rem;
+    margin-top: 1rem;
+  }
+  .ou-fb a { color: var(--off-white); font-weight: 700; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--brown);
+    color: var(--rust-light);
+    padding: 3rem 4rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 3rem;
+  }
+  .footer-brand .nav-logo { color: var(--off-white); font-size: 1.1rem; }
+  .footer-brand .nav-logo span { color: var(--rust-light); }
+  .footer-brand p {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    opacity: 0.7;
+    line-height: 1.7;
+  }
+  footer h5 {
+    color: var(--off-white);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+  }
+  footer ul { list-style: none; }
+  footer ul li { margin-bottom: 0.5rem; }
+  footer ul a {
+    color: var(--rust-light);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s;
+  }
+  footer ul a:hover { color: var(--off-white); }
+  .footer-bottom {
+    background: #1A0E07;
+    color: var(--gray-warm);
+    text-align: center;
+    padding: 1rem 4rem;
+    font-size: 0.8rem;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 0.75rem 1.25rem; }
+    .nav-links { display: none; }
+    #hero { grid-template-columns: 1fr; padding: 6rem 1.5rem 3rem; }
+    .hero-visual { display: none; }
+    #pour-toi, #methode, #offre, #temoignages, #apropos, #cercle { padding: 4rem 1.5rem; }
+    .pour-toi-grid { grid-template-columns: 1fr; }
+    .methode-grid { grid-template-columns: 1fr; }
+    .offre-inner { grid-template-columns: 1fr; }
+    .temoignages-grid { grid-template-columns: 1fr; }
+    .apropos-inner { grid-template-columns: 1fr; }
+    .apropos-photo { aspect-ratio: 16/9; }
+    footer { grid-template-columns: 1fr; padding: 3rem 1.5rem; gap: 2rem; }
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-eyebrow { animation: fadeUp 0.6s ease both; }
+  .hero-title   { animation: fadeUp 0.7s 0.1s ease both; }
+  .hero-sub     { animation: fadeUp 0.7s 0.2s ease both; }
+  .hero-ctas    { animation: fadeUp 0.7s 0.3s ease both; }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav>
+  <a href="#hero" class="nav-logo">
+    Géraldine Feron
+    <span>et psychologue pour Robert</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#pour-toi">Pour toi si…</a></li>
+    <li><a href="#methode">La méthode</a></li>
+    <li><a href="#offre">Mission Connexion</a></li>
+    <li><a href="#apropos">Géraldine</a></li>
+    <li><a href="#cercle" class="nav-cta">Rejoindre le cercle</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-text">
+    <p class="hero-eyebrow">Pour les cavalières qui en ont assez d'avoir peur</p>
+    <h1 class="hero-title">
+      De la peur<br>
+      à la <em>confiance</em> —<br>
+      reconstruire le lien
+    </h1>
+    <p class="hero-sub">
+      Tu aimes ton cheval plus que tout. Mais quelque chose coince.
+      La peur, le doute, ce moment où tu sens que ça part de travers
+      et tu ne sais plus quoi faire. Tu n'es pas seule.
+    </p>
+    <div class="hero-ctas">
+      <a href="https://www.facebook.com/groups/lecerclesdescavalieresintuitives" target="_blank" class="btn-primary">→ Rejoindre le cercle gratuitement</a>
+      <a href="#offre" class="btn-secondary">Découvrir Mission Connexion</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="logo-placeholder">
+      <div class="logo-icon">🐴</div>
+      <strong style="font-family:'Playfair Display',serif; color:var(--rust); font-size:1rem;">Logo Géraldine Feron</strong>
+      <p>Illustration à intégrer<br>(cavalière + cheval + Robert)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── POUR TOI ── -->
+<section id="pour-toi">
+  <div class="section-inner">
+    <span class="section-tag">Tu te reconnais ?</span>
+    <h2 class="section-title reveal">C'est exactement fait pour toi si…</h2>
+    <div class="pour-toi-grid">
+      <ul class="pour-toi-items reveal">
+        <li>
+          <span class="check">✓</span>
+          <span>Tu as ton propre cheval et tu vis votre relation comme un défi permanent, pas un plaisir.</span>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <span>Tu ressens de la peur — à cheval, en main, ou même avant de mettre le pied à l'étrier.</span>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <span>Tu sens que ton cheval "ne t'écoute pas" ou fait n'importe quoi — mais au fond tu sais qu'il répond à <em>quelque chose</em>.</span>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <span>Tu travailles à distance, tu peux t'engager sur 6 mois, et tu veux des résultats concrets.</span>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <span>Tu en as assez des conseils techniques qui n'adressent pas le vrai problème : la connexion.</span>
+        </li>
+      </ul>
+      <div class="pour-toi-quote reveal">
+        <blockquote>
+          "C'est pas une question de niveau. C'est une question de lien. Et ce lien, on peut le reconstruire."
+        </blockquote>
+        <p class="robert-note">
+          Et Robert dans tout ça ? Il est là, accroupi dans son coin, prêt à te convaincre que ton cheval veut ta mort. <strong>On va s'occuper de lui.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MÉTHODE ── -->
+<section id="methode">
+  <div class="section-inner">
+    <span class="section-tag">La méthode</span>
+    <h2 class="section-title reveal">Intention · Timing · Énergie</h2>
+    <div class="methode-grid">
+      <div class="methode-card reveal">
+        <div class="methode-num">01</div>
+        <h3>Intention</h3>
+        <p>Avant de demander quoi que ce soit à ton cheval, qu'est-ce que tu veux vraiment ? Pas la perfection — la connexion. Apprendre à formuler une intention claire, ça change tout dans ce que ton cheval perçoit.</p>
+      </div>
+      <div class="methode-card reveal">
+        <div class="methode-num">02</div>
+        <h3>Timing</h3>
+        <p>Le cheval vit dans l'instant présent. Toi aussi, tu peux y revenir. Le timing, c'est l'art d'être là au bon moment — ni trop tôt, ni trop tard. C'est ce qui distingue une demande d'une pression.</p>
+      </div>
+      <div class="methode-card reveal">
+        <div class="methode-num">03</div>
+        <h3>Énergie</h3>
+        <p>Ton cheval te lit comme un livre ouvert. L'énergie que tu projettes, c'est déjà un message. Apprendre à la réguler — pas à la supprimer — c'est le cœur du travail. Robert inclus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── OFFRE ── -->
+<section id="offre">
+  <div class="section-inner">
+    <span class="section-tag">L'accompagnement</span>
+    <h2 class="section-title reveal">Mission Connexion</h2>
+    <div class="offre-inner">
+      <div class="offre-details reveal">
+        <h3>6 mois pour tout changer</h3>
+        <p class="offre-tagline">Un accompagnement complet, 100 % à distance</p>
+        <ul class="offre-list">
+          <li><span class="dot"></span><span><strong>Visios collectives hebdomadaires</strong> — apprendre, pratiquer, poser tes questions dans un espace bienveillant</span></li>
+          <li><span class="dot"></span><span><strong>Coaching individuel mensuel</strong> — une heure en tête-à-tête pour travailler ta situation spécifique</span></li>
+          <li><span class="dot"></span><span><strong>Analyse vidéo</strong> — tu envoies, je regarde, je t'explique ce que je vois</span></li>
+          <li><span class="dot"></span><span><strong>Communauté privée</strong> — parce qu'avancer entourée, ça change tout</span></li>
+          <li><span class="dot"></span><span><strong>Méthode Intention – Timing – Énergie</strong> — progressive, concrète, applicable dès la prochaine séance</span></li>
+        </ul>
+        <p style="font-size:0.9rem; color:var(--gray-warm); font-style:italic;">
+          "C'est énorme ce que tu viens de faire — et tu ne t'en rends même pas compte encore."
+        </p>
+      </div>
+      <div class="offre-card reveal">
+        <div class="prix">1 200€</div>
+        <div class="prix-detail">· 6 mois · Paiement en plusieurs fois disponible</div>
+        <p>Tu es propriétaire de ton cheval. Tu veux que ça se passe bien — pour toi <em>et</em> pour lui. C'est ça, Mission Connexion.</p>
+        <a href="mailto:contactezgeraldine@gmail.com" class="btn-primary" style="display:block; text-align:center; margin-bottom:0.75rem;">Je veux en savoir plus</a>
+        <a href="https://www.youtube.com/playlist?list=PL8xOk5pwxOsE3cDxtJEYeCR47wVhXR_fe" target="_blank" class="btn-secondary" style="display:block; text-align:center; font-size:0.85rem;">▶ Voir la formation offerte</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TÉMOIGNAGES ── -->
+<section id="temoignages">
+  <div class="section-inner">
+    <span class="section-tag">Elles l'ont vécu</span>
+    <h2 class="section-title reveal">Ce qu'elles disent</h2>
+    <div class="temoignages-grid">
+      <div class="temo-placeholder reveal">
+        <p style="font-size:2rem; margin-bottom:0.5rem;">💬</p>
+        <p>Témoignage à venir</p>
+        <p style="font-size:0.75rem; margin-top:0.5rem;">Prénom · situation à ajouter</p>
+      </div>
+      <div class="temo-placeholder reveal">
+        <p style="font-size:2rem; margin-bottom:0.5rem;">💬</p>
+        <p>Témoignage à venir</p>
+        <p style="font-size:0.75rem; margin-top:0.5rem;">Prénom · situation à ajouter</p>
+      </div>
+      <div class="temo-placeholder reveal">
+        <p style="font-size:2rem; margin-bottom:0.5rem;">💬</p>
+        <p>Témoignage à venir</p>
+        <p style="font-size:0.75rem; margin-top:0.5rem;">Prénom · situation à ajouter</p>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:2rem; font-size:0.85rem; color:var(--gray-warm); font-style:italic;">
+      ⚠ Remplacer ces blocs par de vrais témoignages (prénom + situation) avant mise en ligne
+    </p>
+  </div>
+</section>
+
+<!-- ── À PROPOS ── -->
+<section id="apropos">
+  <div class="section-inner">
+    <span class="section-tag">Qui je suis</span>
+    <h2 class="section-title reveal">Géraldine Feron</h2>
+    <div class="apropos-inner">
+      <div class="apropos-photo reveal">
+        <div class="apropos-photo-icon">📷</div>
+        <p>Photo de Géraldine<br>avec son cheval<br><span style="font-size:0.75rem;">(à intégrer)</span></p>
+      </div>
+      <div class="apropos-text reveal">
+        <p>
+          Je suis cavalière depuis 30 ans. CSO international, Master en éducation physique,
+          ostéopathie équine, éthologie avec Andy Booth. J'ai passé ma vie à comprendre le cheval —
+          techniquement, physiquement, et énergiquement.
+        </p>
+        <p>
+          Et puis la peur est arrivée. Pas d'un coup. Progressivement. Ce petit Robert
+          qui s'installe et qui commence à décider à ta place.
+        </p>
+        <p>
+          J'ai compris que les problèmes qu'on croit avoir "avec son cheval", c'est souvent
+          un problème de connexion — avec soi d'abord, avec lui ensuite. C'est pour ça que j'ai
+          créé la méthode Intention – Timing – Énergie. Pas pour être parfaite. Pour être
+          <em>présente</em>.
+        </p>
+        <p>
+          Aujourd'hui, j'accompagne des cavalières à reconstruire ce lien — à distance,
+          en collectif et en individuel, avec humour et sans bullshit. 
+          Le cercle des cavalières intuitives, c'est +1 300 femmes qui savent que ça fait sens.
+        </p>
+        <div class="credentials">
+          <span class="cred-tag">30 ans de cheval</span>
+          <span class="cred-tag">CSO international</span>
+          <span class="cred-tag">Master éducation physique</span>
+          <span class="cred-tag">Ostéopathie équine</span>
+          <span class="cred-tag">Éthologie Andy Booth</span>
+          <span class="cred-tag">+1 300 membres dans le cercle</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CERCLE ── -->
+<section id="cercle">
+  <div class="section-inner">
+    <span class="section-tag">La communauté</span>
+    <h2 class="section-title reveal">Rejoins le cercle</h2>
+    <p class="section-sub reveal">
+      Plus de 1 300 cavalières qui ne croient plus que c'est "leur cheval le problème".
+      C'est gratuit. C'est bienveillant. Et Robert n'y a pas accès.
+    </p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;" class="reveal">
+      <a href="https://www.facebook.com/groups/lecerclesdescavalieresintuitives" target="_blank" class="btn-primary" style="font-size:1rem; padding:1rem 2.5rem;">
+        → Rejoindre le cercle sur Facebook
+      </a>
+    </div>
+    <div class="cercle-lead reveal">
+      <h4>Reçois la formation offerte</h4>
+      <p>La playlist vidéo pour commencer à comprendre ce qui se passe entre toi et ton cheval.</p>
+      <div class="form-row">
+        <input type="email" placeholder="ton@email.com">
+        <button class="btn-white" type="button" onclick="alert('Intégrer ici le formulaire Systeme.io')">Recevoir →</button>
+      </div>
+      <p class="ou-fb">
+        Ou accède directement à la <a href="https://www.youtube.com/playlist?list=PL8xOk5pwxOsE3cDxtJEYeCR47wVhXR_fe" target="_blank">playlist YouTube</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-brand">
+    <a href="#hero" class="nav-logo">
+      Géraldine Feron
+      <span>et psychologue pour Robert</span>
+    </a>
+    <p>Équicoach pour cavalières intuitives.<br>
+       Méthode Intention – Timing – Énergie.<br>
+       100 % distanciel.</p>
+    <p style="margin-top:1rem;">
+      <a href="mailto:contactezgeraldine@gmail.com" style="color:var(--rust-light); font-size:0.875rem;">contactezgeraldine@gmail.com</a>
+    </p>
+  </div>
+  <div>
+    <h5>Navigation</h5>
+    <ul>
+      <li><a href="#pour-toi">Pour toi si…</a></li>
+      <li><a href="#methode">La méthode</a></li>
+      <li><a href="#offre">Mission Connexion</a></li>
+      <li><a href="#temoignages">Témoignages</a></li>
+      <li><a href="#apropos">Géraldine</a></li>
+    </ul>
+  </div>
+  <div>
+    <h5>Liens</h5>
+    <ul>
+      <li><a href="https://www.facebook.com/groups/lecerclesdescavalieresintuitives" target="_blank">Le cercle (Facebook)</a></li>
+      <li><a href="https://www.youtube.com/playlist?list=PL8xOk5pwxOsE3cDxtJEYeCR47wVhXR_fe" target="_blank">Formation offerte</a></li>
+      <li><a href="#" style="color:var(--gray-warm); cursor:not-allowed;">Mentions légales</a></li>
+      <li><a href="#" style="color:var(--gray-warm); cursor:not-allowed;">Politique de confidentialité</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  © 2025 Géraldine Feron — Équicoach pour cavalières intuitives · Tous droits réservés
+</div>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
