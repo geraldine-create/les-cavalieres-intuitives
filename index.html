@@ -85,6 +85,29 @@
     transition: background 0.2s !important;
   }
   .nav-cta:hover { background: var(--amber) !important; }
+  .nav-app-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--rust);
+    background: transparent;
+    border: 1.5px solid var(--rust-light);
+    border-radius: 20px;
+    padding: 0.3rem 0.85rem;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+    opacity: 1 !important;
+  }
+  .nav-app-badge:hover {
+    background: var(--rust);
+    color: var(--off-white);
+    border-color: var(--rust);
+  }
 
   /* ── HERO ── */
   #hero {
@@ -623,6 +646,7 @@
     <li><a href="#offre">Mission Connexion</a></li>
     <li><a href="#apropos">Géraldine</a></li>
     <li><a href="#cercle" class="nav-cta">Rejoindre le cercle</a></li>
+    <li><a href="https://mission-connexion.netlify.app/" target="_blank" rel="noopener noreferrer" class="nav-app-badge">✦ Espace clientes</a></li>
   </ul>
 </nav>
 
@@ -837,13 +861,10 @@
       </a>
     </div>
     <div class="cercle-lead reveal">
-      <h4>Reçois la formation offerte</h4>
-      <p>La playlist vidéo pour commencer à comprendre ce qui se passe entre toi et ton cheval.</p>
-      <div class="form-row">
-        <input type="email" placeholder="ton@email.com">
-        <button class="btn-white" type="button" onclick="alert('Intégrer ici le formulaire Systeme.io')">Recevoir →</button>
-      </div>
-      <p class="ou-fb">
+      <h4>Tu l'aimes profondément.<br>Alors pourquoi c'est si compliqué ?</h4>
+      <p>5 minutes pour comprendre ce qui bloque — et recevoir une clé personnalisée en message privé.</p>
+      <a href="questionnaire.html" class="btn-white" style="display:inline-block; text-decoration:none; text-align:center; padding:0.9rem 2rem; font-size:0.95rem;">→ Répondre au questionnaire</a>
+      <p class="ou-fb" style="margin-top:1.25rem;">
         Ou accède directement à la <a href="https://www.youtube.com/playlist?list=PL8xOk5pwxOsE3cDxtJEYeCR47wVhXR_fe" target="_blank">playlist YouTube</a>
       </p>
     </div>
@@ -882,6 +903,8 @@
     <ul>
       <li><a href="https://www.facebook.com/groups/lecerclesdescavalieresintuitives" target="_blank">Le cercle (Facebook)</a></li>
       <li><a href="https://www.youtube.com/playlist?list=PL8xOk5pwxOsE3cDxtJEYeCR47wVhXR_fe" target="_blank">Formation offerte</a></li>
+      <li><a href="questionnaire.html">Questionnaire prospect</a></li>
+      <li><a href="https://mission-connexion.netlify.app/" target="_blank" rel="noopener noreferrer">Espace clientes (bêta)</a></li>
       <li><a href="confidentialite.html">Mentions légales</a></li>
       <li><a href="confidentialite.html">Politique de confidentialité</a></li>
     </ul>
