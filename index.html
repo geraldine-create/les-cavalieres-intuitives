@@ -427,10 +427,6 @@
     padding-top: 56.25%;
     background: var(--brown);
   }
-  /* Ratio 9:16 pour les Shorts */
-  .video-card.is-short .video-wrapper {
-    padding-top: 177.78%;
-  }
 
   .video-wrapper iframe {
     position: absolute;
@@ -439,23 +435,6 @@
     height: 100%;
     border: none;
   }
-
-  /* Badge Short */
-  .short-badge {
-    display: none;
-    position: absolute;
-    top: 10px; right: 10px;
-    background: var(--rust);
-    color: var(--off-white);
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 3px 8px;
-    border-radius: 20px;
-    z-index: 2;
-  }
-  .video-card.is-short .short-badge { display: block; }
 
   /* CTA bas de section */
   .temo-cta {
@@ -861,11 +840,8 @@
           </iframe>
         </div>
       </div>
-
-      <!-- Short 1 — format 9:16, colonne 2 -->
-      <div class="video-card is-short">
+      <div class="video-card">
         <div class="video-wrapper">
-          <span class="short-badge">Short</span>
           <iframe
             src="https://www.youtube-nocookie.com/embed/iSnrmLs4mzg"
             title="Témoignage cliente — Short"
@@ -875,11 +851,8 @@
           </iframe>
         </div>
       </div>
-
-      <!-- Short 2 — format 9:16, colonne 3 -->
-      <div class="video-card is-short">
+      <div class="video-card">
         <div class="video-wrapper">
-          <span class="short-badge">Short</span>
           <iframe
             src="https://www.youtube-nocookie.com/embed/HbaCQSr1f6g"
             title="Témoignage cliente — Short"
