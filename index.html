@@ -653,72 +653,82 @@
 
 <!-- ── POPUP NARRATIF ── -->
 <div id="popup-overlay" style="position:fixed;inset:0;z-index:1000;background:rgba(44,26,16,0.65);display:flex;align-items:center;justify-content:center;padding:1rem;overflow-y:auto;">
-  <div id="popup-box" style="background:#FDFAF7;border-radius:12px;border:1px solid #E8D5CC;max-width:480px;width:100%;position:relative;overflow:hidden;box-shadow:0 24px 64px rgba(44,26,16,0.25);">
+  <div id="popup-box" style="background:#FDFAF7;border-radius:12px;border:1px solid #E8D5CC;max-width:440px;width:100%;position:relative;overflow:hidden;box-shadow:0 24px 64px rgba(44,26,16,0.25);">
 
     <button onclick="closePopup()" aria-label="Fermer" style="position:absolute;top:12px;right:14px;background:none;border:none;cursor:pointer;font-size:18px;color:#9C8C80;z-index:10;line-height:1;padding:4px;">✕</button>
 
     <!-- ÉTAPE 1 -->
     <div class="pop-step" id="pop-1">
-      <div style="width:100%;aspect-ratio:1/1;overflow:hidden;background:#F5EFE6;">
-        <img src="assets/illustration-1.png" alt="Camille et Daytona" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <img src="assets/illustration-1.png" alt="Camille et Daytona" style="width:100%;display:block;">
+      <div style="padding:1.25rem 1.5rem 0.5rem;">
+        <p style="font-size:11px;color:#C0622A;letter-spacing:0.08em;text-transform:uppercase;margin:0 0 4px;">étape 1 · le problème</p>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#8B2500;margin:0;">Camille et Daytona</h3>
       </div>
-      <div style="padding:1.5rem 1.75rem 1rem;">
-        <p style="font-size:11px;color:#C0622A;letter-spacing:0.08em;text-transform:uppercase;margin:0 0 6px;">étape 1 · le problème</p>
-        <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#8B2500;margin:0 0 0.75rem;line-height:1.3;">Camille et Daytona</h3>
-        <div style="font-size:0.88rem;color:#2C1A10;line-height:1.75;">
+      <!-- Texte accordéon -->
+      <div class="pop-accordion" id="acc-1" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;padding:0 1.5rem;">
+        <div style="font-size:0.88rem;color:#2C1A10;line-height:1.75;padding-bottom:1rem;border-top:1px solid #E8D5CC;margin-top:0.75rem;padding-top:0.75rem;">
           <p style="margin:0 0 0.6rem;">Voici Camille. Elle est passionnée de chevaux depuis toujours. Daytona, sa jument, est bien plus qu'un animal — elle est son équilibre, son refuge, sa bouffée d'air.</p>
           <p style="margin:0 0 0.6rem;">Et pourtant. Chaque séance commence pareil. Daytona sellée, prête. Et déjà, quelque chose se resserre dans la poitrine de Camille.</p>
           <p style="margin:0 0 0.6rem;">La carrière ? Trop d'imprévus. Le manège ? Il va hennir après les copains. La promenade ? Elle sent que ça va mal tourner.</p>
           <p style="margin:0 0 0.6rem;">L'amour est là. La connexion aussi. Ce qui manque, c'est la confiance — en elle, en Daytona, dans sa capacité à faire face.</p>
           <p style="margin:0;font-family:'Playfair Display',serif;font-style:italic;color:#8B2500;">Tu reconnais quelque chose dans cette histoire ?</p>
         </div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:1.25rem;">
+      </div>
+      <div style="padding:0.75rem 1.5rem;display:flex;align-items:center;justify-content:space-between;">
+        <button onclick="toggleAcc(1)" id="btn-acc-1" style="background:none;border:1px solid #E8D5CC;border-radius:6px;padding:0.4rem 1rem;font-size:0.82rem;color:#8B2500;cursor:pointer;font-weight:700;transition:background 0.15s;">En savoir plus ↓</button>
+        <div style="display:flex;align-items:center;gap:0.75rem;">
           <div style="display:flex;gap:6px;" class="pop-dots" data-step="1"></div>
-          <button onclick="goTo(2)" style="background:#8B2500;color:#FDFAF7;border:none;border-radius:6px;padding:0.5rem 1.25rem;font-size:0.85rem;font-weight:700;cursor:pointer;">Suivant →</button>
+          <button onclick="goTo(2)" style="background:#8B2500;color:#FDFAF7;border:none;border-radius:6px;padding:0.4rem 1.1rem;font-size:0.82rem;font-weight:700;cursor:pointer;">Suivant →</button>
         </div>
       </div>
     </div>
 
     <!-- ÉTAPE 2 -->
     <div class="pop-step" id="pop-2" style="display:none;">
-      <div style="width:100%;aspect-ratio:1/1;overflow:hidden;background:#F5EFE6;">
-        <img src="assets/illustration-2.png" alt="Robert à l'école des catastrophes" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <img src="assets/illustration-2.png" alt="Robert à l'école des catastrophes" style="width:100%;display:block;">
+      <div style="padding:1.25rem 1.5rem 0.5rem;">
+        <p style="font-size:11px;color:#C0622A;letter-spacing:0.08em;text-transform:uppercase;margin:0 0 4px;">étape 2 · l'explication</p>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#8B2500;margin:0;">Robert à l'école des catastrophes</h3>
       </div>
-      <div style="padding:1.5rem 1.75rem 1rem;">
-        <p style="font-size:11px;color:#C0622A;letter-spacing:0.08em;text-transform:uppercase;margin:0 0 6px;">étape 2 · l'explication</p>
-        <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#8B2500;margin:0 0 0.75rem;line-height:1.3;">Robert à l'école des catastrophes</h3>
-        <div style="font-size:0.88rem;color:#2C1A10;line-height:1.75;">
+      <div class="pop-accordion" id="acc-2" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;padding:0 1.5rem;">
+        <div style="font-size:0.88rem;color:#2C1A10;line-height:1.75;padding-bottom:1rem;border-top:1px solid #E8D5CC;margin-top:0.75rem;padding-top:0.75rem;">
           <p style="margin:0 0 0.6rem;">Ces scénarios ne viennent pas de Camille. Ils sont la spécialité de Robert — un programme biologique un peu archaïque, logé dans son cerveau depuis sa naissance.</p>
           <p style="margin:0 0 0.6rem;">Redoutablement efficace pour survivre dans la savane. Nettement moins adapté pour gérer ses émotions sur un animal de 500 kg — avec la sensibilité d'un marshmallow, la réactivité d'une fusée et la force d'un gorille.</p>
-          <p style="margin:0 0 0.6rem;">Robert a été à bonne école. Il a un catalogue. 8 576 pages. Minutieusement répertoriées. Une base d'inspiration inépuisable.</p>
+          <p style="margin:0 0 0.6rem;">Robert a été à bonne école. Il a un catalogue. 8 576 pages. Minutieusement répertoriées. Une base d'inspiration inépuisable pour construire des scénarios catastrophe en tout genre.</p>
           <p style="margin:0 0 0.6rem;">Camille n'a pas besoin d'imagination. Robert en a largement assez pour elle.</p>
           <p style="margin:0;font-family:'Playfair Display',serif;font-style:italic;color:#8B2500;">Et toi — tu connais ton Robert ?</p>
         </div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:1.25rem;">
+      </div>
+      <div style="padding:0.75rem 1.5rem;display:flex;align-items:center;justify-content:space-between;">
+        <button onclick="toggleAcc(2)" id="btn-acc-2" style="background:none;border:1px solid #E8D5CC;border-radius:6px;padding:0.4rem 1rem;font-size:0.82rem;color:#8B2500;cursor:pointer;font-weight:700;transition:background 0.15s;">En savoir plus ↓</button>
+        <div style="display:flex;align-items:center;gap:0.75rem;">
           <div style="display:flex;gap:6px;" class="pop-dots" data-step="2"></div>
-          <button onclick="goTo(3)" style="background:#8B2500;color:#FDFAF7;border:none;border-radius:6px;padding:0.5rem 1.25rem;font-size:0.85rem;font-weight:700;cursor:pointer;">Suivant →</button>
+          <button onclick="goTo(3)" style="background:#8B2500;color:#FDFAF7;border:none;border-radius:6px;padding:0.4rem 1.1rem;font-size:0.82rem;font-weight:700;cursor:pointer;">Suivant →</button>
         </div>
       </div>
     </div>
 
     <!-- ÉTAPE 3 -->
     <div class="pop-step" id="pop-3" style="display:none;">
-      <div style="width:100%;aspect-ratio:1/1;overflow:hidden;background:#F5EFE6;">
-        <img src="assets/illustration-3.png" alt="Remettre Robert à sa juste place" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <img src="assets/illustration-3.png" alt="Remettre Robert à sa juste place" style="width:100%;display:block;">
+      <div style="padding:1.25rem 1.5rem 0.5rem;">
+        <p style="font-size:11px;color:#C0622A;letter-spacing:0.08em;text-transform:uppercase;margin:0 0 4px;">étape 3 · la solution</p>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#8B2500;margin:0;">Remettre Robert à sa juste place</h3>
       </div>
-      <div style="padding:1.5rem 1.75rem 1rem;">
-        <p style="font-size:11px;color:#C0622A;letter-spacing:0.08em;text-transform:uppercase;margin:0 0 6px;">étape 3 · la solution</p>
-        <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#8B2500;margin:0 0 0.75rem;line-height:1.3;">Remettre Robert à sa juste place</h3>
-        <div style="font-size:0.88rem;color:#2C1A10;line-height:1.75;">
+      <div class="pop-accordion" id="acc-3" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;padding:0 1.5rem;">
+        <div style="font-size:0.88rem;color:#2C1A10;line-height:1.75;padding-bottom:1rem;border-top:1px solid #E8D5CC;margin-top:0.75rem;padding-top:0.75rem;">
           <p style="margin:0 0 0.6rem;">Robert n'est pas ton ennemi. Il fait son travail — celui qu'on lui a appris. Avec beaucoup de zèle, et un catalogue qu'il tient à jour depuis des années.</p>
           <p style="margin:0 0 0.6rem;">Mais il est mal placé. Quand Robert pilote à la place de Camille, ce n'est pas Camille qui monte — c'est la peur. Et Daytona le sait avant tout le monde.</p>
           <p style="margin:0 0 0.6rem;">Le travail ne consiste pas à faire taire Robert. Il consiste à lui remettre son rôle exact — utile, vigilant, mais plus aux commandes.</p>
           <p style="margin:0 0 0.6rem;">C'est précisément ce qu'on fait ensemble. On remet Camille — toi — à la place du pilote.</p>
           <p style="margin:0;font-family:'Playfair Display',serif;font-style:italic;color:#8B2500;">Avec Daytona qui attendait ça depuis le début.</p>
         </div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:1.25rem;">
+      </div>
+      <div style="padding:0.75rem 1.5rem;display:flex;align-items:center;justify-content:space-between;">
+        <button onclick="toggleAcc(3)" id="btn-acc-3" style="background:none;border:1px solid #E8D5CC;border-radius:6px;padding:0.4rem 1rem;font-size:0.82rem;color:#8B2500;cursor:pointer;font-weight:700;transition:background 0.15s;">En savoir plus ↓</button>
+        <div style="display:flex;align-items:center;gap:0.75rem;">
           <div style="display:flex;gap:6px;" class="pop-dots" data-step="3"></div>
-          <button onclick="closePopup()" style="background:#8B2500;color:#FDFAF7;border:none;border-radius:6px;padding:0.5rem 1.25rem;font-size:0.85rem;font-weight:700;cursor:pointer;">Entrer dans le site →</button>
+          <button onclick="closePopup()" style="background:#8B2500;color:#FDFAF7;border:none;border-radius:6px;padding:0.4rem 1.1rem;font-size:0.82rem;font-weight:700;cursor:pointer;">Entrer dans le site →</button>
         </div>
       </div>
     </div>
@@ -735,24 +745,41 @@
 (function(){
   function renderDots(active){
     document.querySelectorAll('.pop-dots').forEach(function(el){
-      el.innerHTML = [1,2,3].map(function(i){
-        return '<button onclick="goTo('+i+')" aria-label="Étape '+i+'" style="width:7px;height:7px;border-radius:50%;border:none;cursor:pointer;padding:0;background:'+(i===active?'#8B2500':'#E8D5CC')+';transition:background 0.2s;"></button>';
+      el.innerHTML=[1,2,3].map(function(i){
+        return '<button onclick="goTo('+i+')" style="width:7px;height:7px;border-radius:50%;border:none;cursor:pointer;padding:0;background:'+(i===active?'#8B2500':'#E8D5CC')+';" aria-label="Étape '+i+'"></button>';
       }).join('');
     });
   }
-  window.goTo = function(n){
-    document.querySelectorAll('.pop-step').forEach(function(s){ s.style.display='none'; });
+  window.goTo=function(n){
+    document.querySelectorAll('.pop-step').forEach(function(s){s.style.display='none';});
     document.getElementById('pop-'+n).style.display='block';
+    // Refermer l'accordéon précédent
+    document.querySelectorAll('.pop-accordion').forEach(function(a){a.style.maxHeight='0';});
+    [1,2,3].forEach(function(i){
+      var b=document.getElementById('btn-acc-'+i);
+      if(b){b.textContent='En savoir plus ↓';}
+    });
     renderDots(n);
-    document.getElementById('popup-overlay').scrollTop = 0;
+    document.getElementById('popup-overlay').scrollTop=0;
   };
-  window.closePopup = function(){
+  window.toggleAcc=function(n){
+    var acc=document.getElementById('acc-'+n);
+    var btn=document.getElementById('btn-acc-'+n);
+    var open=acc.style.maxHeight!=='0px'&&acc.style.maxHeight!=='';
+    if(open){
+      acc.style.maxHeight='0';
+      btn.textContent='En savoir plus ↓';
+    } else {
+      acc.style.maxHeight=acc.scrollHeight+'px';
+      btn.textContent='Refermer ↑';
+    }
+  };
+  window.closePopup=function(){
     document.getElementById('popup-overlay').style.display='none';
   };
   renderDots(1);
 })();
 </script>
-
 
 <!-- ── NAVIGATION ── -->
 <nav>
