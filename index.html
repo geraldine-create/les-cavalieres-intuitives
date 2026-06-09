@@ -40,7 +40,9 @@
   #hero::before { content: ''; position: absolute; right: -100px; top: -100px; width: 600px; height: 600px; background: radial-gradient(circle, var(--rust-light) 0%, transparent 70%); opacity: 0.4; pointer-events: none; }
   .hero-text { position: relative; z-index: 1; }
   .hero-eyebrow { font-family: 'Dancing Script', cursive; font-size: 1.3rem; color: var(--amber); margin-bottom: 1rem; }
-  .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 4vw, 3.5rem); line-height: 1.15; color: var(--rust); margin-bottom: 1.5rem; }
+  .hero-title { font-family: 'Playfair Display', serif; line-height: 1.2; color: var(--rust); margin-bottom: 1.5rem; }
+  .hero-title .title-main { display: block; font-size: clamp(2.4rem, 4vw, 3.5rem); }
+  .hero-title .title-sub { display: block; font-size: clamp(1.15rem, 2vw, 1.5rem); font-weight: 400; color: var(--brown); opacity: 0.75; margin-top: 0.5rem; }
   .hero-title em { font-style: italic; color: var(--amber); }
   .hero-sub { font-size: 1.1rem; color: var(--brown); opacity: 0.8; max-width: 480px; margin-bottom: 2.5rem; line-height: 1.8; }
   .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
@@ -67,31 +69,37 @@
   .pour-toi-quote .robert-note { margin-top: 1.5rem; font-size: 0.9rem; color: var(--rust-light); border-top: 1px solid rgba(253,250,247,0.15); padding-top: 1rem; }
   .pour-toi-quote .robert-note strong { color: var(--off-white); }
 
-  /* MÉTHODE */
+  /* PARCOURS */
   #methode { background: var(--beige); padding: 6rem 4rem; }
   #methode .section-title { color: var(--rust); }
-  .methode-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 1rem; }
-  .methode-card { background: var(--off-white); border: 1px solid var(--rust-light); padding: 2.5rem 2rem; transition: transform 0.2s, box-shadow 0.2s; }
-  .methode-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(139,37,0,0.08); }
-  .methode-num { font-family: 'Playfair Display', serif; font-size: 4rem; color: var(--rust-light); line-height: 1; margin-bottom: 0.75rem; font-weight: 700; }
-  .methode-card h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--rust); margin-bottom: 0.75rem; }
-  .methode-card p { color: var(--brown); opacity: 0.85; font-size: 0.95rem; }
+  .methode-intro { max-width: 680px; margin: 1.5rem 0 3.5rem; font-size: 1.05rem; color: var(--brown); opacity: 0.85; line-height: 1.85; }
+  .methode-intro em { font-family: 'Playfair Display', serif; font-style: italic; color: var(--rust); }
+  .methode-intro p + p { margin-top: 0.75rem; }
+  .methode-grid { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1rem; }
+  .methode-card { background: var(--off-white); border: 1px solid var(--rust-light); padding: 2rem 2.5rem; display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; align-items: start; transition: box-shadow 0.2s; }
+  .methode-card:hover { box-shadow: 0 6px 24px rgba(139,37,0,0.08); }
+  .methode-num { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--rust-light); line-height: 1; font-weight: 700; }
+  .methode-card-body h3 { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--rust); margin-bottom: 0.5rem; }
+  .methode-card-body p { color: var(--brown); opacity: 0.85; font-size: 0.97rem; line-height: 1.75; }
 
-  /* OFFRE */
+  /* OFFRE — 3 niveaux */
   #offre { background: var(--off-white); padding: 6rem 4rem; }
   #offre .section-title { color: var(--rust); }
-  .offre-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; margin-top: 1rem; }
-  .offre-details h3 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--rust); margin-bottom: 0.25rem; }
-  .offre-tagline { font-family: 'Dancing Script', cursive; font-size: 1.2rem; color: var(--amber); margin-bottom: 2rem; }
-  .offre-list { list-style: none; margin-bottom: 2rem; }
-  .offre-list li { padding: 0.75rem 0; border-bottom: 1px solid var(--rust-light); font-size: 1rem; display: flex; gap: 0.75rem; align-items: flex-start; }
-  .offre-list li:last-child { border-bottom: none; }
-  .dot { width: 8px; height: 8px; background: var(--amber); border-radius: 50%; flex-shrink: 0; margin-top: 8px; }
-  .offre-card { background: var(--beige); border: 2px solid var(--rust-light); padding: 3rem 2.5rem; text-align: center; position: relative; }
-  .offre-card::before { content: '✦'; position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--beige); color: var(--amber); font-size: 1.5rem; padding: 0 0.5rem; }
-  .prix { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--rust); font-weight: 700; line-height: 1; }
-  .prix-detail { color: var(--gray-warm); font-size: 0.9rem; margin-bottom: 1.5rem; }
-  .offre-card p { font-size: 0.95rem; color: var(--brown); opacity: 0.8; margin-bottom: 2rem; line-height: 1.7; }
+  .offre-intro { text-align: center; font-size: 1.05rem; color: var(--brown); opacity: 0.8; max-width: 650px; margin: 0 auto 3rem; line-height: 1.8; }
+  .niveaux-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1rem; }
+  .niveau-card { background: var(--beige); border: 1.5px solid var(--rust-light); padding: 2.5rem 2rem; position: relative; display: flex; flex-direction: column; gap: 1.25rem; transition: transform 0.2s, box-shadow 0.2s; }
+  .niveau-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(139,37,0,0.09); }
+  .niveau-card.featured { border-color: var(--amber); background: var(--off-white); }
+  .niveau-card.featured::before { content: 'Le plus populaire'; position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--amber); color: var(--off-white); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.25rem 0.85rem; border-radius: 20px; white-space: nowrap; }
+  .niveau-label { font-family: 'Dancing Script', cursive; font-size: 1rem; color: var(--amber); }
+  .niveau-card h3 { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--rust); margin: 0; }
+  .niveau-prix { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--rust); font-weight: 700; line-height: 1; }
+  .niveau-prix span { font-size: 0.95rem; font-family: 'Lato', sans-serif; font-weight: 400; color: var(--gray-warm); }
+  .niveau-includes { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; flex: 1; }
+  .niveau-includes li { font-size: 0.9rem; color: var(--brown); opacity: 0.85; display: flex; gap: 0.6rem; align-items: flex-start; }
+  .niveau-includes li::before { content: '→'; color: var(--amber); font-weight: 700; flex-shrink: 0; }
+  .niveau-pour { font-size: 0.82rem; color: var(--gray-warm); font-style: italic; border-top: 1px solid var(--rust-light); padding-top: 0.85rem; line-height: 1.6; }
+  .niveau-cta { display: block; text-align: center; padding: 0.75rem 1rem; font-size: 0.88rem; font-weight: 700; }
 
   /* TÉMOIGNAGES VIDÉOS */
   #temoignages { background: var(--beige); padding: 6rem 4rem; }
@@ -152,8 +160,8 @@
     .hero-visual { display: none; }
     #pour-toi, #methode, #offre, #temoignages, #apropos, #cercle { padding: 4rem 1.5rem; }
     .pour-toi-grid { grid-template-columns: 1fr; }
-    .methode-grid { grid-template-columns: 1fr; }
-    .offre-inner { grid-template-columns: 1fr; }
+    .methode-card { grid-template-columns: 50px 1fr; padding: 1.5rem; }
+    .niveaux-grid { grid-template-columns: 1fr; }
     .apropos-inner { grid-template-columns: 1fr; }
     .apropos-photo { aspect-ratio: 4/3; }
     footer { grid-template-columns: 1fr; padding: 3rem 1.5rem; gap: 2rem; }
@@ -293,12 +301,12 @@
 <!-- ── NAVIGATION ── -->
 <nav>
   <a href="#hero" class="nav-logo">
-    <img src="assets/images/logo-cavaliere-intuitive.png" alt="Logo Géraldine Feron">
+    <img src="assets/images/Logo_fond_transparent.png" alt="Logo Les Cavalières Intuitives">
     <div>Géraldine Feron<span>et psychologue pour Robert</span></div>
   </a>
   <ul class="nav-links">
     <li><a href="#pour-toi">Pour toi si…</a></li>
-    <li><a href="#methode">La méthode</a></li>
+    <li><a href="#methode">Mon parcours</a></li>
     <li><a href="#offre">Mission Connexion</a></li>
     <li><a href="#apropos">Géraldine</a></li>
     <li><a href="#cercle" class="nav-cta">Rejoindre le cercle</a></li>
@@ -309,16 +317,19 @@
 <!-- ── HERO ── -->
 <section id="hero">
   <div class="hero-text">
-    <p class="hero-eyebrow">Pour les cavalières qui en ont assez d'avoir peur</p>
-    <h1 class="hero-title">De la peur<br>à la <em>confiance</em> —<br>reconstruire le lien</h1>
-    <p class="hero-sub">Tu aimes ton cheval plus que tout. Mais quelque chose coince. La peur, le doute, ce moment où tu sens que ça part de travers et tu ne sais plus quoi faire. Tu n'es pas seule.</p>
+    <p class="hero-eyebrow">Pour les cavalières qui se reconnaissent plus dans la peur que dans le plaisir</p>
+    <h1 class="hero-title">
+      <span class="title-main">De la peur à la <em>confiance</em> —</span>
+      <span class="title-sub">redevenir celle que ton cheval choisit de suivre.</span>
+    </h1>
+    <p class="hero-sub">Quelque chose a changé. Pas ton amour pour lui — ça, il est intact. C'est toi qui n'es plus tout à fait là. Robert a pris ta place. Ce petite voix qui prédit le pire avant même que tu aies sellé. On va s'en occuper.</p>
     <div class="hero-ctas">
       <a href="https://www.facebook.com/groups/lecerclesdescavalieresintuitives" target="_blank" class="btn-primary">→ Rejoindre le cercle gratuitement</a>
       <a href="#offre" class="btn-secondary">Découvrir Mission Connexion</a>
     </div>
   </div>
   <div class="hero-visual">
-    <img src="assets/images/logo-cavaliere-intuitive.png" alt="Géraldine Feron — équicoach pour cavalières intuitives" class="logo-img">
+    <img src="assets/images/Logo_fond_transparent.png" alt="Géraldine Feron — équicoach pour cavalières intuitives" class="logo-img">
   </div>
 </section>
 
@@ -329,58 +340,113 @@
     <h2 class="section-title reveal">C'est exactement fait pour toi si…</h2>
     <div class="pour-toi-grid">
       <ul class="pour-toi-items reveal">
-        <li><span class="check">✓</span><span>Tu as ton propre cheval et tu vis votre relation comme un défi permanent, pas un plaisir.</span></li>
-        <li><span class="check">✓</span><span>Tu ressens de la peur — à cheval, en main, ou même avant de mettre le pied à l'étrier.</span></li>
-        <li><span class="check">✓</span><span>Tu sens que ton cheval "ne t'écoute pas" ou fait n'importe quoi — mais au fond tu sais qu'il répond à <em>quelque chose</em>.</span></li>
-        <li><span class="check">✓</span><span>Tu travailles à distance, tu peux t'engager sur 6 mois, et tu veux des résultats concrets.</span></li>
-        <li><span class="check">✓</span><span>Tu en as assez des conseils techniques qui n'adressent pas le vrai problème : la connexion.</span></li>
+        <li><span class="check">✓</span><span>Tu arrives à l'écurie avec une boule au ventre que tu ne sais plus vraiment expliquer.</span></li>
+        <li><span class="check">✓</span><span>Tu ajustes la sangle une deuxième fois. Pas parce qu'elle est mal mise. Parce que tu gagnes une minute.</span></li>
+        <li><span class="check">✓</span><span>Tu sais lire ton cheval dans ta tête — mais ton corps, lui, ne suit pas.</span></li>
+        <li><span class="check">✓</span><span>Tu as essayé de te forcer. Ça n'a pas marché. Tu as essayé d'éviter. Ça n'a pas marché non plus.</span></li>
+        <li><span class="check">✓</span><span>Tu passes plus de temps à analyser ce qui s'est mal passé qu'à profiter de ce qui s'est bien passé.</span></li>
+        <li><span class="check">✓</span><span>Tu as peur de ta propre peur — parce que tu sais que ton stress, il l'attrape.</span></li>
+        <li><span class="check">✓</span><span>Tu veux bien faire, respecter ton cheval, préserver le lien — et c'est justement ça qui te paralyse.</span></li>
+        <li><span class="check">✓</span><span>Quelque part dans un coin de toi, il y a cette phrase : <em>"Je l'aime tellement que j'ai peur de tout gâcher."</em></span></li>
       </ul>
       <div class="pour-toi-quote reveal">
-        <blockquote>"C'est pas une question de niveau. C'est une question de lien. Et ce lien, on peut le reconstruire."</blockquote>
+        <blockquote>"Tu n'as pas perdu le lien avec ton cheval. Tu as perdu le lien avec toi-même. Cette version de toi qui décide, qui ose, qui choisit pour elle — et pas pour apaiser Robert. C'est elle qu'on va retrouver."</blockquote>
         <p class="robert-note">Et Robert dans tout ça ? Il est là, accroupi dans son coin, prêt à te convaincre que ton cheval veut ta mort. <strong>On va s'occuper de lui.</strong></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── MÉTHODE ── -->
+<!-- ── PARCOURS (ex-MÉTHODE) ── -->
 <section id="methode">
   <div class="section-inner">
-    <span class="section-tag">La méthode</span>
-    <h2 class="section-title reveal">Intention · Timing · Énergie</h2>
+    <span class="section-tag">Ton parcours</span>
+    <div class="methode-intro reveal">
+      <p>Comprendre ta peur, la psychologie de Robert — c'est nécessaire. <em>Mais pas suffisant.</em></p>
+      <p style="margin-top:0.75rem;">Robert ne réagit pas à la réalité. Il prédit un futur possible. Il n'écoute pas tes arguments. Il écoute ton corps. C'est pour ça que tout le travail passe par là : ce que tu projettes, quand tu le projettes, et avec quelle énergie. <em>Avant même que vos regards ne se soient croisés.</em></p>
+    </div>
     <div class="methode-grid">
-      <div class="methode-card reveal"><div class="methode-num">01</div><h3>Intention</h3><p>Avant de demander quoi que ce soit à ton cheval, qu'est-ce que tu veux vraiment ? Pas la perfection — la connexion. Apprendre à formuler une intention claire, ça change tout dans ce que ton cheval perçoit.</p></div>
-      <div class="methode-card reveal"><div class="methode-num">02</div><h3>Timing</h3><p>Le cheval vit dans l'instant présent. Toi aussi, tu peux y revenir. Le timing, c'est l'art d'être là au bon moment — ni trop tôt, ni trop tard. C'est ce qui distingue une demande d'une pression.</p></div>
-      <div class="methode-card reveal"><div class="methode-num">03</div><h3>Énergie</h3><p>Ton cheval te lit comme un livre ouvert. L'énergie que tu projettes, c'est déjà un message. Apprendre à la réguler — pas à la supprimer — c'est le cœur du travail. Robert inclus.</p></div>
+      <div class="methode-card reveal">
+        <div class="methode-num">01</div>
+        <div class="methode-card-body">
+          <h3>Intention</h3>
+          <p>Avant de demander quoi que ce soit à ton cheval, ton cerveau a déjà envoyé un message. Robert commente. Le juge intérieur prépare son verdict. L'intention, c'est l'art d'arriver avec quelque chose de clair — pas parfait, clair. Ce que tu projettes en montant, ton cheval le reçoit dans tes muscles avant que tu aies ouvert les doigts.</p>
+        </div>
+      </div>
+      <div class="methode-card reveal">
+        <div class="methode-num">02</div>
+        <div class="methode-card-body">
+          <h3>Timing</h3>
+          <p>Le cheval vit dans l'instant présent. Toi aussi, tu peux y revenir. Le timing, ce n'est pas la technique — c'est la présence. Être là au bon moment, ni trop tôt ni trop tard, c'est ce qui distingue une demande d'une pression. Et une pression de la peur qui prend les rênes à ta place.</p>
+        </div>
+      </div>
+      <div class="methode-card reveal">
+        <div class="methode-num">03</div>
+        <div class="methode-card-body">
+          <h3>Énergie</h3>
+          <p>Ton cheval ne lit pas tes pensées. Il lit ton système nerveux — ta respiration, la tension de ta mâchoire, la qualité de tes appuis. Apprendre à réguler cette énergie — pas la supprimer, la réguler — c'est devenir l'ancre du couple plutôt que le bateau qui dérive. Robert inclus.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ── OFFRE ── -->
+<!-- ── OFFRE — 3 NIVEAUX ── -->
 <section id="offre">
   <div class="section-inner">
     <span class="section-tag">L'accompagnement</span>
-    <h2 class="section-title reveal">Mission Connexion</h2>
-    <div class="offre-inner">
-      <div class="offre-details reveal">
-        <h3>6 mois pour tout changer</h3>
-        <p class="offre-tagline">Un accompagnement complet, 100 % à distance</p>
-        <ul class="offre-list">
-          <li><span class="dot"></span><span><strong>Visios collectives hebdomadaires</strong> — apprendre, pratiquer, poser tes questions dans un espace bienveillant</span></li>
-          <li><span class="dot"></span><span><strong>Coaching individuel mensuel</strong> — une heure en tête-à-tête pour travailler ta situation spécifique</span></li>
-          <li><span class="dot"></span><span><strong>Analyse vidéo</strong> — tu envoies, je regarde, je t'explique ce que je vois</span></li>
-          <li><span class="dot"></span><span><strong>Communauté privée</strong> — parce qu'avancer entourée, ça change tout</span></li>
-          <li><span class="dot"></span><span><strong>Méthode Intention – Timing – Énergie</strong> — progressive, concrète, applicable dès la prochaine séance</span></li>
+    <h2 class="section-title reveal">Choisir ton niveau d'engagement</h2>
+    <p class="offre-intro reveal">Trois chemins vers la même destination. Le bon niveau dépend de là où tu en es aujourd'hui.</p>
+    <div class="niveaux-grid">
+
+      <!-- NIVEAU 1 -->
+      <div class="niveau-card reveal">
+        <div class="niveau-label">Niveau 1</div>
+        <h3>Collectif</h3>
+        <div class="niveau-prix">97 €<span> / mois · sans engagement</span></div>
+        <ul class="niveau-includes">
+          <li>2 visios Zoom collectives / mois</li>
+          <li>Accès à l'application Mission Connexion</li>
+          <li>Groupe Facebook privé dédié</li>
+          <li>Contenu pédagogique progressif</li>
         </ul>
-        <p style="font-size:0.9rem;color:var(--gray-warm);font-style:italic;">"C'est énorme ce que tu viens de faire — et tu ne t'en rends même pas compte encore."</p>
+        <p class="niveau-pour">Pour qui : tu veux progresser sans urgence immédiate, tu cherches un espace collectif bienveillant, tu veux tester avant de t'engager plus loin.</p>
+        <a href="https://buy.stripe.com/00weVccjPaFQ93g9ZO8Vi08" target="_blank" rel="noopener noreferrer" class="btn-primary niveau-cta">→ Démarrer maintenant</a>
+        <p style="font-size:0.78rem;color:var(--gray-warm);text-align:center;">Lien de paiement direct. Accès immédiat. Pas d'appel.</p>
       </div>
-      <div class="offre-card reveal">
-        <div class="prix">1 200€</div>
-        <div class="prix-detail">· 6 mois · Paiement en plusieurs fois disponible</div>
-        <p>Tu es propriétaire de ton cheval. Tu veux que ça se passe bien — pour toi <em>et</em> pour lui. C'est ça, Mission Connexion.</p>
-        <a href="mailto:contactezgeraldine@gmail.com" class="btn-primary" style="display:block;text-align:center;margin-bottom:0.75rem;">Je veux en savoir plus</a>
-        <a href="https://www.youtube.com/playlist?list=PL8xOk5pwxOsE3cDxtJEYeCR47wVhXR_fe" target="_blank" class="btn-secondary" style="display:block;text-align:center;font-size:0.85rem;">▶ Voir la formation offerte</a>
+
+      <!-- NIVEAU 2 -->
+      <div class="niveau-card featured reveal">
+        <div class="niveau-label">Niveau 2</div>
+        <h3>L'Intensif</h3>
+        <div class="niveau-prix">397 €<span> · forfait 4 séances</span></div>
+        <ul class="niveau-includes">
+          <li>4 séances individuelles Zoom (45 min)</li>
+          <li>1 analyse vidéo de ta séance équestre</li>
+          <li>Accès au groupe Collectif inclus</li>
+          <li>Accès à l'application Mission Connexion</li>
+        </ul>
+        <p class="niveau-pour">Pour qui : tu as un blocage précis + une échéance concrète. Un concours, un voyage, une reprise approche. Tu as déjà essayé seule — sans résultat durable.</p>
+        <a href="mailto:contactezgeraldine@gmail.com" class="btn-primary niveau-cta">→ Réserver un appel de 15 min</a>
+        <p style="font-size:0.78rem;color:var(--gray-warm);text-align:center;">Un appel Zoom de 15 min pour cadrer ton objectif. Puis on démarre.</p>
       </div>
+
+      <!-- NIVEAU 3 -->
+      <div class="niveau-card reveal">
+        <div class="niveau-label">Niveau 3</div>
+        <h3>Individuel</h3>
+        <div class="niveau-prix">1 200 €<span> · 6 mois · accompagnement complet</span></div>
+        <ul class="niveau-includes">
+          <li>Visios collectives hebdomadaires</li>
+          <li>1 séance individuelle / mois</li>
+          <li>Analyses vidéo régulières</li>
+          <li>Accès à l'application + groupe privé dédié</li>
+        </ul>
+        <p class="niveau-pour">Pour qui : tu veux une transformation profonde et durable. Ta problématique demande un travail de fond. Souvent : suite naturelle après l'Intensif.</p>
+        <a href="mailto:contactezgeraldine@gmail.com" class="btn-primary niveau-cta">→ Réserver un appel de 15 min</a>
+        <p style="font-size:0.78rem;color:var(--gray-warm);text-align:center;">Sur proposition de Géraldine. Accès limité.</p>
+      </div>
+
     </div>
   </div>
 </section>
@@ -391,15 +457,11 @@
     <span class="section-tag">Elles l'ont vécu</span>
     <h2 class="section-title reveal">Ce qu'elles disent</h2>
     <div class="videos-mosaic reveal">
-      <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/WqOGYqOEsGs" title="Témoignage 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
-      <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/M5xVwAOVcNA" title="Témoignage 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
-      <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/dUON_BVvDYc" title="Témoignage 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
-      <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/iSnrmLs4mzg" title="Témoignage 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
-      <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/HbaCQSr1f6g" title="Témoignage 5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
-    </div>
-    <div class="temo-cta reveal">
-      <p>tu n'es pas seule dans ça 🐴</p>
-      <a href="https://www.facebook.com/groups/lecerclesdescavalieresintuitives" target="_blank" class="btn-primary">→ Rejoindre le cercle gratuitement</a>
+      <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/HbaCQSr1f6g" title="Témoignage Mathilde" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+      <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/2wYcn0lQoBs" title="Témoignage Alba" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+      <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/iSnrmLs4mzg" title="Témoignage Camille" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+      <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/WqOGYqOEsGs" title="Témoignage Marie" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+      <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/M5xVwAOVcNA" title="Témoignage Kara" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
     </div>
   </div>
 </section>
@@ -414,16 +476,18 @@
         <img src="assets/Geraldine.jpg" alt="Géraldine Feron avec son cheval">
       </div>
       <div class="apropos-text reveal">
-        <p>Je suis cavalière depuis 30 ans. CSO international, Master en éducation physique, ostéopathie équine, éthologie avec Andy Booth. J'ai passé ma vie à comprendre le cheval — techniquement, physiquement, et énergiquement.</p>
-        <p>Et puis la peur est arrivée. Pas d'un coup. Progressivement. Ce petit Robert qui s'installe et qui commence à décider à ta place.</p>
-        <p>J'ai compris que les problèmes qu'on croit avoir "avec son cheval", c'est souvent un problème de connexion — avec soi d'abord, avec lui ensuite. C'est pour ça que j'ai créé la méthode Intention – Timing – Énergie. Pas pour être parfaite. Pour être <em>présente</em>.</p>
-        <p>Aujourd'hui, j'accompagne des cavalières à reconstruire ce lien — à distance, en collectif et en individuel, avec humour et sans bullshit. Le cercle des cavalières intuitives, c'est +1 300 femmes qui savent que ça fait sens.</p>
+        <p>On devient équicoach par passion pour les chevaux. On continue par passion pour les humains.</p>
+        <p>Ça fait plus de 25 ans que j'accompagne des couples improbables : une proie et un prédateur. Une cavalière et son cheval. Deux êtres qui portent chacun leurs peurs, leurs histoires, leurs cicatrices — et qui essaient quand même de se faire confiance.</p>
+        <p>La peur des cavalières, j'en ai fait ma spécialité. Pas parce que c'est un sujet à la mode — mais parce qu'elle est là, constante, et qu'on fait semblant de ne pas la voir. La peur de tomber. La peur de mal faire. La peur du regard des autres. La peur que ton cheval ne t'aime pas vraiment. Cette liste est longue. Et chacune de ces peurs vient interférer dans la relation avec ton cheval, qui lui aussi a les siennes.</p>
+        <p>(Et Robert dans tout ça ? Il est là, il observe, et il attend juste le bon moment pour te convaincre que tout va mal se passer.)</p>
+        <p>Mon parcours m'a donné les outils pour comprendre les deux côtés du miroir : cavalière de CSO jusqu'au niveau international, formation équestre auprès de grands noms comme Joss Kumst et Nelson Pessoa, master en éducation physique, ostéopathie équine — et des années à creuser la psychologie humaine pour faire le lien entre ce qui se passe dans ta tête et ce qui se passe entre tes mains et la bouche de ton cheval.</p>
+        <p>Tout ça m'a conduite vers trois piliers d'une relation juste : l'intention, le timing et l'énergie. Parce que les peurs, ça ne se comprend pas dans les livres. Ça se traverse par l'expérience. Et une fois traversées — les vôtres et celles de votre cheval — vous êtes libres d'écrire ensemble votre plus belle histoire.</p>
         <div class="credentials">
-          <span class="cred-tag">30 ans de cheval</span>
+          <span class="cred-tag">+25 ans de cheval</span>
           <span class="cred-tag">CSO international</span>
           <span class="cred-tag">Master éducation physique</span>
           <span class="cred-tag">Ostéopathie équine</span>
-          <span class="cred-tag">Éthologie Andy Booth</span>
+          <span class="cred-tag">Formation Joss Kumst · Nelson Pessoa</span>
           <span class="cred-tag">+1 300 membres dans le cercle</span>
         </div>
       </div>
@@ -453,7 +517,7 @@
 <footer>
   <div class="footer-brand">
     <a href="#hero" class="nav-logo">
-      <img src="assets/images/logo-cavaliere-intuitive.png" alt="Logo Géraldine Feron">
+      <img src="assets/images/Logo_fond_transparent.png" alt="Logo Les Cavalières Intuitives">
       <div>Géraldine Feron<span>et psychologue pour Robert</span></div>
     </a>
     <p>Équicoach pour cavalières intuitives.<br>Méthode Intention – Timing – Énergie.<br>100 % distanciel.</p>
@@ -463,7 +527,7 @@
     <h5>Navigation</h5>
     <ul>
       <li><a href="#pour-toi">Pour toi si…</a></li>
-      <li><a href="#methode">La méthode</a></li>
+      <li><a href="#methode">Mon parcours</a></li>
       <li><a href="#offre">Mission Connexion</a></li>
       <li><a href="#temoignages">Témoignages</a></li>
       <li><a href="#apropos">Géraldine</a></li>
