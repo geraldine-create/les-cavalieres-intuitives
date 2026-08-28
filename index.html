@@ -92,7 +92,7 @@
   #offre { background: var(--off-white); padding: 6rem 4rem; }
   #offre .section-title { color: var(--rust); }
   .offre-intro { text-align: center; font-size: 1.05rem; color: var(--brown); opacity: 0.8; max-width: 650px; margin: 0 auto 3rem; line-height: 1.8; }
-  .niveaux-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1rem; }
+  .niveaux-grid { display: grid; grid-template-columns: repeat(2, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1rem; max-width: 860px; margin-left: auto; margin-right: auto; }
   .niveau-card { background: var(--beige); border: 1.5px solid var(--rust-light); padding: 2.5rem 2rem; position: relative; display: flex; flex-direction: column; gap: 1.25rem; transition: transform 0.2s, box-shadow 0.2s; }
   .niveau-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(139,37,0,0.09); }
   .niveau-card.featured { border-color: var(--amber); background: var(--off-white); }
@@ -106,6 +106,13 @@
   .niveau-includes li::before { content: '→'; color: var(--amber); font-weight: 700; flex-shrink: 0; }
   .niveau-pour { font-size: 0.82rem; color: var(--gray-warm); font-style: italic; border-top: 1px solid var(--rust-light); padding-top: 0.85rem; line-height: 1.6; }
   .niveau-cta { display: block; text-align: center; padding: 0.75rem 1rem; font-size: 0.88rem; font-weight: 700; }
+  .niveau-accroche { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.05rem; color: var(--amber); margin: -0.5rem 0 0; }
+  .offre-liaison { max-width: 680px; margin: 1.5rem auto 0; font-size: 0.98rem; color: var(--rust); font-family: 'Playfair Display', serif; font-style: italic; text-align: center; }
+  .offre-comparatif { max-width: 860px; margin: 3rem auto 0; border-collapse: collapse; width: 100%; }
+  .offre-comparatif th, .offre-comparatif td { border: 1px solid var(--rust-light); padding: 0.9rem 1rem; text-align: left; font-size: 0.88rem; color: var(--brown); vertical-align: top; }
+  .offre-comparatif th { font-family: 'Playfair Display', serif; color: var(--rust); background: var(--beige); font-weight: 700; }
+  .offre-comparatif td:first-child { font-weight: 700; color: var(--rust); white-space: nowrap; }
+  @media (max-width: 700px) { .offre-comparatif { font-size: 0.8rem; } .offre-comparatif th, .offre-comparatif td { padding: 0.6rem 0.7rem; } }
 
   /* TÉMOIGNAGES VIDÉOS */
   #temoignages { background: var(--beige); padding: 6rem 4rem; }
@@ -410,63 +417,63 @@
   </div>
 </section>
 
-<!-- ── OFFRE — 3 NIVEAUX ── -->
+<!-- ── OFFRE — 2 FORMULES ── -->
 <section id="offre">
   <div class="section-inner">
     <span class="section-tag">L'accompagnement</span>
-    <h2 class="section-title reveal">Choisir ton niveau d'engagement</h2>
-    <p class="offre-intro reveal">Trois chemins vers la même destination. Le bon niveau dépend de là où tu en es aujourd'hui.</p>
+    <h2 class="section-title reveal">Calmer Robert, à ton rythme</h2>
+    <p class="offre-intro reveal">La peur est mentale. Sa régulation est physique. Deux formules, un même travail de fond — porté par le collectif dans les deux cas.</p>
     <div class="niveaux-grid">
 
-      <!-- NIVEAU 1 -->
+      <!-- FORMULE INTENSIVE -->
       <div class="niveau-card reveal">
-        <div class="niveau-label">Niveau 1</div>
-        <h3>Collectif</h3>
-        <div class="niveau-prix">97 €<span> / mois · sans engagement</span></div>
+        <div class="niveau-label">4 semaines</div>
+        <h3>Intensive</h3>
+        <p class="niveau-accroche">Robert s'emballe vite. On le calme vite.</p>
+        <div class="niveau-prix">597 €<span> · forfait 4 séances</span></div>
         <ul class="niveau-includes">
-          <li>2 visios Zoom collectives / mois</li>
-          <li>Accès à l'application Mission Connexion</li>
-          <li>Groupe Facebook privé dédié</li>
-          <li>Contenu pédagogique progressif</li>
-        </ul>
-        <p class="niveau-pour">Pour qui : tu veux progresser sans urgence immédiate, tu cherches un espace collectif bienveillant, tu veux tester avant de t'engager plus loin.</p>
-        <a href="https://buy.stripe.com/00weVccjPaFQ93g9ZO8Vi08" target="_blank" rel="noopener noreferrer" class="btn-primary niveau-cta">→ Démarrer maintenant</a>
-        <p style="font-size:0.78rem;color:var(--gray-warm);text-align:center;">Lien de paiement direct. Accès immédiat. Pas d'appel.</p>
-      </div>
-
-      <!-- NIVEAU 2 -->
-      <div class="niveau-card featured reveal">
-        <div class="niveau-label">Niveau 2</div>
-        <h3>L'Intensif</h3>
-        <div class="niveau-prix">397 €<span> · forfait 4 séances</span></div>
-        <ul class="niveau-includes">
-          <li>4 séances individuelles Zoom (45 min)</li>
-          <li>1 analyse vidéo de ta séance équestre</li>
-          <li>Accès au groupe Collectif inclus</li>
+          <li>4 séances en direct avec Pivo</li>
+          <li>Accès au coaching collectif</li>
+          <li>Analyses vidéo</li>
+          <li>Accès au groupe WhatsApp</li>
           <li>Accès à l'application Mission Connexion</li>
         </ul>
-        <p class="niveau-pour">Pour qui : tu as un blocage précis + une échéance concrète. Un concours, un voyage, une reprise approche. Tu as déjà essayé seule — sans résultat durable.</p>
-        <a href="mailto:contactezgeraldine@gmail.com" class="btn-primary niveau-cta">→ Réserver un appel de 15 min</a>
-        <p style="font-size:0.78rem;color:var(--gray-warm);text-align:center;">Un appel Zoom de 15 min pour cadrer ton objectif. Puis on démarre.</p>
+        <p class="niveau-pour">Pour qui : un déclic rapide à provoquer — un concours, un voyage, une reprise après un coup dur, un cheval qui vient de changer.</p>
+        <a href="mailto:cavalieres.intuitives@gmail.com" class="btn-primary niveau-cta">→ Réserver un appel de 15 min</a>
+        <p style="font-size:0.78rem;color:var(--gray-warm);text-align:center;">Un appel Zoom de 15 min pour cadrer ton objectif. Puis on démarre. Paiement en 4 fois disponible (PayPal).</p>
       </div>
 
-      <!-- NIVEAU 3 -->
+      <!-- FORMULE ANCRAGE -->
       <div class="niveau-card reveal">
-        <div class="niveau-label">Niveau 3</div>
-        <h3>Individuel</h3>
-        <div class="niveau-prix">1 200 €<span> · 6 mois · accompagnement complet</span></div>
+        <div class="niveau-label">12 semaines</div>
+        <h3>Ancrage</h3>
+        <p class="niveau-accroche">Calmer Robert une fois ne suffit pas. On l'ancre pour de bon.</p>
+        <div class="niveau-prix">1 200 €<span> · 12 semaines</span></div>
         <ul class="niveau-includes">
-          <li>Visios collectives hebdomadaires</li>
-          <li>1 séance individuelle / mois</li>
-          <li>Analyses vidéo régulières</li>
-          <li>Accès à l'application + groupe privé dédié</li>
+          <li>4 séances de coaching individuel</li>
+          <li>Accès au coaching collectif</li>
+          <li>2 séances d'analyse vidéo par semaine</li>
+          <li>Accès à l'application Mission Connexion</li>
         </ul>
-        <p class="niveau-pour">Pour qui : tu veux une transformation profonde et durable. Ta problématique demande un travail de fond. Souvent : suite naturelle après l'Intensif.</p>
-        <a href="mailto:contactezgeraldine@gmail.com" class="btn-primary niveau-cta">→ Réserver un appel de 15 min</a>
+        <p class="niveau-pour">Pour qui : que le changement tienne — de nouveaux automatismes installés dans la durée, portés par le collectif entre les séances. Souvent la suite naturelle après l'Intensive.</p>
+        <a href="mailto:cavalieres.intuitives@gmail.com" class="btn-primary niveau-cta">→ Réserver un appel de 15 min</a>
         <p style="font-size:0.78rem;color:var(--gray-warm);text-align:center;">Sur proposition de Géraldine. Accès limité.</p>
       </div>
 
     </div>
+
+    <p class="offre-liaison reveal">Même objectif, deux rythmes — et dans les deux cas, tu n'es jamais seule avec Robert.</p>
+
+    <table class="offre-comparatif reveal">
+      <thead>
+        <tr><th></th><th>Intensive</th><th>Ancrage</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Durée</td><td>4 semaines</td><td>12 semaines</td></tr>
+        <tr><td>Promesse</td><td>Calmer Robert vite</td><td>Calmer Robert durablement</td></tr>
+        <tr><td>Pour qui</td><td>Un déclic rapide à provoquer : échéance proche, reprise après un coup dur, cheval qui vient de changer</td><td>Que le changement tienne : nouveaux automatismes installés dans la durée, portée par le collectif entre les séances</td></tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
