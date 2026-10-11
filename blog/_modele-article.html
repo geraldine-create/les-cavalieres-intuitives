@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--
+  GABARIT D'ARTICLE — Les Cavalières Intuitives
+  Mode d'emploi :
+  1. Crée un dossier dans /blog/ avec l'adresse de l'article, en minuscules, sans accents, mots séparés par des tirets.
+     Exemple : /blog/mon-cheval-ressent-il-mon-stress/
+  2. Copie ce fichier dans ce dossier et renomme-le index.html.
+  3. Remplace tout ce qui est écrit EN_MAJUSCULES_ENTRE_CROCHETS, puis supprime la ligne « noindex » ci-dessous.
+  4. Ajoute l'article en haut de la liste dans /blog/index.html, et son adresse dans /sitemap.xml.
+-->
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex"><!-- À SUPPRIMER dans les vrais articles -->
+<title>[TITRE GOOGLE, 60 CARACTÈRES MAX] — Les Cavalières Intuitives</title>
+<meta name="description" content="[META DESCRIPTION, 155 CARACTÈRES MAX]">
+<link rel="canonical" href="https://les-cavalieres-intuitives.com/blog/[ADRESSE]/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Les Cavalières Intuitives">
+<meta property="og:title" content="[TITRE DE L'ARTICLE]">
+<meta property="og:description" content="[PHRASE D'ACCROCHE POUR LE PARTAGE FACEBOOK]">
+<meta property="og:url" content="https://les-cavalieres-intuitives.com/blog/[ADRESSE]/">
+<meta property="og:image" content="https://les-cavalieres-intuitives.com/blog/[ADRESSE]/illustration.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<script src="/assets/consent.js" defer></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@400;700&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "[TITRE DE L'ARTICLE]",
+  "description": "[META DESCRIPTION]",
+  "datePublished": "[AAAA-MM-JJ]",
+  "dateModified": "[AAAA-MM-JJ]",
+  "inLanguage": "fr-FR",
+  "image": "https://les-cavalieres-intuitives.com/blog/[ADRESSE]/illustration.webp",
+  "mainEntityOfPage": "https://les-cavalieres-intuitives.com/blog/[ADRESSE]/",
+  "author": { "@type": "Person", "name": "Géraldine Feron", "jobTitle": "Équicoach", "url": "https://les-cavalieres-intuitives.com/" },
+  "publisher": { "@type": "Organization", "name": "Les Cavalières Intuitives", "url": "https://les-cavalieres-intuitives.com/",
+    "logo": { "@type": "ImageObject", "url": "https://les-cavalieres-intuitives.com/assets/images/Logo_fond_transparent.png" } }
+}
+</script>
+</head>
+<body>
+<header class="site-head">
+  <div class="in">
+    <a class="logo" href="/"><img src="/assets/images/Logo_fond_transparent.png" alt="" width="46" height="46"><div>Géraldine Feron<span>et psychologue pour Robert</span></div></a>
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a href="/">Accueil</a>
+      <a href="/blog/">Blog</a>
+      <a class="nav-cta" href="https://decouverte-mission-connexion.netlify.app">Découvrir mon profil</a>
+    </nav>
+  </div>
+</header>
+
+<main class="col">
+  <p class="crumbs"><a href="/blog/">Blog</a> / [THÈME]</p>
+
+  <article>
+    <p class="opening">« [PHRASE D'OUVERTURE, MISE EN GRAND] »</p>
+    <h1 class="article-title">[TITRE DE L'ARTICLE]</h1>
+    <p class="meta">Par Géraldine Feron, équicoach · [N] minutes de lecture</p>
+    <!-- Illustration 1200 × 630, nommée illustration.webp, dans le dossier de l'article -->
+    <figure class="hero-img"><img src="illustration.webp" width="1200" height="630" alt="[CE QUE MONTRE L'ILLUSTRATION]"></figure>
+
+    <div class="article-body">
+      <p>[INTRODUCTION : 2 À 3 PARAGRAPHES COURTS]</p>
+
+      <h2>[INTERTITRE 1]</h2>
+      <p>[TEXTE]</p>
+
+      <!-- Liste à puces :
+      <ul><li>[ÉLÉMENT]</li><li>[ÉLÉMENT]</li></ul> -->
+
+      <!-- Image :
+      <figure><img src="[FICHIER].webp" width="720" height="480" alt="[CE QUE MONTRE L'IMAGE]"><figcaption>[LÉGENDE]</figcaption></figure> -->
+
+      <!-- Bloc de comparaison « avant / aujourd'hui » :
+      <div class="then-now">
+        <div><h3>[AVANT]</h3><p>[…]</p></div>
+        <div><h3>[AUJOURD'HUI]</h3><p>[…]</p></div>
+      </div> -->
+
+      <h2>[INTERTITRE OUTILS]</h2>
+      <!-- Étapes numérotées automatiquement : -->
+      <ol class="steps">
+        <li><h3>[ÉTAPE]</h3><p>[EXPLICATION]</p></li>
+        <li><h3>[ÉTAPE]</h3><p>[EXPLICATION]</p></li>
+      </ol>
+
+      <h2>[INTERTITRE FINAL]</h2>
+      <p>[TEXTE]</p>
+      <p class="sign">Géraldine Feron<span>[DEUXIÈME LIGNE DE SIGNATURE, ADAPTÉE AU SUJET]</span></p>
+    </div>
+  </article>
+
+  <section class="invite" aria-labelledby="invite-titre">
+    <h2 id="invite-titre">Et maintenant, par où commencer ?</h2>
+    <p>[PHRASE QUI RELIE LE SUJET AU QUESTIONNAIRE]. En 2 minutes, tu découvres ton profil de cavalière intuitive, et tu reçois par email une vidéo choisie pour ta situation.</p>
+    <a class="btn" href="https://decouverte-mission-connexion.netlify.app">Découvrir mon profil</a>
+    <p class="alt">Tu préfères en parler directement ? Écris-moi en message privé sur Facebook avec le mot <strong>VISIO</strong>, on cale un moment ensemble.</p>
+  </section>
+
+  <!-- Questions fréquentes (facultatif) : -->
+  <section class="faq" aria-labelledby="faq-titre">
+    <h2 id="faq-titre">Questions fréquentes</h2>
+    <details><summary>[QUESTION]</summary><p>[RÉPONSE EN 2 À 3 PHRASES]</p></details>
+  </section>
+</main>
+
+<footer class="site-foot">
+  Géraldine Feron, équicoach pour cavalières intuitives · <a href="/">les-cavalieres-intuitives.com</a> · <a href="/blog/">Blog</a> · <a href="/confidentialite.html">Politique de confidentialité</a> · <a href="#" onclick="window.lciCookies&&lciCookies.open();return false;">Gérer mes cookies</a>
+</footer>
+
+<script>
+/* Statistiques (uniquement si la visiteuse a accepté les cookies) */
+(function(){
+  var ARTICLE = '[ADRESSE]';
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a'); if(!a || typeof window.gtag !== 'function') return;
+    if((a.getAttribute('href')||'').indexOf('decouverte-mission-connexion') > -1)
+      gtag('event', 'clic_questionnaire', { depuis: 'blog-' + ARTICLE, bouton: a.textContent.trim() });
+  });
+  var sign = document.querySelector('.sign');
+  if(sign && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      if(entries[0].isIntersecting && typeof window.gtag === 'function'){
+        gtag('event', 'article_lu', { article: ARTICLE }); io.disconnect();
+      }
+    });
+    io.observe(sign);
+  }
+})();
+</script>
+</body>
+</html>

@@ -72,7 +72,7 @@
     b.innerHTML =
       '<p>Petite question avant de continuer 🐎 J\u2019aimerais mesurer, de façon anonyme, comment les visiteuses ' +
       'utilisent ce site (Google Analytics), pour l\u2019améliorer. Tu es d\u2019accord ? Tu peux changer d\u2019avis ' +
-      'à tout moment. <a href="confidentialite.html#cookies">En savoir plus</a></p>' +
+      'à tout moment. <a href="/confidentialite.html#cookies">En savoir plus</a></p>' +
       '<div class="lci-btns">' +
       '<button type="button" class="lci-no">Je refuse</button>' +
       '<button type="button" class="lci-yes">J\u2019accepte</button>' +
