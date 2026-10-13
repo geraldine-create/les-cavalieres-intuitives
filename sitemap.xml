@@ -2,8 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://les-cavalieres-intuitives.com/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-13</lastmod>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://les-cavalieres-intuitives.com/peur-a-cheval/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://les-cavalieres-intuitives.com/questionnaire.html</loc>
@@ -22,37 +27,37 @@
   </url>
   <url>
     <loc>https://les-cavalieres-intuitives.com/blog/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-13</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://les-cavalieres-intuitives.com/blog/reprendre-confiance-a-cheval-apres-une-chute/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-13</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://les-cavalieres-intuitives.com/blog/mon-cheval-ressent-il-mon-stress/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-13</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://les-cavalieres-intuitives.com/blog/a-quel-age-commencer-jeune-cheval/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-13</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://les-cavalieres-intuitives.com/blog/perdre-le-controle-de-son-cheval/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-13</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://les-cavalieres-intuitives.com/blog/faut-il-defouler-son-cheval/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-13</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://les-cavalieres-intuitives.com/blog/peur-a-cheval-pourquoi-continuer/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-13</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>

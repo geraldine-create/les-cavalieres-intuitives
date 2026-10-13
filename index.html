@@ -4,8 +4,46 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="assets/consent.js" defer></script>
-<title>Peur à cheval ? Retrouve confiance avec ton cheval — Géraldine Feron, Équicoach</title>
-<meta name="description" content="Tu aimes ton cheval mais la peur prend le dessus ? Découvre la méthode Intention-Timing-Énergie de Géraldine Feron, équicoach depuis 25 ans, 100% en distanciel.">
+<title>Équicoaching à distance : retrouver confiance à cheval</title>
+<meta name="description" content="Tu aimes ton cheval mais la peur prend le dessus ? Géraldine Feron, équicoach depuis 25 ans, t'accompagne 100 % à distance pour retrouver confiance.">
+<link rel="canonical" href="https://les-cavalieres-intuitives.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Les Cavalières Intuitives">
+<meta property="og:url" content="https://les-cavalieres-intuitives.com/">
+<meta property="og:title" content="Équicoaching à distance : retrouver confiance à cheval">
+<meta property="og:description" content="La peur prend le dessus avec ton cheval ? Géraldine Feron, équicoach, t'accompagne 100 % à distance pour retrouver confiance, à ton rythme.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://les-cavalieres-intuitives.com/#service",
+      "name": "Les Cavalières Intuitives",
+      "url": "https://les-cavalieres-intuitives.com/",
+      "description": "Équicoaching 100 % à distance pour les cavalières adultes qui ont peur à cheval et veulent retrouver confiance et connexion avec leur cheval.",
+      "image": "https://les-cavalieres-intuitives.com/assets/images/Logo_fond_transparent.png",
+      "areaServed": "FR",
+      "inLanguage": "fr-FR",
+      "founder": {
+        "@id": "https://les-cavalieres-intuitives.com/#geraldine"
+      },
+      "sameAs": [
+        "https://www.facebook.com/groups/lecerclesdescavalieresintuitives"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://les-cavalieres-intuitives.com/#geraldine",
+      "name": "Géraldine Feron",
+      "jobTitle": "Équicoach",
+      "url": "https://les-cavalieres-intuitives.com/",
+      "image": "https://les-cavalieres-intuitives.com/assets/Geraldine.webp"
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
@@ -218,14 +256,15 @@
 <body>
 
 <!-- ── POPUP NARRATIF ── -->
-<div id="popup-overlay" style="position:fixed;inset:0;z-index:1000;background:rgba(44,26,16,0.65);display:flex;align-items:center;justify-content:center;padding:1rem;overflow-y:auto;">
-  <div id="popup-box" style="background:#FDFAF7;border-radius:12px;border:1px solid #E8D5CC;max-width:440px;width:100%;position:relative;overflow:hidden;box-shadow:0 24px 64px rgba(44,26,16,0.25);">
+<div id="popup-overlay" style="position:fixed;inset:0;z-index:1000;background:rgba(44,26,16,0.65);display:flex;align-items:flex-start;justify-content:center;padding:1rem;overflow-y:auto;">
+  <div id="popup-box" style="margin:auto 0;background:#FDFAF7;border-radius:12px;border:1px solid #E8D5CC;max-width:440px;width:100%;position:relative;overflow:hidden;box-shadow:0 24px 64px rgba(44,26,16,0.25);">
 
+    <button onclick="closePopup()" style="position:absolute;top:12px;left:14px;z-index:10;background:rgba(253,250,247,0.92);border:1px solid #E8D5CC;border-radius:14px;padding:4px 12px;font-size:0.8rem;font-weight:700;color:#8B2500;cursor:pointer;">Passer l'introduction</button>
     <button onclick="closePopup()" aria-label="Fermer" style="position:absolute;top:12px;right:14px;background:none;border:none;cursor:pointer;font-size:18px;color:#9C8C80;z-index:10;line-height:1;padding:4px;">✕</button>
 
     <!-- ÉTAPE 1 -->
     <div class="pop-step" id="pop-1">
-      <img src="assets/illustration-1.png" alt="Camille et Daytona" style="width:100%;display:block;">
+      <img src="assets/illustration-1.webp" width="880" height="880" alt="Camille et Daytona" style="width:100%;display:block;">
       <div style="padding:1.25rem 1.5rem 0.5rem;">
         <p style="font-size:11px;color:#C0622A;letter-spacing:0.08em;text-transform:uppercase;margin:0 0 4px;">étape 1 · le problème</p>
         <h3 style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#8B2500;margin:0;">Camille et Daytona</h3>
@@ -250,7 +289,7 @@
 
     <!-- ÉTAPE 2 -->
     <div class="pop-step" id="pop-2" style="display:none;">
-      <img src="assets/illustration-2.png" alt="Robert à l'école des catastrophes" style="width:100%;display:block;">
+      <img src="assets/illustration-2.webp" width="880" height="880" loading="lazy" alt="Robert à l'école des catastrophes" style="width:100%;display:block;">
       <div style="padding:1.25rem 1.5rem 0.5rem;">
         <p style="font-size:11px;color:#C0622A;letter-spacing:0.08em;text-transform:uppercase;margin:0 0 4px;">étape 2 · l'explication</p>
         <h3 style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#8B2500;margin:0;">Robert à l'école des catastrophes</h3>
@@ -275,7 +314,7 @@
 
     <!-- ÉTAPE 3 -->
     <div class="pop-step" id="pop-3" style="display:none;">
-      <img src="assets/illustration-3.png" alt="Remettre Robert à sa juste place" style="width:100%;display:block;">
+      <img src="assets/illustration-3.webp" width="880" height="880" loading="lazy" alt="Remettre Robert à sa juste place" style="width:100%;display:block;">
       <div style="padding:1.25rem 1.5rem 0.5rem;">
         <p style="font-size:11px;color:#C0622A;letter-spacing:0.08em;text-transform:uppercase;margin:0 0 4px;">étape 3 · la solution</p>
         <h3 style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#8B2500;margin:0;">Remettre Robert à sa juste place</h3>
@@ -299,7 +338,7 @@
     </div>
 
     <div style="text-align:center;padding:0.6rem;border-top:1px solid #E8D5CC;background:#FDFAF7;">
-      <button onclick="closePopup()" style="background:none;border:none;font-size:0.8rem;color:#9C8C80;cursor:pointer;padding:0;">Passer l'introduction</button>
+      <button onclick="closePopup()" style="background:none;border:none;font-size:0.9rem;font-weight:700;color:#8B2500;text-decoration:underline;cursor:pointer;padding:0;">Passer l'introduction</button>
     </div>
 
   </div>
@@ -367,6 +406,11 @@
     else{acc.style.maxHeight=acc.scrollHeight+'px';btn.textContent='Refermer ↑';}
   };
   window.closePopup=function(){document.getElementById('popup-overlay').style.display='none';};
+  /* L'introduction ne s'affiche qu'à la première visite, et jamais quand on arrive vers une section précise (ex. /#offre) */
+  try{
+    if(location.hash || localStorage.getItem('lci_intro_vue')) closePopup();
+    else localStorage.setItem('lci_intro_vue','1');
+  }catch(e){}
   renderDots(1);
 })();
 </script>
@@ -374,7 +418,7 @@
 <!-- ── NAVIGATION ── -->
 <nav>
   <a href="#hero" class="nav-logo">
-    <img src="assets/images/Logo_fond_transparent.png" alt="Logo Les Cavalières Intuitives">
+    <img src="assets/images/logo-128.webp" alt="Logo Les Cavalières Intuitives">
     <div>Géraldine Feron<span>et psychologue pour Robert</span></div>
   </a>
   <ul class="nav-links">
@@ -404,7 +448,7 @@
     </div>
   </div>
   <div class="hero-visual">
-    <img src="assets/images/Logo_fond_transparent.png" alt="Géraldine Feron — équicoach pour cavalières intuitives" class="logo-img">
+    <img src="assets/images/logo.webp" alt="Géraldine Feron — équicoach pour cavalières intuitives" class="logo-img" width="420" height="420">
   </div>
 </section>
 
@@ -427,6 +471,7 @@
       <div class="pour-toi-quote reveal">
         <blockquote>"Tu n'as pas perdu le lien avec ton cheval. Tu as perdu le lien avec toi-même. Cette version de toi qui décide, qui ose, qui choisit pour elle — et pas pour apaiser Robert. C'est elle qu'on va retrouver."</blockquote>
         <p class="robert-note">Et Robert dans tout ça ? Il est là, accroupi dans son coin, prêt à te convaincre que ton cheval veut ta mort. <strong>On va s'occuper de lui.</strong></p>
+        <p class="robert-note"><a href="/peur-a-cheval/" style="color:inherit;text-decoration:underline;">Comprendre d'où vient ta peur à cheval, et comment la calmer</a></p>
       </div>
     </div>
   </div>
@@ -482,7 +527,7 @@
 <section id="offre">
   <div class="section-inner">
     <span class="section-tag">L'accompagnement</span>
-    <h2 class="section-title reveal">Calmer Robert, à ton rythme</h2>
+    <h2 class="section-title reveal">Coaching à distance : calmer Robert, à ton rythme</h2>
     <p class="offre-intro reveal">La peur est mentale. Sa régulation est physique. Deux formules, un même travail de fond — porté par le collectif dans les deux cas.</p>
     <div class="niveaux-grid">
 
@@ -501,7 +546,7 @@
         </ul>
         <p class="niveau-pour">Pour qui : un déclic rapide à provoquer — un concours, un voyage, une reprise après un coup dur, un cheval qui vient de changer.</p>
         <button type="button" class="btn-primary niveau-cta" onclick="openBookingModal('Intensive')">→ Réserver un appel de 15 min</button>
-        <p style="font-size:0.78rem;color:var(--gray-warm);text-align:center;">Un appel Zoom de 15 min pour cadrer ton objectif. Puis on démarre. Paiement en 4 fois disponible (PayPal).</p>
+        <p style="font-size:0.78rem;color:var(--gray-warm);text-align:center;">Un appel Zoom de 15 min, gratuit et sans engagement, pour cadrer ton objectif. Puis on démarre. Paiement en 4 fois disponible (PayPal).</p>
       </div>
 
       <!-- FORMULE ANCRAGE -->
@@ -518,7 +563,7 @@
         </ul>
         <p class="niveau-pour">Pour qui : que le changement tienne — de nouveaux automatismes installés dans la durée, portés par le collectif entre les séances. Souvent la suite naturelle après l'Intensive.</p>
         <button type="button" class="btn-primary niveau-cta" onclick="openBookingModal('Ancrage')">→ Réserver un appel de 15 min</button>
-        <p style="font-size:0.78rem;color:var(--gray-warm);text-align:center;">Sur proposition de Géraldine. Accès limité.</p>
+        <p style="font-size:0.78rem;color:var(--gray-warm);text-align:center;">Appel de 15 min gratuit et sans engagement. Sur proposition de Géraldine, accès limité.</p>
       </div>
 
     </div>
@@ -542,7 +587,7 @@
 <section id="temoignages">
   <div class="section-inner">
     <span class="section-tag">Elles l'ont vécu</span>
-    <h2 class="section-title reveal">Ce qu'elles disent</h2>
+    <h2 class="section-title reveal">Ce qu'en disent les cavalières accompagnées</h2>
     <div class="videos-mosaic reveal">
       <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/HbaCQSr1f6g" title="Témoignage Mathilde" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
       <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/2wYcn0lQoBs" title="Témoignage Alba" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
@@ -557,10 +602,10 @@
 <section id="apropos">
   <div class="section-inner">
     <span class="section-tag">Qui je suis</span>
-    <h2 class="section-title reveal">Géraldine Feron</h2>
+    <h2 class="section-title reveal">Géraldine Feron, équicoach</h2>
     <div class="apropos-inner">
       <div class="apropos-photo reveal">
-        <img src="assets/Geraldine.jpg" alt="Géraldine Feron avec son cheval">
+        <img src="assets/Geraldine.webp" alt="Géraldine Feron avec son cheval" width="900" height="1350" loading="lazy">
       </div>
       <div class="apropos-text reveal">
         <p>On devient équicoach par passion pour les chevaux. On continue par passion pour les humains.</p>
@@ -601,7 +646,7 @@
 <footer>
   <div class="footer-brand">
     <a href="#hero" class="nav-logo">
-      <img src="assets/images/Logo_fond_transparent.png" alt="Logo Les Cavalières Intuitives">
+      <img src="assets/images/logo-128.webp" alt="Logo Les Cavalières Intuitives">
       <div>Géraldine Feron<span>et psychologue pour Robert</span></div>
     </a>
     <p>Équicoach pour cavalières intuitives.<br>Méthode Intention – Timing – Énergie.<br>100 % distanciel.</p>
@@ -616,6 +661,7 @@
       <li><a href="#offre">Mission Connexion</a></li>
       <li><a href="#temoignages">Témoignages</a></li>
       <li><a href="#apropos">Géraldine</a></li>
+      <li><a href="/peur-a-cheval/">Peur à cheval</a></li>
       <li><a href="/blog/">Blog</a></li>
     </ul>
   </div>
@@ -655,7 +701,7 @@
   window.openBookingModal = function(formule){
     document.getElementById('booking-formule-field').value = formule;
     document.getElementById('booking-subject-field').value = 'Demande d\'appel — Formule ' + formule;
-    document.getElementById('booking-formule-sub').textContent = 'Formule ' + formule;
+    document.getElementById('booking-formule-sub').textContent = 'Formule ' + formule + ', appel gratuit et sans engagement';
     document.getElementById('booking-title').textContent = 'Réserver ton appel de 15 min';
     document.getElementById('booking-overlay').classList.add('show');
     document.body.style.overflow = 'hidden';
