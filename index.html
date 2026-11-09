@@ -2,503 +2,704 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Quelle cavalière ton cheval voit-il en toi ? Le test des 4 clés</title>
-<meta name="description" content="24 questions, 5 minutes : découvre par quelle porte ta peur se glisse entre toi et ton cheval, ce qu'il perçoit de toi, et par où commencer.">
-<link rel="canonical" href="https://les-cavalieres-intuitives.com/test/">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="assets/consent.js" defer></script>
+<title>Équicoaching à distance : retrouver confiance à cheval</title>
+<meta name="description" content="Tu aimes ton cheval mais la peur prend le dessus ? Géraldine Feron, équicoach depuis 25 ans, t'accompagne 100 % à distance pour retrouver confiance.">
+<link rel="canonical" href="https://les-cavalieres-intuitives.com/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Les Cavalières Intuitives">
-<meta property="og:title" content="Quelle cavalière ton cheval voit-il en toi ?">
-<meta property="og:description" content="Le test des 4 clés : intention, timing, énergie, posture. 24 questions, 5 minutes.">
-<meta property="og:url" content="https://les-cavalieres-intuitives.com/test/">
-<meta property="og:image" content="https://les-cavalieres-intuitives.com/test/partage.webp">
-<script src="/assets/consent.js" defer></script>
+<meta property="og:url" content="https://les-cavalieres-intuitives.com/">
+<meta property="og:title" content="Équicoaching à distance : retrouver confiance à cheval">
+<meta property="og:description" content="La peur prend le dessus avec ton cheval ? Géraldine Feron, équicoach, t'accompagne 100 % à distance pour retrouver confiance, à ton rythme.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://les-cavalieres-intuitives.com/#service",
+      "name": "Les Cavalières Intuitives",
+      "url": "https://les-cavalieres-intuitives.com/",
+      "description": "Équicoaching 100 % à distance pour les cavalières adultes qui ont peur à cheval et veulent retrouver confiance et connexion avec leur cheval.",
+      "image": "https://les-cavalieres-intuitives.com/assets/images/Logo_fond_transparent.png",
+      "areaServed": "FR",
+      "inLanguage": "fr-FR",
+      "founder": {
+        "@id": "https://les-cavalieres-intuitives.com/#geraldine"
+      },
+      "sameAs": [
+        "https://www.facebook.com/groups/lecerclesdescavalieresintuitives"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://les-cavalieres-intuitives.com/#geraldine",
+      "name": "Géraldine Feron",
+      "jobTitle": "Équicoach",
+      "url": "https://les-cavalieres-intuitives.com/",
+      "image": "https://les-cavalieres-intuitives.com/assets/Geraldine.webp"
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@400;700&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/blog/blog.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
 <style>
-/* Styles propres au test (les couleurs et polices viennent de /blog/blog.css) */
-.test{max-width:40rem;margin:0 auto;padding:2rem 1.2rem 3rem}
-.carte{background:#fff;border:1px solid var(--rust-light);padding:2rem 1.4rem}
-@media(min-width:600px){.carte{padding:2.6rem 3rem}}
-.ecran{display:none;animation:apparait .35s ease}
-.ecran.actif{display:block}
-@keyframes apparait{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.surtitre{color:var(--amber);font-weight:700;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;margin:0 0 .6rem}
-.test h1{font-size:clamp(1.9rem,5.5vw,2.6rem);margin:0 0 1rem}
-.test h2{font-size:clamp(1.5rem,4vw,1.9rem);margin:0 0 .8rem}
-.test h3{font-size:1.3rem;margin:0 0 .4rem}
-.lead{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:1.2rem;color:var(--rust);line-height:1.5}
-.puces{list-style:none;padding:0;margin:1.2rem 0 1.8rem}
-.puces li{padding-left:1.5rem;position:relative;margin-bottom:.3rem}
-.puces li::before{content:"";position:absolute;left:0;top:.7em;width:.55rem;height:.55rem;background:var(--amber);border-radius:50%}
-button.btn{border:0;cursor:pointer;font:700 1rem Lato,sans-serif;text-align:center}
-.btn-gros{font-size:1.08rem!important;padding:1rem 2.2rem}
-.btn.large{display:block;width:100%}
-.btn:disabled{opacity:.5;cursor:not-allowed}
-.lien{background:none;border:0;color:var(--muted);font:700 .95rem Lato,sans-serif;cursor:pointer;padding:.4rem 0;margin-top:1rem}
-.lien:hover{color:var(--rust)}
-.petit{font-size:.88rem;color:var(--muted)}
-/* ===== Page d'accueil du test ===== */
-.wrap{max-width:1080px;margin:0 auto;padding:0 1.4rem}
-.hero{padding-top:3rem;padding-bottom:2.5rem;display:grid;gap:2.2rem;align-items:center}
-@media(min-width:860px){.hero{grid-template-columns:1.1fr .9fr;padding-top:4rem;padding-bottom:3.5rem}}
-.hero h1{font-size:clamp(2.1rem,5vw,3.2rem);margin:0 0 1rem}
-.hero .lead{font-size:1.3rem;margin:0 0 1rem}
-.hero img,.duo img{width:100%;border-radius:3px;box-shadow:0 10px 30px rgba(44,26,16,.12)}
-.reassure{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-size:.9rem;color:var(--muted);margin:1rem 0 0}
-.reassure span::before{content:"✓ ";color:var(--amber);font-weight:700}
-.bande{background:var(--beige);padding:3.2rem 0}
-.section{padding:3.2rem 0}
-.titre-section{text-align:center;max-width:40rem;margin:0 auto 2rem}
-.titre-section h2{font-size:clamp(1.6rem,3.5vw,2.2rem);margin:0 0 .6rem}
-.titre-section p{color:var(--muted);margin:0}
-.cles4{display:grid;gap:1rem;grid-template-columns:1fr}
-@media(min-width:640px){.cles4{grid-template-columns:1fr 1fr}}
-@media(min-width:980px){.cles4{grid-template-columns:repeat(4,1fr)}}
-.cle4{background:var(--off-white);border-top:3px solid var(--rust);padding:1.3rem 1.2rem}
-.cle4 .n{font-family:"Playfair Display",serif;font-size:2rem;color:var(--amber);line-height:1}
-.cle4 h3{font-size:1.35rem;margin:.3rem 0 .3rem}
-.cle4 p{margin:0;font-size:.97rem}
-.cle4 .q{margin-top:.7rem;font-family:"Playfair Display",serif;font-style:italic;color:var(--rust);font-size:.95rem}
-.decouvre{display:grid;gap:1.2rem;grid-template-columns:1fr;counter-reset:d}
-@media(min-width:760px){.decouvre{grid-template-columns:repeat(4,1fr)}}
-.decouvre div{border-top:1px solid var(--rust-light);padding-top:1rem}
-.decouvre strong{display:block;font-family:"Playfair Display",serif;color:var(--rust);font-size:1.15rem;margin-bottom:.2rem}
-.decouvre p{margin:0;font-size:.97rem}
-.duo{display:grid;gap:2rem;align-items:center}
-@media(min-width:820px){.duo{grid-template-columns:.9fr 1.1fr}.duo.inverse > :first-child{order:2}}
-.duo h2{font-size:clamp(1.6rem,3.5vw,2.1rem);margin:0 0 .8rem}
-.duo p{margin:0 0 1rem}
-.portrait img{max-height:520px;object-fit:cover;object-position:top}
-.creds{list-style:none;padding:0;margin:0 0 1.2rem}
-.creds li{padding:.35rem 0 .35rem 1.4rem;position:relative;border-bottom:1px solid var(--rust-light);font-size:.97rem}
-.creds li::before{content:"";position:absolute;left:0;top:.95em;width:.5rem;height:.5rem;border-radius:50%;background:var(--amber)}
-.articles{display:grid;gap:1.2rem;grid-template-columns:1fr}
-@media(min-width:760px){.articles{grid-template-columns:repeat(3,1fr)}}
-.article{background:var(--off-white);text-decoration:none;color:var(--brown);display:block;border:1px solid var(--rust-light);transition:transform .15s,box-shadow .15s}
-.article:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(44,26,16,.1)}
-.article img{aspect-ratio:1200/630;object-fit:cover;width:100%}
-.article div{padding:1rem 1.1rem 1.2rem}
-.article strong{font-family:"Playfair Display",serif;color:var(--rust);font-size:1.1rem;line-height:1.3;display:block}
-.article span{display:block;margin-top:.5rem;font-size:.88rem;color:var(--amber);font-weight:700}
-.final{text-align:center;padding-top:3.5rem;padding-bottom:4rem}
-.final h2{font-size:clamp(1.7rem,4vw,2.4rem);margin:0 0 .6rem}
-.final p{color:var(--muted);margin:0 0 1.6rem}
-.liens-suite{margin-top:1.2rem;font-size:.95rem}
-/* Questions */
-.progression{display:flex;align-items:center;gap:.8rem;margin-bottom:1.6rem}
-.barre{flex:1;height:6px;background:var(--rust-light);border-radius:99px;overflow:hidden}
-.barre span{display:block;height:100%;width:0;background:var(--rust);transition:width .35s ease}
-.compteur{font-size:.85rem;color:var(--muted);min-width:3.2rem;text-align:right}
-.question{font-family:"Playfair Display",Georgia,serif;font-size:clamp(1.3rem,4.2vw,1.65rem);line-height:1.35;color:var(--brown);margin:0 0 1.5rem;min-height:4.1em}
-.choix{display:grid;gap:.6rem}
-.choix button{display:flex;align-items:center;gap:.8rem;width:100%;text-align:left;background:var(--off-white);border:1.5px solid var(--rust-light);border-radius:3px;padding:.8rem 1rem;font:700 1rem Lato,sans-serif;color:var(--brown);cursor:pointer;transition:border-color .15s,background .15s}
-@media(hover:hover){.choix button:hover{border-color:var(--rust);background:var(--beige)}}
-.choix button.choisi{border-color:var(--rust);background:var(--rust);color:#fff}
-.choix .num{display:inline-flex;align-items:center;justify-content:center;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--beige);color:var(--muted);font-size:.85rem;flex:none}
-.choix button.choisi .num{background:rgba(255,255,255,.2);color:#fff}
-/* Formulaires */
-.test label,.modale label{display:block;font-weight:700;margin:1rem 0 .3rem}
-.opt{font-weight:400;color:var(--muted)}
-.test input[type=text],.test input[type=email],.test input[type=tel],.modale input[type=text],.modale input[type=email],.modale input[type=tel],.modale textarea{width:100%;padding:.8rem 1rem;border:1.5px solid var(--rust-light);border-radius:3px;font:1rem Lato,sans-serif;background:var(--off-white);color:var(--brown)}
-.test input:focus,.modale input:focus,.modale textarea:focus{outline:none;border-color:var(--rust)}
-.case{display:flex!important;gap:.7rem;align-items:flex-start;font-weight:400!important;font-size:.92rem;color:var(--muted);margin:1.3rem 0 1.5rem!important}
-.case input{margin-top:.3rem;width:1.1rem;height:1.1rem;accent-color:var(--rust);flex:none}
-.erreur{color:#a33b2b;font-size:.92rem;margin-top:.6rem;display:none}
-.pot{position:absolute;left:-9999px}
-/* Résultat */
-.bloc{border-left:3px solid var(--amber);padding:.2rem 0 .2rem 1rem;margin:1.3rem 0}
-.bloc .titre{font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--amber);margin-bottom:.2rem}
-.bloc p{margin:0}
-.robert-def{font-size:.86rem;color:var(--muted);margin-top:.4rem!important}
-.cle{border:1px solid var(--rust-light);padding:1.1rem 1.1rem .3rem;margin-bottom:.9rem}
-.cle-tete{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.5rem}
-.cle-tete strong{font-family:"Playfair Display",Georgia,serif;font-size:1.3rem;color:var(--rust)}
-.cle-def{font-size:.9rem;color:var(--muted);margin-bottom:.7rem}
-.badge{font-size:.75rem;font-weight:700;padding:.2rem .65rem;border-radius:99px;background:var(--beige);color:var(--muted)}
-.badge.appui{background:#E6EDE4;color:#3F5E4A}
-.badge.peur{background:#F5E1D6;color:var(--amber)}
-.sous{font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--amber);margin:.6rem 0 .1rem}
-.cle p{font-size:.98rem;margin:0 0 .6rem}
-.encart{background:var(--beige);border-left:4px solid var(--rust);padding:1.2rem 1.3rem;margin:1.6rem 0}
-.encart p{margin:0}
-.encart .btn{margin-top:1rem}
-.suite{text-align:center;margin:2rem 0 .5rem}
-.suite .alt{margin-top:.8rem}
-.mention{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--rust-light);font-size:.8rem;color:var(--muted);line-height:1.6}
-/* Modale rendez-vous */
-.voile{position:fixed;inset:0;background:rgba(44,26,16,.55);display:none;align-items:center;justify-content:center;padding:1rem;z-index:10000}
-.voile.ouvert{display:flex}
-.modale{background:var(--off-white);max-width:30rem;width:100%;max-height:92vh;overflow-y:auto;padding:1.8rem 1.4rem;position:relative;border-radius:3px}
-.modale h3{margin:0 0 .3rem}
-.fermer{position:absolute;top:.6rem;right:.8rem;background:none;border:0;font-size:1.6rem;color:var(--muted);cursor:pointer;line-height:1}
+  :root {
+    --rust:       #8B2500;
+    --amber:      #C0622A;
+    --beige:      #F5EFE6;
+    --gray-warm:  #9C8C80;
+    --brown:      #2C1A10;
+    --off-white:  #FDFAF7;
+    --rust-light: #E8D5CC;
+    --rust-mid:   #D4785A;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--off-white); color: var(--brown); font-family: 'Lato', sans-serif; font-size: 16px; line-height: 1.7; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(253,250,247,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--rust-light); padding: 0.75rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--rust); font-weight: 700; text-decoration: none; letter-spacing: 0.02em; display: flex; align-items: center; gap: 0.75rem; }
+  .nav-logo img { width: 52px; height: 52px; object-fit: contain; flex-shrink: 0; }
+  .nav-logo span { font-family: 'Dancing Script', cursive; font-weight: 500; font-size: 0.85rem; color: var(--gray-warm); display: block; line-height: 1.1; margin-top: -2px; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { font-size: 0.88rem; color: var(--brown); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; opacity: 0.7; transition: opacity 0.2s, color 0.2s; }
+  .nav-links a:hover { opacity: 1; color: var(--rust); }
+  .nav-cta { background: var(--rust); color: var(--off-white) !important; padding: 0.5rem 1.25rem; border-radius: 2px; opacity: 1 !important; font-weight: 700; font-size: 0.82rem !important; transition: background 0.2s !important; }
+  .nav-cta:hover { background: var(--amber) !important; }
+  .nav-app-badge { display: inline-flex; align-items: center; gap: 0.35rem; font-family: 'Lato', sans-serif; font-size: 0.78rem; font-weight: 700; color: var(--rust); background: transparent; border: 1.5px solid var(--rust-light); border-radius: 20px; padding: 0.3rem 0.85rem; text-decoration: none; letter-spacing: 0.03em; transition: background 0.2s, color 0.2s, border-color 0.2s; white-space: nowrap; opacity: 1 !important; }
+  .nav-app-badge:hover { background: var(--rust); color: var(--off-white); border-color: var(--rust); }
+
+  /* HERO */
+  #hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 7rem 4rem 4rem; background: var(--off-white); position: relative; overflow: hidden; }
+  #hero::before { content: ''; position: absolute; right: -100px; top: -100px; width: 600px; height: 600px; background: radial-gradient(circle, var(--rust-light) 0%, transparent 70%); opacity: 0.4; pointer-events: none; }
+  .hero-text { position: relative; z-index: 1; }
+  .hero-eyebrow { font-family: 'Dancing Script', cursive; font-size: 1.3rem; color: var(--amber); margin-bottom: 1rem; }
+  .hero-title { font-family: 'Playfair Display', serif; line-height: 1.2; color: var(--rust); margin-bottom: 1.5rem; }
+  .hero-title .title-main { display: block; font-size: clamp(2.4rem, 4vw, 3.5rem); }
+  .hero-title .title-sub { display: block; font-size: clamp(1.15rem, 2vw, 1.5rem); font-weight: 400; color: var(--brown); opacity: 0.75; margin-top: 0.5rem; }
+  .hero-title em { font-style: italic; color: var(--amber); }
+  .hero-sub { font-size: 1.1rem; color: var(--brown); opacity: 0.8; max-width: 480px; margin-bottom: 2.5rem; line-height: 1.8; }
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary { display: inline-block; background: var(--rust); color: var(--off-white); padding: 0.9rem 2rem; border-radius: 2px; font-weight: 700; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.03em; transition: background 0.2s, transform 0.15s; }
+  .btn-primary:hover { background: var(--amber); transform: translateY(-1px); }
+  button.btn-primary { border: none; cursor: pointer; font-family: 'Lato', sans-serif; width: 100%; }
+  .btn-secondary { display: inline-block; border: 1.5px solid var(--rust-light); color: var(--rust); padding: 0.9rem 2rem; border-radius: 2px; font-weight: 700; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.03em; transition: border-color 0.2s, color 0.2s; }
+  .btn-secondary:hover { border-color: var(--amber); color: var(--amber); }
+  .hero-visual { display: flex; justify-content: center; align-items: center; position: relative; z-index: 1; }
+  .logo-img { width: 420px; height: 420px; object-fit: contain; filter: drop-shadow(0 8px 32px rgba(139,37,0,0.10)); }
+
+  /* POUR TOI */
+  #pour-toi { background: var(--rust); color: var(--off-white); padding: 6rem 4rem; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-tag { font-family: 'Dancing Script', cursive; font-size: 1.1rem; color: var(--rust-light); margin-bottom: 0.5rem; display: block; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.2; margin-bottom: 3rem; }
+  #pour-toi .section-title { color: var(--off-white); }
+  .pour-toi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+  .pour-toi-items { list-style: none; }
+  .pour-toi-items li { padding: 1.25rem 0; border-bottom: 1px solid rgba(253,250,247,0.15); font-size: 1.05rem; display: flex; gap: 1rem; align-items: flex-start; }
+  .pour-toi-items li:last-child { border-bottom: none; }
+  .check { width: 22px; height: 22px; background: var(--off-white); color: var(--rust); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 900; flex-shrink: 0; margin-top: 2px; }
+  .pour-toi-quote { background: rgba(253,250,247,0.08); border-left: 3px solid var(--rust-light); padding: 2rem; border-radius: 0 4px 4px 0; }
+  .pour-toi-quote blockquote { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; line-height: 1.8; color: var(--off-white); opacity: 0.95; }
+  .pour-toi-quote .robert-note { margin-top: 1.5rem; font-size: 0.9rem; color: var(--rust-light); border-top: 1px solid rgba(253,250,247,0.15); padding-top: 1rem; }
+  .pour-toi-quote .robert-note strong { color: var(--off-white); }
+
+  /* PARCOURS */
+  #methode { background: var(--beige); padding: 6rem 4rem; }
+  #methode .section-title { color: var(--rust); }
+  .methode-intro { max-width: 680px; margin: 1.5rem 0 3.5rem; font-size: 1.05rem; color: var(--brown); opacity: 0.85; line-height: 1.85; }
+  .methode-intro em { font-family: 'Playfair Display', serif; font-style: italic; color: var(--rust); }
+  .methode-intro p + p { margin-top: 0.75rem; }
+  .methode-grid { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1rem; }
+  .methode-card { background: var(--off-white); border: 1px solid var(--rust-light); padding: 2rem 2.5rem; display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; align-items: start; transition: box-shadow 0.2s; }
+  .methode-card:hover { box-shadow: 0 6px 24px rgba(139,37,0,0.08); }
+  .methode-num { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--rust-light); line-height: 1; font-weight: 700; }
+  .methode-card-body h3 { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--rust); margin-bottom: 0.5rem; }
+  .methode-card-body p { color: var(--brown); opacity: 0.85; font-size: 0.97rem; line-height: 1.75; }
+
+  /* DÉCOUVERTE */
+  #decouverte { background: var(--off-white); padding: 5rem 4rem; text-align: center; border-top: 1px solid var(--rust-light); }
+  #decouverte .section-inner { max-width: 700px; }
+  #decouverte .section-title { color: var(--rust); }
+  .decouverte-text { font-size: 1.05rem; color: var(--brown); opacity: 0.85; max-width: 600px; margin: 1rem auto 2.5rem; line-height: 1.8; }
+
+  /* OFFRE — 3 niveaux */
+  #offre { background: var(--off-white); padding: 6rem 4rem; }
+  #offre .section-title { color: var(--rust); }
+  .offre-intro { text-align: center; font-size: 1.05rem; color: var(--brown); opacity: 0.8; max-width: 650px; margin: 0 auto 3rem; line-height: 1.8; }
+  .niveaux-grid { display: grid; grid-template-columns: repeat(2, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1rem; max-width: 860px; margin-left: auto; margin-right: auto; }
+  .niveau-card { background: var(--beige); border: 1.5px solid var(--rust-light); padding: 2.5rem 2rem; position: relative; display: flex; flex-direction: column; gap: 1.25rem; transition: transform 0.2s, box-shadow 0.2s; }
+  .niveau-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(139,37,0,0.09); }
+  .niveau-card.featured { border-color: var(--amber); background: var(--off-white); }
+  .niveau-card.featured::before { content: 'Le plus populaire'; position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--amber); color: var(--off-white); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.25rem 0.85rem; border-radius: 20px; white-space: nowrap; }
+  .niveau-label { font-family: 'Dancing Script', cursive; font-size: 1rem; color: var(--amber); }
+  .niveau-card h3 { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--rust); margin: 0; }
+  .niveau-prix { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--rust); font-weight: 700; line-height: 1; }
+  .niveau-prix span { font-size: 0.95rem; font-family: 'Lato', sans-serif; font-weight: 400; color: var(--gray-warm); }
+  .niveau-includes { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; flex: 1; }
+  .niveau-includes li { font-size: 0.9rem; color: var(--brown); opacity: 0.85; display: flex; gap: 0.6rem; align-items: flex-start; }
+  .niveau-includes li::before { content: '→'; color: var(--amber); font-weight: 700; flex-shrink: 0; }
+  .niveau-pour { font-size: 0.82rem; color: var(--gray-warm); font-style: italic; border-top: 1px solid var(--rust-light); padding-top: 0.85rem; line-height: 1.6; }
+  .niveau-cta { display: block; text-align: center; padding: 0.75rem 1rem; font-size: 0.88rem; font-weight: 700; }
+  .niveau-accroche { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.05rem; color: var(--amber); margin: -0.5rem 0 0; }
+  .offre-liaison { max-width: 680px; margin: 1.5rem auto 0; font-size: 0.98rem; color: var(--rust); font-family: 'Playfair Display', serif; font-style: italic; text-align: center; }
+  .offre-comparatif { max-width: 860px; margin: 3rem auto 0; border-collapse: collapse; width: 100%; }
+  .offre-comparatif th, .offre-comparatif td { border: 1px solid var(--rust-light); padding: 0.9rem 1rem; text-align: left; font-size: 0.88rem; color: var(--brown); vertical-align: top; }
+  .offre-comparatif th { font-family: 'Playfair Display', serif; color: var(--rust); background: var(--beige); font-weight: 700; }
+  .offre-comparatif td:first-child { font-weight: 700; color: var(--rust); white-space: nowrap; }
+  @media (max-width: 700px) { .offre-comparatif { font-size: 0.8rem; } .offre-comparatif th, .offre-comparatif td { padding: 0.6rem 0.7rem; } }
+
+  /* MODALE RÉSERVATION D'APPEL */
+  #booking-overlay { display: none; position: fixed; inset: 0; background: rgba(44,26,16,0.55); z-index: 1000; align-items: center; justify-content: center; padding: 1.5rem; }
+  #booking-overlay.show { display: flex; }
+  .booking-modal { background: var(--off-white); max-width: 480px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 2.5rem 2rem; position: relative; border-radius: 4px; }
+  .booking-close { position: absolute; top: 1rem; right: 1.25rem; background: none; border: none; font-size: 1.4rem; color: var(--gray-warm); cursor: pointer; line-height: 1; padding: 0.25rem; }
+  .booking-close:hover { color: var(--rust); }
+  .booking-modal h3 { font-family: 'Playfair Display', serif; color: var(--rust); font-size: 1.4rem; margin: 0 0 0.4rem; }
+  .booking-modal .booking-sub { font-size: 0.9rem; color: var(--gray-warm); margin: 0 0 1.5rem; }
+  .booking-field { margin-bottom: 1rem; }
+  .booking-field label { display: block; font-size: 0.82rem; font-weight: 700; color: var(--brown); margin-bottom: 0.35rem; }
+  .booking-field input, .booking-field textarea { width: 100%; border: 1.5px solid var(--rust-light); border-radius: 3px; padding: 0.7rem 0.85rem; font-family: 'Lato', sans-serif; font-size: 0.92rem; color: var(--brown); background: var(--off-white); }
+  .booking-field input:focus, .booking-field textarea:focus { outline: none; border-color: var(--amber); }
+  .booking-field textarea { resize: vertical; min-height: 70px; }
+  #booking-form .btn-primary { width: 100%; border: none; cursor: pointer; font-family: 'Lato', sans-serif; margin-top: 0.5rem; }
+  #booking-form .btn-primary:disabled { opacity: 0.6; cursor: wait; }
+  .booking-error { color: var(--rust); font-size: 0.82rem; margin-top: 0.75rem; display: none; }
+  .booking-success { text-align: center; padding: 1rem 0; }
+  .booking-success h3 { margin-bottom: 0.75rem; }
+  .booking-success p { color: var(--brown); opacity: 0.85; font-size: 0.95rem; line-height: 1.7; }
+
+  /* TÉMOIGNAGES VIDÉOS */
+  #temoignages { background: var(--beige); padding: 6rem 4rem; }
+  #temoignages .section-title { color: var(--rust); }
+  .videos-mosaic { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto auto; gap: 20px; margin-top: 2.5rem; max-width: 1100px; margin-left: auto; margin-right: auto; }
+  .video-card:nth-child(1) { grid-column: 1 / 2; }
+  .video-card:nth-child(2) { grid-column: 2 / 4; }
+  .video-card:nth-child(3) { grid-column: 1 / 2; }
+  .video-card:nth-child(4) { grid-column: 2 / 3; }
+  .video-card:nth-child(5) { grid-column: 3 / 4; }
+  .video-card { background: var(--off-white); border: 1px solid var(--rust-light); border-radius: 10px; overflow: hidden; box-shadow: 0 2px 12px rgba(44,26,16,0.07); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .video-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(139,37,0,0.13); }
+  .video-wrapper { position: relative; width: 100%; padding-top: 56.25%; background: var(--brown); }
+  .video-wrapper iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+  .temo-cta { text-align: center; margin-top: 3rem; }
+  .temo-cta p { font-family: 'Dancing Script', cursive; font-size: 1.15rem; color: var(--amber); margin-bottom: 1.25rem; }
+
+  /* À PROPOS */
+  #apropos { background: var(--off-white); padding: 6rem 4rem; }
+  #apropos .section-title { color: var(--rust); }
+  .apropos-inner { display: grid; grid-template-columns: 1fr 1.5fr; gap: 5rem; align-items: start; }
+  .apropos-photo { aspect-ratio: 3/4; overflow: hidden; border-radius: 4px; }
+  .apropos-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .apropos-text p { margin-bottom: 1.25rem; opacity: 0.85; }
+  .credentials { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+  .cred-tag { background: var(--beige); border: 1px solid var(--rust-light); color: var(--rust); font-size: 0.8rem; padding: 0.35rem 0.85rem; border-radius: 2px; font-weight: 700; letter-spacing: 0.02em; }
+
+  /* CERCLE */
+  #cercle { background: var(--rust); padding: 6rem 4rem; text-align: center; }
+  #cercle .section-tag { color: var(--rust-light); display: block; margin-bottom: 0.5rem; }
+  #cercle .section-title { color: var(--off-white); margin-bottom: 1rem; }
+  #cercle .btn-primary { background: var(--off-white); color: var(--rust); }
+  #cercle .btn-primary:hover { background: var(--beige); color: var(--rust); }
+  #cercle .section-sub { color: var(--off-white); opacity: 0.8; max-width: 600px; margin: 0 auto 2rem; font-size: 1.05rem; }
+  .cercle-lead { background: rgba(253,250,247,0.08); border: 1.5px solid rgba(253,250,247,0.25); max-width: 480px; margin: 3rem auto 0; padding: 2.5rem; }
+  .cercle-lead h4 { font-family: 'Playfair Display', serif; color: var(--off-white); font-size: 1.3rem; margin-bottom: 0.5rem; }
+  .cercle-lead p { color: var(--rust-light); font-size: 0.9rem; margin-bottom: 1.5rem; }
+  .btn-white { background: var(--off-white); color: var(--rust); padding: 0.85rem 1.5rem; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 0.9rem; border: none; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+  .btn-white:hover { background: var(--rust-light); }
+  .ou-fb { color: var(--rust-light); font-size: 0.85rem; margin-top: 1rem; }
+  .ou-fb a { color: var(--off-white); font-weight: 700; }
+
+  /* FOOTER */
+  footer { background: var(--brown); color: var(--rust-light); padding: 3rem 4rem; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem; }
+  .footer-brand .nav-logo { color: var(--off-white); font-size: 1.1rem; }
+  .footer-brand .nav-logo span { color: var(--rust-light); }
+  .footer-brand p { margin-top: 1rem; font-size: 0.85rem; opacity: 0.7; line-height: 1.7; }
+  footer h5 { color: var(--off-white); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem; }
+  footer ul { list-style: none; }
+  footer ul li { margin-bottom: 0.5rem; }
+  footer ul a { color: var(--rust-light); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+  footer ul a:hover { color: var(--off-white); }
+  .footer-bottom { background: #1A0E07; color: var(--gray-warm); text-align: center; padding: 1rem 4rem; font-size: 0.8rem; }
+
+  /* L'HISTOIRE */
+  #histoire { background: var(--beige); padding: 6rem 4rem; }
+  #histoire .section-title { color: var(--rust); }
+  #histoire .section-tag { color: var(--amber); }
+  .histoire-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; align-items: start; }
+  .histoire-etape { background: var(--off-white); border: 1px solid var(--rust-light); border-radius: 4px; overflow: hidden; }
+  .histoire-etape img { width: 100%; height: auto; display: block; border-bottom: 1px solid var(--rust-light); }
+  .histoire-num { font-size: 0.85rem; font-weight: 700; color: var(--amber); margin: 1.25rem 1.5rem 0.25rem; }
+  .histoire-etape h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--rust); line-height: 1.3; margin: 0 1.5rem 0.75rem; }
+  .histoire-etape details { margin: 0 1.5rem 1.5rem; }
+  .histoire-etape summary { cursor: pointer; font-weight: 700; font-size: 0.9rem; color: var(--rust); list-style: none; display: inline-block; border: 1px solid var(--rust-light); border-radius: 4px; padding: 0.4rem 1rem; }
+  .histoire-etape summary::-webkit-details-marker { display: none; }
+  .histoire-etape summary:hover, .histoire-etape summary:focus-visible { border-color: var(--amber); }
+  .histoire-etape details[open] summary { margin-bottom: 1rem; }
+  .histoire-etape details p { font-size: 0.95rem; line-height: 1.75; margin-bottom: 0.7rem; }
+  .histoire-etape .histoire-chute { font-family: 'Playfair Display', serif; font-style: italic; color: var(--rust); margin-bottom: 0; }
+  @media (max-width: 900px) {
+    #histoire { padding: 4rem 1.5rem; }
+    .histoire-grid { grid-template-columns: 1fr; gap: 1.5rem; max-width: 480px; margin: 0 auto; }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 0.75rem 1.25rem; }
+    .nav-links { display: none; }
+    #hero { grid-template-columns: 1fr; padding: 6rem 1.5rem 3rem; }
+    .hero-visual { display: none; }
+    #pour-toi, #methode, #decouverte, #offre, #temoignages, #apropos, #cercle { padding: 4rem 1.5rem; }
+    .pour-toi-grid { grid-template-columns: 1fr; }
+    .methode-card { grid-template-columns: 50px 1fr; padding: 1.5rem; }
+    .niveaux-grid { grid-template-columns: 1fr; }
+    .apropos-inner { grid-template-columns: 1fr; }
+    .apropos-photo { aspect-ratio: 4/3; }
+    footer { grid-template-columns: 1fr; padding: 3rem 1.5rem; gap: 2rem; }
+    .videos-mosaic { grid-template-columns: 1fr; gap: 16px; }
+    .video-card:nth-child(n) { grid-column: 1 / -1; }
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  .hero-eyebrow { animation: fadeUp 0.6s ease both; }
+  .hero-title   { animation: fadeUp 0.7s 0.1s ease both; }
+  .hero-sub     { animation: fadeUp 0.7s 0.2s ease both; }
+  .hero-ctas    { animation: fadeUp 0.7s 0.3s ease both; }
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
 </style>
 </head>
 <body>
-<header class="site-head">
-  <div class="in">
-    <a class="logo" href="/"><img src="/assets/images/logo-128.webp" alt="" width="46" height="46"><div>Géraldine Feron<span>et psychologue pour Robert</span></div></a>
-    <nav class="site-nav" aria-label="Navigation principale">
-      <a href="/">Accueil</a>
-      <a href="/#offre">L'accompagnement</a>
-      <a href="/blog/">Blog</a>
-    </nav>
-  </div>
-</header>
 
-<div id="landing">
-  <!-- HÉRO -->
-  <section class="wrap hero">
-    <div>
-      <p class="surtitre">Le test des 4 clés</p>
-      <h1>Quelle cavalière ton cheval voit-il en toi&nbsp;?</h1>
-      <p class="lead">Ton cheval te lit avant même que tu montes en selle.</p>
-      <p>Ta respiration, ton regard, ta façon d'hésiter ou d'anticiper&nbsp;: il perçoit tout. Ce test ne mesure pas ton niveau à cheval. Il te montre ce que ton cheval ressent de toi, et par où commencer pour qu'il ait envie de te suivre.</p>
-      <button class="btn btn-gros commencer">Je commence le test</button>
-      <p class="reassure"><span>24 questions</span><span>5 minutes</span><span>Résultat immédiat</span><span>Gratuit</span></p>
-    </div>
-    <img src="/assets/illustration-1.webp" width="880" height="880" alt="Camille hésite entre la carrière, le manège et la promenade, pendant que Robert lui souffle un scénario catastrophe pour chaque chemin. Daytona attend. Igloo broute.">
-  </section>
 
-  <!-- LES 4 CLÉS -->
-  <section class="bande">
-    <div class="wrap">
-      <div class="titre-section">
-        <h2>Ta peur passe par une porte. Laquelle&nbsp;?</h2>
-        <p>Chez chaque cavalière, la peur se glisse entre elle et son cheval par une clé en particulier. Le test t'aide à trouver la tienne.</p>
-      </div>
-      <div class="cles4">
-        <div class="cle4"><div class="n">1</div><h3>Intention</h3><p>La clarté de ce que tu demandes à ton cheval.</p><p class="q">«&nbsp;Est-ce que j'ai le droit de lui demander ça&nbsp;?&nbsp;»</p></div>
-        <div class="cle4"><div class="n">2</div><h3>Timing</h3><p>Ta présence à l'instant, au bon moment.</p><p class="q">«&nbsp;J'ai vu la bâche avant lui.&nbsp;»</p></div>
-        <div class="cle4"><div class="n">3</div><h3>Énergie</h3><p>Ce que ton corps transmet à ton cheval.</p><p class="q">«&nbsp;Je retiens mon souffle sans m'en rendre compte.&nbsp;»</p></div>
-        <div class="cle4"><div class="n">4</div><h3>Posture</h3><p>Ta place de guide auprès de lui.</p><p class="q">«&nbsp;J'ai l'impression que c'est lui qui décide.&nbsp;»</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CE QUE TU VAS DÉCOUVRIR -->
-  <section class="section">
-    <div class="wrap">
-      <div class="titre-section"><h2>Ce que tu vas découvrir</h2></div>
-      <div class="decouvre">
-        <div><strong>Ton profil de cavalière</strong><p>Parmi 7 profils, celui qui te ressemble, décrit avec des mots simples et sans jugement.</p></div>
-        <div><strong>Ce que ton cheval perçoit</strong><p>Comment ton cheval, animal de proie, traduit ce que tu lui transmets, clé par clé.</p></div>
-        <div><strong>Ta clé ressource</strong><p>Le point d'appui sur lequel tu peux déjà compter pour avancer.</p></div>
-        <div><strong>Un premier outil</strong><p>Un exercice concret à essayer dès ta prochaine séance.</p></div>
-      </div>
-      <p style="text-align:center;margin:2rem 0 0"><button class="btn commencer">Découvrir mon profil</button></p>
-    </div>
-  </section>
-
-  <!-- ROBERT -->
-  <section class="bande">
-    <div class="wrap duo">
-      <img src="/assets/illustration-2.webp" width="880" height="880" loading="lazy" alt="Robert, en professeur, donne un cours sur les 1 567 342 façons de mourir à cheval devant une classe de petits Robert.">
-      <div>
-        <p class="surtitre">Qui est Robert&nbsp;?</p>
-        <h2>Robert n'est pas ton ennemi. Il fait juste trop bien son travail.</h2>
-        <p>Robert, c'est le nom que je donne à la partie de ton cerveau qui fonctionne en mode survie. Il garde en mémoire chaque chute, chaque frayeur, et il prédit le pire pour te protéger.</p>
-        <p>Le problème&nbsp;? Ton cheval, lui, lit tout ce que Robert déclenche dans ton corps. Le test te montre où Robert prend le plus de place.</p>
-        <a href="/peur-a-cheval/">Comprendre la peur à cheval →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- GÉRALDINE -->
-  <section class="section">
-    <div class="wrap duo inverse">
-      <div class="portrait"><img src="/assets/Geraldine.webp" width="900" height="1350" loading="lazy" alt="Géraldine Feron avec un cheval gris."></div>
-      <div>
-        <p class="surtitre">Qui a créé ce test&nbsp;?</p>
-        <h2>Je suis Géraldine, équicoach pour cavalières intuitives.</h2>
-        <p>J'accompagne des cavalières adultes qui aiment profondément leur cheval et que la peur empêche d'être la cavalière qu'elles veulent être. Mon travail&nbsp;: les aider à redevenir la référente de confiance de leur cheval, sans sacrifier leur sensibilité.</p>
-        <ul class="creds">
-          <li>Plus de 30 ans d'équitation, plus de 20 ans d'enseignement</li>
-          <li>Master en éducation physique</li>
-          <li>Formée en éthologie, ostéopathie, psychologie et préparation physique</li>
-        </ul>
-        <a class="btn" href="/#offre">Découvrir l'accompagnement</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- BLOG -->
-  <section class="bande">
-    <div class="wrap">
-      <div class="titre-section"><h2>Pour aller plus loin</h2><p>Quelques articles pour mieux comprendre ce qui se joue entre toi et ton cheval.</p></div>
-      <div class="articles">
-        <a class="article" href="/blog/mon-cheval-ressent-il-mon-stress/"><img src="/blog/mon-cheval-ressent-il-mon-stress/illustration.webp" width="1200" height="630" loading="lazy" alt=""><div><strong>Mon cheval ressent-il mon stress&nbsp;? Ce qui se passe vraiment</strong><span>Lire l'article →</span></div></a>
-        <a class="article" href="/blog/reprendre-confiance-a-cheval-apres-une-chute/"><img src="/blog/reprendre-confiance-a-cheval-apres-une-chute/illustration.webp" width="1200" height="630" loading="lazy" alt=""><div><strong>Reprendre confiance à cheval après une chute&nbsp;: tu n'as pas régressé</strong><span>Lire l'article →</span></div></a>
-        <a class="article" href="/blog/perdre-le-controle-de-son-cheval/"><img src="/blog/perdre-le-controle-de-son-cheval/illustration.webp" width="1200" height="630" loading="lazy" alt=""><div><strong>Que faire quand on perd le contrôle de son cheval&nbsp;?</strong><span>Lire l'article →</span></div></a>
-      </div>
-      <p class="liens-suite" style="text-align:center"><a href="/blog/">Voir tous les articles →</a></p>
-    </div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section class="wrap final">
-    <h2>Prête à découvrir ce que ton cheval voit en toi&nbsp;?</h2>
-    <p>5 minutes, 24 questions, et un premier pas vers une relation plus sereine.</p>
-    <button class="btn btn-gros commencer">Je commence le test</button>
-  </section>
-</div>
-
-<main class="test" id="parcours" hidden>
-
-  <!-- 2. QUESTIONS -->
-  <section class="ecran carte" id="questions">
-    <div class="progression"><div class="barre"><span id="barre"></span></div><div class="compteur" id="compteur">1 / 24</div></div>
-    <p class="question" id="texte-question"></p>
-    <div class="choix" id="choix"></div>
-    <button class="lien" id="precedent">← Question précédente</button>
-  </section>
-
-  <!-- 3. COORDONNÉES -->
-  <section class="ecran carte" id="coordonnees">
-    <p class="surtitre">Ton profil est prêt</p>
-    <h2>Où est-ce que je t'envoie ton résultat complet ?</h2>
-    <p>Tu découvres ton profil tout de suite. Je t'envoie aussi par e-mail ton analyse complète : ton histoire, ce qui se joue dans ton cerveau, et un outil concret à essayer avec ton cheval.</p>
-    <form id="formulaire" novalidate>
-      <label for="prenom">Ton prénom</label>
-      <input type="text" id="prenom" autocomplete="given-name" required>
-      <label for="email">Ton e-mail</label>
-      <input type="email" id="email" autocomplete="email" required>
-      <label for="tel">Ton téléphone <span class="opt">(facultatif)</span></label>
-      <input type="tel" id="tel" autocomplete="tel" placeholder="06 12 34 56 78">
-      <input class="pot" type="text" id="piege" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <label class="case"><input type="checkbox" id="consentement"> <span>J'accepte de recevoir mon résultat et les e-mails de Géraldine (Les Cavalières Intuitives). Je peux me désinscrire à tout moment. <a href="/confidentialite.html" target="_blank">Politique de confidentialité</a></span></label>
-      <button class="btn large" type="submit" id="envoyer">Voir mon profil</button>
-      <p class="erreur" id="erreur"></p>
-    </form>
-  </section>
-
-  <!-- 4. RÉSULTAT -->
-  <section class="ecran carte" id="resultat">
-    <p class="surtitre" id="r-salut">Ton profil</p>
-    <h1 id="r-nom"></h1>
-    <div class="bloc"><div class="titre">En bref</div><p id="r-voit"></p></div>
-    <div class="bloc" id="r-robert-bloc"><div class="titre">Ce que Robert te souffle</div><p id="r-robert"></p><p class="robert-def">Robert, c'est le nom que je donne à la partie de ton cerveau qui fonctionne en mode survie : elle cherche à te protéger en prédisant le pire.</p></div>
-
-    <h3>Tes 4 clés, une par une</h3>
-    <p class="petit">Chaque clé décrit une façon d'être avec ton cheval. Pour chacune, tu découvres ce que tu vis peut-être, et comment ton cheval, animal de proie, traduit ce que tu lui transmets.</p>
-    <div id="r-cles"></div>
-    <p id="r-ressource"></p>
-
-    <div class="encart"><h3 id="r-outil-titre"></h3><p id="r-outil"></p></div>
-
-    <div class="encart" id="r-video" hidden>
-      <p class="surtitre">Pour aller plus loin</p>
-      <h3 id="r-video-titre"></h3>
-      <p>Dans cette vidéo, je t'explique comment fonctionne ta peur, l'évitement et le forcing, et pourquoi c'est maintenant qu'elle s'invite, et pas quand tu étais débutante.</p>
-      <a class="btn" id="r-video-lien" href="#" target="_blank" rel="noopener">Regarder la vidéo</a>
-    </div>
-
-    <p id="r-invitation"></p>
-    <div class="suite">
-      <button class="btn" id="r-rdv">Réserver mes 15 minutes avec Géraldine</button>
-      <p class="alt petit">15 minutes pour faire le point sur ton profil, offertes et sans engagement.</p>
-    </div>
-    <p class="petit" id="r-mail">Ton analyse complète t'attend dans ta boîte mail. Pense à regarder dans tes promotions ou tes spams.</p>
-
-    <p class="mention">Ce test est un outil de prise de conscience et d'accompagnement, construit à partir de modèles reconnus en psychologie du sport et en thérapies cognitives et comportementales. Il ne constitue ni un diagnostic, ni une évaluation psychologique, et ne remplace pas l'avis d'un professionnel de santé.</p>
-  </section>
-</main>
-
-<!-- MODALE : 15 MINUTES AVEC GÉRALDINE -->
-<div class="voile" id="voile" role="dialog" aria-modal="true" aria-labelledby="rdv-titre">
-  <div class="modale" id="modale">
-    <button class="fermer" id="fermer" aria-label="Fermer">×</button>
-    <div id="rdv-contenu">
-      <h3 id="rdv-titre">15 minutes pour faire le point sur ton profil</h3>
-      <p class="petit">Offert et sans engagement. Je te recontacte pour caler le créneau.</p>
-      <form id="rdv-form" novalidate>
-        <label for="rdv-prenom">Ton prénom</label>
-        <input type="text" id="rdv-prenom" name="prenom" required>
-        <label for="rdv-email">Ton e-mail</label>
-        <input type="email" id="rdv-email" name="email" required>
-        <label for="rdv-tel">Ton téléphone</label>
-        <input type="tel" id="rdv-tel" name="telephone" required>
-        <label for="rdv-cheval">Ton cheval en quelques mots <span class="opt">(facultatif)</span></label>
-        <input type="text" id="rdv-cheval" name="cheval">
-        <label for="rdv-envie">Ce que tu aimerais changer <span class="opt">(facultatif)</span></label>
-        <textarea id="rdv-envie" name="envie" rows="3"></textarea>
-        <label for="rdv-dispos">Tes disponibilités <span class="opt">(facultatif)</span></label>
-        <input type="text" id="rdv-dispos" name="disponibilites" placeholder="ex. mardi matin, jeudi après 18 h">
-        <input type="hidden" name="profil" id="rdv-profil">
-        <input type="hidden" name="_subject" id="rdv-sujet" value="Demande d'appel — Test 4 clés">
-        <button class="btn large" type="submit" id="rdv-envoyer" style="margin-top:1.2rem">Envoyer ma demande</button>
-        <p class="erreur" id="rdv-erreur">L'envoi n'a pas fonctionné. Réessaie, ou écris-moi à contactezgeraldine@gmail.com.</p>
+<!-- ── MODALE RÉSERVATION D'APPEL ── -->
+<div id="booking-overlay" onclick="if(event.target===this)closeBookingModal()">
+  <div class="booking-modal" role="dialog" aria-modal="true" aria-labelledby="booking-title">
+    <button type="button" class="booking-close" onclick="closeBookingModal()" aria-label="Fermer">✕</button>
+    <div id="booking-content">
+      <h3 id="booking-title">Réserver ton appel de 15 min</h3>
+      <p class="booking-sub" id="booking-formule-sub">Formule Intensive</p>
+      <form id="booking-form" onsubmit="submitBooking(event)">
+        <input type="hidden" name="Formule" id="booking-formule-field" value="">
+        <input type="hidden" name="_subject" id="booking-subject-field" value="">
+        <div class="booking-field">
+          <label for="booking-prenom">Prénom</label>
+          <input type="text" id="booking-prenom" name="Prénom" required>
+        </div>
+        <div class="booking-field">
+          <label for="booking-nom">Nom</label>
+          <input type="text" id="booking-nom" name="Nom" required>
+        </div>
+        <div class="booking-field">
+          <label for="booking-tel">Téléphone</label>
+          <input type="tel" id="booking-tel" name="Téléphone" required>
+        </div>
+        <div class="booking-field">
+          <label for="booking-email">Email</label>
+          <input type="email" id="booking-email" name="_replyto" required>
+        </div>
+        <div class="booking-field">
+          <label for="booking-dispo">Tes disponibilités (jours / horaires)</label>
+          <textarea id="booking-dispo" name="Disponibilités" placeholder="Ex : en semaine après 18h, ou le week-end" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" id="booking-submit-btn">Envoyer ma demande</button>
+        <p class="booking-error" id="booking-error">Un souci a empêché l'envoi. Tu peux réessayer, ou nous écrire directement à <a href="mailto:cavalieres.intuitives@gmail.com" style="color:var(--rust);">cavalieres.intuitives@gmail.com</a>.</p>
       </form>
     </div>
   </div>
 </div>
 
-<footer class="site-foot">
-  Géraldine Feron, équicoach pour cavalières intuitives · <a href="/">les-cavalieres-intuitives.com</a> · <a href="/blog/">Blog</a> · <a href="/confidentialite.html">Politique de confidentialité</a> · <a href="#" onclick="window.lciCookies&&lciCookies.open();return false;">Gérer mes cookies</a>
+
+<!-- ── NAVIGATION ── -->
+<nav>
+  <a href="#hero" class="nav-logo">
+    <img src="assets/images/logo-128.webp" alt="Logo Les Cavalières Intuitives">
+    <div>Géraldine Feron<span>et psychologue pour Robert</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#pour-toi">Pour toi si…</a></li>
+    <li><a href="#methode">Mon parcours</a></li>
+    <li><a href="#decouverte">Découverte</a></li>
+    <li><a href="#offre">Mission Connexion</a></li>
+    <li><a href="#apropos">Géraldine</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="https://decouverte-mission-connexion.netlify.app" target="_blank" rel="noopener noreferrer" class="nav-cta">Découvrir mon profil</a></li>
+    <li><a href="https://mission-connexion.netlify.app/" target="_blank" rel="noopener noreferrer" class="nav-app-badge">✦ Espace clientes</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-text">
+    <p class="hero-eyebrow">Pour les cavalières qui se reconnaissent plus dans la peur que dans le plaisir</p>
+    <h1 class="hero-title">
+      <span class="title-main">De la peur à la <em>confiance</em> —</span>
+      <span class="title-sub">redevenir celle que ton cheval choisit de suivre.</span>
+    </h1>
+    <p class="hero-sub">Quelque chose a changé. Pas ton amour pour lui — ça, il est intact. C'est toi qui n'es plus tout à fait là. Robert a pris ta place. Ce petite voix qui prédit le pire avant même que tu aies sellé. On va s'en occuper.</p>
+    <div class="hero-ctas">
+      <a href="https://decouverte-mission-connexion.netlify.app" target="_blank" rel="noopener noreferrer" class="btn-primary">→ Découvrir mon profil en 2 minutes</a>
+      <a href="#offre" class="btn-secondary">Découvrir Mission Connexion</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <img src="assets/images/logo.webp" alt="Géraldine Feron — équicoach pour cavalières intuitives" class="logo-img" width="420" height="420">
+  </div>
+</section>
+
+<!-- ── L'HISTOIRE (ex-introduction en fenêtre) ── -->
+<section id="histoire">
+  <div class="section-inner">
+    <span class="section-tag">Trois images pour tout comprendre</span>
+    <h2 class="section-title reveal">Camille, Daytona… et Robert</h2>
+    <div class="histoire-grid">
+      <article class="histoire-etape reveal">
+        <img src="assets/illustration-1.webp" width="880" height="880" alt="Camille et Daytona">
+        <p class="histoire-num">Étape 1 : Le problème</p>
+        <h3>Camille et Daytona</h3>
+        <details>
+          <summary>Lire la suite</summary>
+          <p>Voici Camille. Elle est passionnée de chevaux depuis toujours. Daytona, sa jument, est bien plus qu'un animal — elle est son équilibre, son refuge, sa bouffée d'air.</p>
+          <p>Et pourtant. Chaque séance commence pareil. Daytona sellée, prête. Et déjà, quelque chose se resserre dans la poitrine de Camille.</p>
+          <p>La carrière ? Trop d'imprévus. Le manège ? Il va hennir après les copains. La promenade ? Elle sent que ça va mal tourner.</p>
+          <p>L'amour est là. La connexion aussi. Ce qui manque, c'est la confiance — en elle, en Daytona, dans sa capacité à faire face.</p>
+          <p class="histoire-chute">Tu reconnais quelque chose dans cette histoire ?</p>
+        </details>
+      </article>
+      <article class="histoire-etape reveal">
+        <img src="assets/illustration-2.webp" width="880" height="880" loading="lazy" alt="Robert à l'école des catastrophes">
+        <p class="histoire-num">Étape 2 : L'explication</p>
+        <h3>Robert à l'école des catastrophes</h3>
+        <details>
+          <summary>Lire la suite</summary>
+          <p>Ces scénarios ne viennent pas de Camille. Ils sont la spécialité de Robert — un programme biologique un peu archaïque, logé dans son cerveau depuis sa naissance.</p>
+          <p>Redoutablement efficace pour survivre dans la savane. Nettement moins adapté pour gérer ses émotions sur un animal de 500 kg — avec la sensibilité d'un marshmallow, la réactivité d'une fusée et la force d'un gorille.</p>
+          <p>Robert a été à bonne école. Il a un catalogue. 8 576 pages. Minutieusement répertoriées. Une base d'inspiration inépuisable pour construire des scénarios catastrophe en tout genre.</p>
+          <p>Camille n'a pas besoin d'imagination. Robert en a largement assez pour elle.</p>
+          <p class="histoire-chute">Et toi — tu connais ton Robert ?</p>
+        </details>
+      </article>
+      <article class="histoire-etape reveal">
+        <img src="assets/illustration-3.webp" width="880" height="880" loading="lazy" alt="Remettre Robert à sa juste place">
+        <p class="histoire-num">Étape 3 : La solution</p>
+        <h3>Remettre Robert à sa juste place</h3>
+        <details>
+          <summary>Lire la suite</summary>
+          <p>Robert n'est pas ton ennemi. Il fait son travail — celui qu'on lui a appris. Avec beaucoup de zèle, et un catalogue qu'il tient à jour depuis des années.</p>
+          <p>Mais il est mal placé. Quand Robert pilote à la place de Camille, ce n'est pas Camille qui monte — c'est la peur. Et Daytona le sait avant tout le monde.</p>
+          <p>Le travail ne consiste pas à faire taire Robert. Il consiste à lui remettre son rôle exact — utile, vigilant, mais plus aux commandes.</p>
+          <p>C'est précisément ce qu'on fait ensemble. On remet Camille — toi — à la place du pilote.</p>
+          <p class="histoire-chute">Avec Daytona qui attendait ça depuis le début.</p>
+        </details>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── POUR TOI ── -->
+<section id="pour-toi">
+  <div class="section-inner">
+    <span class="section-tag">Tu te reconnais ?</span>
+    <h2 class="section-title reveal">C'est exactement fait pour toi si…</h2>
+    <div class="pour-toi-grid">
+      <ul class="pour-toi-items reveal">
+        <li><span class="check">✓</span><span>Tu arrives à l'écurie avec une boule au ventre que tu ne sais plus vraiment expliquer.</span></li>
+        <li><span class="check">✓</span><span>Tu ajustes la sangle une deuxième fois. Pas parce qu'elle est mal mise. Parce que tu gagnes une minute.</span></li>
+        <li><span class="check">✓</span><span>Tu sais lire ton cheval dans ta tête — mais ton corps, lui, ne suit pas.</span></li>
+        <li><span class="check">✓</span><span>Tu as essayé de te forcer. Ça n'a pas marché. Tu as essayé d'éviter. Ça n'a pas marché non plus.</span></li>
+        <li><span class="check">✓</span><span>Tu passes plus de temps à analyser ce qui s'est mal passé qu'à profiter de ce qui s'est bien passé.</span></li>
+        <li><span class="check">✓</span><span>Tu as peur de ta propre peur — parce que tu sais que ton stress, il l'attrape.</span></li>
+        <li><span class="check">✓</span><span>Tu veux bien faire, respecter ton cheval, préserver le lien — et c'est justement ça qui te paralyse.</span></li>
+        <li><span class="check">✓</span><span>Quelque part dans un coin de toi, il y a cette phrase : <em>"Je l'aime tellement que j'ai peur de tout gâcher."</em></span></li>
+      </ul>
+      <div class="pour-toi-quote reveal">
+        <blockquote>"Tu n'as pas perdu le lien avec ton cheval. Tu as perdu le lien avec toi-même. Cette version de toi qui décide, qui ose, qui choisit pour elle — et pas pour apaiser Robert. C'est elle qu'on va retrouver."</blockquote>
+        <p class="robert-note">Et Robert dans tout ça ? Il est là, accroupi dans son coin, prêt à te convaincre que ton cheval veut ta mort. <strong>On va s'occuper de lui.</strong></p>
+        <p class="robert-note"><a href="/peur-a-cheval/" style="color:inherit;text-decoration:underline;">Comprendre d'où vient ta peur à cheval, et comment la calmer</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PARCOURS (ex-MÉTHODE) ── -->
+<section id="methode">
+  <div class="section-inner">
+    <span class="section-tag">Ton parcours</span>
+    <div class="methode-intro reveal">
+      <p>Comprendre ta peur, la psychologie de Robert — c'est nécessaire. <em>Mais pas suffisant.</em></p>
+      <p style="margin-top:0.75rem;">Robert ne réagit pas à la réalité. Il prédit un futur possible. Il n'écoute pas tes arguments. Il écoute ton corps. C'est pour ça que tout le travail passe par là : ce que tu projettes, quand tu le projettes, et avec quelle énergie. <em>Avant même que vos regards ne se soient croisés.</em></p>
+    </div>
+    <div class="methode-grid">
+      <div class="methode-card reveal">
+        <div class="methode-num">01</div>
+        <div class="methode-card-body">
+          <h3>Intention</h3>
+          <p>Avant de demander quoi que ce soit à ton cheval, ton cerveau a déjà envoyé un message. Robert commente. Le juge intérieur prépare son verdict. L'intention, c'est l'art d'arriver avec quelque chose de clair — pas parfait, clair. Ce que tu projettes en montant, ton cheval le reçoit dans tes muscles avant que tu aies ouvert les doigts.</p>
+        </div>
+      </div>
+      <div class="methode-card reveal">
+        <div class="methode-num">02</div>
+        <div class="methode-card-body">
+          <h3>Timing</h3>
+          <p>Le cheval vit dans l'instant présent. Toi aussi, tu peux y revenir. Le timing, ce n'est pas la technique — c'est la présence. Être là au bon moment, ni trop tôt ni trop tard, c'est ce qui distingue une demande d'une pression. Et une pression de la peur qui prend les rênes à ta place.</p>
+        </div>
+      </div>
+      <div class="methode-card reveal">
+        <div class="methode-num">03</div>
+        <div class="methode-card-body">
+          <h3>Énergie</h3>
+          <p>Ton cheval ne lit pas tes pensées. Il lit ton système nerveux — ta respiration, la tension de ta mâchoire, la qualité de tes appuis. Apprendre à réguler cette énergie — pas la supprimer, la réguler — c'est devenir l'ancre du couple plutôt que le bateau qui dérive. Robert inclus.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DÉCOUVERTE ── -->
+<section id="decouverte">
+  <div class="section-inner">
+    <span class="section-tag">Gratuit, en 2 minutes</span>
+    <h2 class="section-title reveal">Découvre ton profil de cavalière intuitive</h2>
+    <p class="decouverte-text reveal">Réponds à quelques questions sur toi et ton cheval. Tu reçois aussitôt par email une vidéo ressource choisie selon ton profil, et le mot de passe pour explorer le contenu complet — gratuit, sans engagement.</p>
+    <div class="reveal">
+      <a href="https://decouverte-mission-connexion.netlify.app" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:1rem;padding:1rem 2.5rem;">→ Je commence ma découverte</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── OFFRE — 2 FORMULES ── -->
+<section id="offre">
+  <div class="section-inner">
+    <span class="section-tag">L'accompagnement</span>
+    <h2 class="section-title reveal">Coaching à distance : calmer Robert, à ton rythme</h2>
+    <p class="offre-intro reveal">La peur est mentale. Sa régulation est physique. Deux formules, un même travail de fond — porté par le collectif dans les deux cas.</p>
+    <div class="niveaux-grid">
+
+      <!-- FORMULE INTENSIVE -->
+      <div class="niveau-card reveal">
+        <div class="niveau-label">4 semaines</div>
+        <h3>Intensive</h3>
+        <p class="niveau-accroche">Robert s'emballe vite. On le calme vite.</p>
+        <div class="niveau-prix">597 €<span> · forfait 4 séances</span></div>
+        <ul class="niveau-includes">
+          <li>4 séances en direct avec Pivo</li>
+          <li>Accès au coaching collectif</li>
+          <li>Analyses vidéo</li>
+          <li>Accès au groupe WhatsApp</li>
+          <li>Accès à l'application Mission Connexion</li>
+        </ul>
+        <p class="niveau-pour">Pour qui : un déclic rapide à provoquer — un concours, un voyage, une reprise après un coup dur, un cheval qui vient de changer.</p>
+        <button type="button" class="btn-primary niveau-cta" onclick="openBookingModal('Intensive')">→ Réserver un appel de 15 min</button>
+        <p style="font-size:0.78rem;color:var(--gray-warm);text-align:center;">Un appel Zoom de 15 min, gratuit et sans engagement, pour cadrer ton objectif. Puis on démarre. Paiement en 4 fois disponible (PayPal).</p>
+      </div>
+
+      <!-- FORMULE ANCRAGE -->
+      <div class="niveau-card reveal">
+        <div class="niveau-label">12 semaines</div>
+        <h3>Ancrage</h3>
+        <p class="niveau-accroche">Calmer Robert une fois ne suffit pas. On l'ancre pour de bon.</p>
+        <div class="niveau-prix">1 200 €<span> · 12 semaines</span></div>
+        <ul class="niveau-includes">
+          <li>4 séances de coaching individuel</li>
+          <li>Accès au coaching collectif</li>
+          <li>2 séances d'analyse vidéo par semaine</li>
+          <li>Accès à l'application Mission Connexion</li>
+        </ul>
+        <p class="niveau-pour">Pour qui : que le changement tienne — de nouveaux automatismes installés dans la durée, portés par le collectif entre les séances. Souvent la suite naturelle après l'Intensive.</p>
+        <button type="button" class="btn-primary niveau-cta" onclick="openBookingModal('Ancrage')">→ Réserver un appel de 15 min</button>
+        <p style="font-size:0.78rem;color:var(--gray-warm);text-align:center;">Appel de 15 min gratuit et sans engagement. Sur proposition de Géraldine, accès limité.</p>
+      </div>
+
+    </div>
+
+    <p class="offre-liaison reveal">Même objectif, deux rythmes — et dans les deux cas, tu n'es jamais seule avec Robert.</p>
+
+    <table class="offre-comparatif reveal">
+      <thead>
+        <tr><th></th><th>Intensive</th><th>Ancrage</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Durée</td><td>4 semaines</td><td>12 semaines</td></tr>
+        <tr><td>Promesse</td><td>Calmer Robert vite</td><td>Calmer Robert durablement</td></tr>
+        <tr><td>Pour qui</td><td>Un déclic rapide à provoquer : échéance proche, reprise après un coup dur, cheval qui vient de changer</td><td>Que le changement tienne : nouveaux automatismes installés dans la durée, portée par le collectif entre les séances</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── TÉMOIGNAGES VIDÉOS ── -->
+<section id="temoignages">
+  <div class="section-inner">
+    <span class="section-tag">Elles l'ont vécu</span>
+    <h2 class="section-title reveal">Ce qu'en disent les cavalières accompagnées</h2>
+    <div class="videos-mosaic reveal">
+      <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/HbaCQSr1f6g" title="Témoignage Mathilde" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+      <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/2wYcn0lQoBs" title="Témoignage Alba" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+      <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/iSnrmLs4mzg" title="Témoignage Camille" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+      <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/WqOGYqOEsGs" title="Témoignage Marie" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+      <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/M5xVwAOVcNA" title="Témoignage Kara" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── À PROPOS ── -->
+<section id="apropos">
+  <div class="section-inner">
+    <span class="section-tag">Qui je suis</span>
+    <h2 class="section-title reveal">Géraldine Feron, équicoach</h2>
+    <div class="apropos-inner">
+      <div class="apropos-photo reveal">
+        <img src="assets/Geraldine.webp" alt="Géraldine Feron avec son cheval" width="900" height="1350" loading="lazy">
+      </div>
+      <div class="apropos-text reveal">
+        <p>On devient équicoach par passion pour les chevaux. On continue par passion pour les humains.</p>
+        <p>Ça fait plus de 25 ans que j'accompagne des couples improbables : une proie et un prédateur. Une cavalière et son cheval. Deux êtres qui portent chacun leurs peurs, leurs histoires, leurs cicatrices — et qui essaient quand même de se faire confiance.</p>
+        <p>La peur des cavalières, j'en ai fait ma spécialité. Pas parce que c'est un sujet à la mode — mais parce qu'elle est là, constante, et qu'on fait semblant de ne pas la voir. La peur de tomber. La peur de mal faire. La peur du regard des autres. La peur que ton cheval ne t'aime pas vraiment. Cette liste est longue. Et chacune de ces peurs vient interférer dans la relation avec ton cheval, qui lui aussi a les siennes.</p>
+        <p>(Et Robert dans tout ça ? Il est là, il observe, et il attend juste le bon moment pour te convaincre que tout va mal se passer.)</p>
+        <p>Mon parcours m'a donné les outils pour comprendre les deux côtés du miroir : cavalière de CSO jusqu'au niveau international, formation équestre auprès de grands noms comme Joss Kumst et Nelson Pessoa, master en éducation physique, ostéopathie équine — et des années à creuser la psychologie humaine pour faire le lien entre ce qui se passe dans ta tête et ce qui se passe entre tes mains et la bouche de ton cheval.</p>
+        <p>Tout ça m'a conduite vers trois piliers d'une relation juste : l'intention, le timing et l'énergie. Parce que les peurs, ça ne se comprend pas dans les livres. Ça se traverse par l'expérience. Et une fois traversées — les vôtres et celles de votre cheval — vous êtes libres d'écrire ensemble votre plus belle histoire.</p>
+        <div class="credentials">
+          <span class="cred-tag">+25 ans de cheval</span>
+          <span class="cred-tag">CSO international</span>
+          <span class="cred-tag">Master éducation physique</span>
+          <span class="cred-tag">Ostéopathie équine</span>
+          <span class="cred-tag">Formation Joss Kumst · Nelson Pessoa</span>
+          <span class="cred-tag">+1 300 membres dans le cercle</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PAR OÙ COMMENCER (remplace l'invitation au Cercle, en sommeil) ── -->
+<section id="cercle">
+  <div class="section-inner">
+    <span class="section-tag">Et maintenant ?</span>
+    <h2 class="section-title reveal">Par où commencer</h2>
+    <p class="section-sub reveal">Découvre ton profil de cavalière intuitive en 2 minutes et reçois une vidéo choisie pour ta situation. Ou parlons-en de vive voix, 15 minutes, gratuitement et sans engagement.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;" class="reveal">
+      <a href="https://decouverte-mission-connexion.netlify.app" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:1rem;padding:1rem 2.5rem;">→ Découvrir mon profil</a>
+      <a href="#offre" class="btn-secondary" style="font-size:1rem;padding:1rem 2.5rem;color:var(--off-white);border-color:rgba(253,250,247,0.5);">Réserver un appel gratuit</a>
+    </div>
+    <div class="cercle-lead reveal">
+      <p class="ou-fb">Envie de commencer tout de suite ? Accède à la <a href="https://www.youtube.com/playlist?list=PL8xOk5pwxOsE3cDxtJEYeCR47wVhXR_fe" target="_blank">formation offerte sur YouTube</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-brand">
+    <a href="#hero" class="nav-logo">
+      <img src="assets/images/logo-128.webp" alt="Logo Les Cavalières Intuitives">
+      <div>Géraldine Feron<span>et psychologue pour Robert</span></div>
+    </a>
+    <p>Équicoach pour cavalières intuitives.<br>Méthode Intention – Timing – Énergie.<br>100 % distanciel.</p>
+    <p style="margin-top:1rem;"><a href="mailto:contactezgeraldine@gmail.com" style="color:var(--rust-light);font-size:0.875rem;">contactezgeraldine@gmail.com</a></p>
+  </div>
+  <div>
+    <h5>Navigation</h5>
+    <ul>
+      <li><a href="#pour-toi">Pour toi si…</a></li>
+      <li><a href="#methode">Mon parcours</a></li>
+      <li><a href="#decouverte">Découverte</a></li>
+      <li><a href="#offre">Mission Connexion</a></li>
+      <li><a href="#temoignages">Témoignages</a></li>
+      <li><a href="#apropos">Géraldine</a></li>
+      <li><a href="/peur-a-cheval/">Peur à cheval</a></li>
+      <li><a href="/blog/">Blog</a></li>
+    </ul>
+  </div>
+  <div>
+    <h5>Liens</h5>
+    <ul>
+      <li><a href="https://www.youtube.com/playlist?list=PL8xOk5pwxOsE3cDxtJEYeCR47wVhXR_fe" target="_blank">Formation offerte</a></li>
+      <li><a href="https://mission-connexion.netlify.app/" target="_blank" rel="noopener noreferrer">Espace clientes (bêta)</a></li>
+      <li><a href="confidentialite.html">Mentions légales</a></li>
+      <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+    </ul>
+  </div>
 </footer>
+<div class="footer-bottom">
+  © 2026 Géraldine Feron — Équicoach pour cavalières intuitives · <a href="confidentialite.html" style="color:var(--gray-warm);">Politique de confidentialité</a> · <a href="#" onclick="lciCookies.open();return false;" style="color:var(--gray-warm);">Gérer mes cookies</a>
+</div>
 
-<script src="test-cles-data.js"></script>
 <script>
-/* =========================================================
-   RÉGLAGES
-   ========================================================= */
-const REGLAGES = {
-  // Fonction Netlify (appli Découverte) qui enregistre dans Brevo, envoie l'e-mail et prévient sur Telegram
-  urlEnvoi: "https://decouverte-mission-connexion.netlify.app/.netlify/functions/test-cles",
-  // Demandes de rendez-vous (même Formspree que la page d'accueil)
-  urlRdv: "https://formspree.io/f/xvkoozza"
-};
-
-const T = window.TestCles;
-const reponses = new Array(T.QUESTIONS.length).fill(null);
-let index = 0, resultat = null, contact = {};
-const $ = id => document.getElementById(id);
-const nb = t => String(t).replace(/« /g,"« ").replace(/ »/g," »").replace(/ ([:;?!])/g," $1");
-const esc = t => String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
-const stat = (nom, params) => { try{ if(typeof window.gtag==="function") gtag("event", nom, params||{}); }catch(e){} };
-
-function montrer(id){
-  document.querySelectorAll(".ecran").forEach(e=>e.classList.remove("actif"));
-  $(id).classList.add("actif");
-  window.scrollTo({top:0,behavior:"smooth"});
-}
-
-function afficherQuestion(){
-  const q = T.QUESTIONS[index];
-  $("texte-question").textContent = nb(q[0]);
-  $("compteur").textContent = (index+1)+" / "+T.QUESTIONS.length;
-  $("barre").style.width = (index/T.QUESTIONS.length*100)+"%";
-  $("precedent").style.visibility = index===0 ? "hidden" : "visible";
-  const zone = $("choix"); zone.innerHTML = "";
-  T.ECHELLE.forEach((libelle,i)=>{
-    const b = document.createElement("button");
-    b.type = "button";
-    b.innerHTML = '<span class="num">'+(i+1)+'</span>'+libelle;
-    if(reponses[index]===i+1) b.classList.add("choisi");
-    b.onclick = ()=>repondre(i+1,b);
-    zone.appendChild(b);
-  });
-}
-
-function repondre(valeur,bouton){
-  reponses[index] = valeur;
-  document.querySelectorAll("#choix button").forEach(b=>b.classList.remove("choisi"));
-  if(bouton) bouton.classList.add("choisi");
-  setTimeout(()=>{
-    if(index < T.QUESTIONS.length-1){ index++; afficherQuestion(); }
-    else { $("barre").style.width="100%"; resultat = T.calculerProfil(reponses); stat("test_termine",{profil:resultat.code}); montrer("coordonnees"); }
-  },260);
-}
-
-function afficherResultat(prenom){
-  const r = resultat, p = T.PROFILS[r.code];
-  $("r-salut").textContent = prenom ? prenom+", ton profil" : "Ton profil";
-  $("r-nom").textContent = p.nom;
-  $("r-voit").textContent = nb(p.voit);
-  if(p.robert){ $("r-robert").textContent = nb(p.robert); $("r-robert-bloc").hidden = false; }
-  else $("r-robert-bloc").hidden = true;
-  const zoneCles = $("r-cles"); zoneCles.innerHTML = "";
-  r.ordre.forEach(k=>{
-    const z = T.zoneDe(r.scores[k]), t = T.TEXTES[k][z];
-    const d = document.createElement("div");
-    d.className = "cle";
-    d.innerHTML = '<div class="cle-tete"><strong>'+T.CLES[k]+'</strong><span class="badge '+z+'">'+T.ZONES[z]+'</span></div>'
-      +'<div class="cle-def">'+T.DEFINITIONS[k]+'</div>'
-      +'<div class="sous">Ce que tu vis peut-être</div><p>'+esc(nb(t.vis))+'</p>'
-      +'<div class="sous">Ce que ton cheval perçoit</div><p>'+esc(nb(t.cheval))+'</p>';
-    zoneCles.appendChild(d);
-  });
-  $("r-ressource").innerHTML = "La clé où tu es le plus à l'aise, c'est la clé <strong>"+T.CLES[r.ressource]+"</strong>. C'est sur elle que tu peux t'appuyer pour avancer sur les autres.";
-  const o = T.outilDe(r);
-  $("r-outil-titre").textContent = nb(o.titre);
-  $("r-outil").textContent = nb(o.texte);
-  if(T.CONFIG.videoUrl){
-    $("r-video").hidden = false;
-    $("r-video-titre").textContent = nb(T.CONFIG.videoTitre);
-    $("r-video-lien").href = T.CONFIG.videoUrl;
-  }
-  $("r-invitation").textContent = nb(p.invitation);
-  // Profil « sous tension » : le rendez-vous passe avant la vidéo
-  if(r.code==="TENSION"){ const s=document.querySelector(".suite"); $("r-video").before(s); }
-  montrer("resultat");
-}
-
-async function envoyerResultat(prenom,email,tel){
-  try{
-    await fetch(REGLAGES.urlEnvoi,{
-      method:"POST", keepalive:true,
-      headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({prenom,email,telephone:tel,consentement:true,reponses,piege:$("piege").value})
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 60);
+        observer.unobserve(entry.target);
+      }
     });
-  }catch(e){ /* le résultat s'affiche quand même */ }
-}
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  reveals.forEach(el => observer.observe(el));
+</script>
 
-/* --- Modale rendez-vous --- */
-function ouvrirRdv(){
-  if(contact.prenom) $("rdv-prenom").value = contact.prenom;
-  if(contact.email) $("rdv-email").value = contact.email;
-  if(contact.tel) $("rdv-tel").value = contact.tel;
-  const nom = resultat ? T.PROFILS[resultat.code].nom : "";
-  $("rdv-profil").value = nom;
-  $("rdv-sujet").value = "Demande d'appel — Test 4 clés" + (nom ? " — "+nom : "");
-  $("voile").classList.add("ouvert"); document.body.style.overflow="hidden";
-  stat("clic_appel",{depuis:"test", profil: resultat ? resultat.code : "direct"});
-}
-function fermerRdv(){ $("voile").classList.remove("ouvert"); document.body.style.overflow=""; }
-$("r-rdv").onclick = ouvrirRdv;
-$("fermer").onclick = fermerRdv;
-$("voile").addEventListener("click",e=>{ if(e.target===$("voile")) fermerRdv(); });
-document.addEventListener("keydown",e=>{ if(e.key==="Escape") fermerRdv(); });
-$("rdv-form").addEventListener("submit", async e=>{
-  e.preventDefault();
-  const err=$("rdv-erreur"); err.style.display="none";
-  if(!$("rdv-prenom").value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($("rdv-email").value.trim()) || !$("rdv-tel").value.trim()){
-    err.textContent="Indique ton prénom, ton e-mail et ton téléphone pour que je puisse te recontacter."; err.style.display="block"; return;
-  }
-  const btn=$("rdv-envoyer"); btn.disabled=true; btn.textContent="Envoi en cours…";
-  try{
-    const res = await fetch(REGLAGES.urlRdv,{method:"POST",headers:{Accept:"application/json"},body:new FormData($("rdv-form"))});
-    if(!res.ok) throw new Error();
-    $("rdv-contenu").innerHTML = '<h3>C\'est envoyé ✓</h3><p>Merci ! Je te recontacte très vite pour caler nos 15 minutes.</p>';
-    stat("demande_appel",{depuis:"test"});
-  }catch(_){
-    btn.disabled=false; btn.textContent="Envoyer ma demande";
-    err.textContent="L'envoi n'a pas fonctionné. Réessaie, ou écris-moi à contactezgeraldine@gmail.com."; err.style.display="block";
-  }
+<script>
+  // ── MODALE RÉSERVATION D'APPEL ──
+  // ⚠️ Jean-Luc : remplacer FORMSPREE_FORM_ID par l'identifiant réel une fois le compte Formspree créé (formspree.io → New Form).
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xvkoozza';
+
+  window.openBookingModal = function(formule){
+    document.getElementById('booking-formule-field').value = formule;
+    document.getElementById('booking-subject-field').value = 'Demande d\'appel — Formule ' + formule;
+    document.getElementById('booking-formule-sub').textContent = 'Formule ' + formule + ', appel gratuit et sans engagement';
+    document.getElementById('booking-title').textContent = 'Réserver ton appel de 15 min';
+    document.getElementById('booking-overlay').classList.add('show');
+    document.body.style.overflow = 'hidden';
+  };
+
+  window.closeBookingModal = function(){
+    document.getElementById('booking-overlay').classList.remove('show');
+    document.body.style.overflow = '';
+  };
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeBookingModal();
+  });
+
+  window.submitBooking = async function(e){
+    e.preventDefault();
+    const form = document.getElementById('booking-form');
+    const btn = document.getElementById('booking-submit-btn');
+    const errorBox = document.getElementById('booking-error');
+    errorBox.style.display = 'none';
+    btn.disabled = true;
+    btn.textContent = 'Envoi en cours…';
+    try{
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+      if(res.ok){
+        const formule = document.getElementById('booking-formule-field').value;
+        document.getElementById('booking-content').innerHTML =
+          '<div class="booking-success"><h3>C\'est envoyé ✓</h3>' +
+          '<p>Merci ! Ta demande pour la formule ' + formule + ' est bien reçue. Géraldine te recontacte très vite pour caler ton appel de 15 min.</p></div>';
+      } else {
+        throw new Error('Formspree error');
+      }
+    } catch(err){
+      btn.disabled = false;
+      btn.textContent = 'Envoyer ma demande';
+      errorBox.style.display = 'block';
+    }
+  };
+</script>
+<script>
+document.querySelectorAll('.histoire-etape details').forEach(function(d){
+  d.addEventListener('toggle',function(){ d.querySelector('summary').textContent = d.open ? 'Refermer' : 'Lire la suite'; });
 });
-
-/* --- Démarrage --- */
-document.querySelectorAll(".commencer").forEach(b=>b.addEventListener("click",()=>{
-  $("landing").hidden = true; $("parcours").hidden = false;
-  index=0; afficherQuestion(); montrer("questions"); stat("test_commence");
-}));
-$("precedent").onclick = ()=>{ if(index>0){ index--; afficherQuestion(); } };
-$("r-video-lien").addEventListener("click",()=>stat("clic_video",{depuis:"test", profil: resultat ? resultat.code : ""}));
-document.addEventListener("keydown",e=>{
-  if($("questions").classList.contains("actif") && /^[1-5]$/.test(e.key)){
-    repondre(+e.key, document.querySelectorAll("#choix button")[+e.key-1]);
-  }
-});
-
-$("formulaire").addEventListener("submit", e=>{
-  e.preventDefault();
-  const prenom=$("prenom").value.trim(), email=$("email").value.trim(), tel=$("tel").value.trim();
-  const err=$("erreur"); err.style.display="none";
-  let msg="";
-  if(!prenom) msg="Indique ton prénom.";
-  else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) msg="Vérifie ton adresse e-mail.";
-  else if(!$("consentement").checked) msg="Coche la case pour recevoir ton résultat.";
-  if(msg){ err.textContent=msg; err.style.display="block"; return; }
-  contact = {prenom,email,tel};
-  envoyerResultat(prenom,email,tel);
-  afficherResultat(prenom);
-});
-
-// Lien direct depuis l'e-mail : …/test/#rdv ouvre la demande de rendez-vous
-if(location.hash==="#rdv") ouvrirRdv();
 </script>
 </body>
 </html>
