@@ -152,6 +152,32 @@ const HISTOIRES = {
      concept:"Quand plusieurs clés sont prises par la peur, la boucle tourne en entier : le corps, la pensée, l'attention, le comportement. On ne la défait pas en luttant contre elle, mais en commençant par le corps, ce que ton cheval perçoit en premier."}
 };
 
+
+/* ---------- Lettre du jour 0 : carnet de défi et illustration ---------- */
+const IMAGES_EMAIL = "https://les-cavalieres-intuitives.com/assets/email/";
+const DEFIS = {
+  I:[["Jours 1 et 2 · Observer.","Remarque chaque fois que tu arrêtes une demande en cours de route : à quel moment, et quelle pensée l'a précédée (« je n'ai pas le droit », « c'est ma faute »)."],
+     ["Jours 3 à 5 · Essayer.","Avant de monter, formule ta phrase-boussole : ce que tu veux construire aujourd'hui, en une phrase positive. Quand une demande n'aboutit pas, garde-la calmement jusqu'à un premier petit essai de sa part, puis relâche aussitôt."],
+     ["Jours 6 et 7 · Remarquer.","Observe s'il comprend plus vite ou propose plus facilement quand ta demande reste la même du début à la fin."]],
+  T:[["Jours 1 et 2 · Observer.","Note chaque fois que ton regard part avant lui : où, quand, et ce que Robert te souffle."],
+     ["Jours 3 à 5 · Essayer.","Dès que ton regard s'échappe, nomme trois sensations : le contact des rênes, le mouvement de son dos, ton poids dans la selle."],
+     ["Jours 6 et 7 · Remarquer.","Regarde sa tête et ses oreilles : surveille-t-il moins quand tu reviens à lui ?"]],
+  E:[["Jours 1 et 2 · Observer.","Note les moments où ton souffle se bloque ou tes mains se ferment : avant de monter, en selle, dans quelles situations."],
+     ["Jours 3 à 5 · Essayer.","À chaque séance, commence par trois expirations longues : 4 temps pour inspirer, 6 pour expirer, en relâchant la mâchoire, puis les mains, puis le bassin. Recommence dès que tu sens la tension monter."],
+     ["Jours 6 et 7 · Remarquer.","Observe son encolure, sa respiration, sa bouche : se détend-il quand toi tu te détends ?"]],
+  P:[["Jours 1 et 2 · Observer.","Fais la liste des situations que tu évites avec ton cheval, même les toutes petites."],
+     ["Jours 3 à 5 · Essayer.","Range-les de la plus facile à la plus difficile, et choisis la première marche. Fais-la chaque jour, à ton rythme, jusqu'à ce qu'elle devienne confortable."],
+     ["Jours 6 et 7 · Remarquer.","Note ce qui s'est vraiment passé, et compare avec ce que Robert avait prédit."]],
+  EVEIL:[["Jours 1 et 2 · Observer.","Après chaque séance, note un moment où vous étiez vraiment ensemble."],
+     ["Jours 3 à 5 · Essayer.","Note aussi ce que tu as fait juste avant : ton regard, ton souffle, ta demande."],
+     ["Jours 6 et 7 · Remarquer.","Essaie de recréer volontairement ce moment, en demandant un peu plus léger."]],
+  TENSION:[["Jours 1 et 2 · Respirer.","Pied à terre, à côté de ton cheval, pratique l'expiration longue : 4 temps pour inspirer, 6 pour expirer, cinq fois de suite."],
+     ["Jours 3 à 5 · Relâcher.","Continue, et ajoute une seule chose : à chaque expiration, relâche la mâchoire, puis les mains. Rien de plus."],
+     ["Jours 6 et 7 · Remarquer.","Note ce qui change en toi, puis chez lui. Même un tout petit changement compte."]]
+};
+/* Le carnet de « la cavalière en chemin » suit sa clé la plus fragile */
+function defiDe(r){ return DEFIS[r.code==="CHEMIN" ? r.prioritaire : r.code]; }
+
 /* ---------- Calcul du profil ---------- */
 function zoneDe(v){ return v<=13 ? "appui" : (v<=21 ? "fragile" : "peur"); }
 
@@ -187,7 +213,7 @@ function outilDe(r){
   return {titre:PROFILS[r.code].outilTitre, texte:PROFILS[r.code].outil};
 }
 
-const API = {CONFIG,QUESTIONS,ECHELLE,CLES,DEFINITIONS,ZONES,TEXTES,PRIORITE,PROFILS,HISTOIRES,zoneDe,calculerProfil,outilDe};
+const API = {IMAGES_EMAIL,DEFIS,defiDe,CONFIG,QUESTIONS,ECHELLE,CLES,DEFINITIONS,ZONES,TEXTES,PRIORITE,PROFILS,HISTOIRES,zoneDe,calculerProfil,outilDe};
 if(typeof module!=="undefined" && module.exports) module.exports = API;
 else window.TestCles = API;
 })();
