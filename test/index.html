@@ -418,7 +418,8 @@ function afficherResultat(prenom){
   const o = T.outilDe(r);
   $("r-outil-titre").textContent = nb(o.titre);
   $("r-outil").textContent = nb(o.texte);
-  if(T.CONFIG.videoUrl){
+  // La vidéo est réservée aux e-mails (J+2 et bilan J+7) : elle ne s'affiche pas sur la page.
+  if(false && T.CONFIG.videoUrl){
     $("r-video").hidden = false;
     $("r-video-titre").textContent = nb(T.CONFIG.videoTitre);
     $("r-video-lien").href = T.CONFIG.videoUrl;
