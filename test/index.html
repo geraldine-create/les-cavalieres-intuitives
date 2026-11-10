@@ -129,6 +129,8 @@ button.btn{border:0;cursor:pointer;font:700 1rem Lato,sans-serif;text-align:cent
 .suite{text-align:center;margin:2rem 0 .5rem}
 .suite .alt{margin-top:.8rem}
 .mention{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--rust-light);font-size:.8rem;color:var(--muted);line-height:1.6}
+.imprimer{text-align:center;margin:0 0 1rem}
+@media print{.site-head,.site-foot,.suite,.imprimer,#r-mail,.voile,#lci-cookie,#landing{display:none!important}body{background:#fff}.test{padding:0}.carte{border:0;padding:0}.cle,.encart,.bloc{break-inside:avoid}}
 /* Modale rendez-vous */
 .voile{position:fixed;inset:0;background:rgba(44,26,16,.55);display:none;align-items:center;justify-content:center;padding:1rem;z-index:10000}
 .voile.ouvert{display:flex}
@@ -301,6 +303,7 @@ button.btn{border:0;cursor:pointer;font:700 1rem Lato,sans-serif;text-align:cent
       <button class="btn" id="r-rdv">Réserver mes 15 minutes avec Géraldine</button>
       <p class="alt petit">15 minutes pour faire le point sur ton profil, offertes et sans engagement.</p>
     </div>
+    <p class="imprimer"><button class="lien" id="r-pdf">Enregistrer mon profil en PDF</button></p>
     <p class="petit" id="r-mail">Ton analyse complète t'attend dans ta boîte mail. Pense à regarder dans tes promotions ou tes spams.</p>
 
     <p class="mention">Ce test est un outil de prise de conscience et d'accompagnement, construit à partir de modèles reconnus en psychologie du sport et en thérapies cognitives et comportementales. Il ne constitue ni un diagnostic, ni une évaluation psychologique, et ne remplace pas l'avis d'un professionnel de santé.</p>
@@ -496,6 +499,22 @@ $("formulaire").addEventListener("submit", e=>{
   envoyerResultat(prenom,email,tel);
   afficherResultat(prenom);
 });
+
+$("r-pdf").onclick = ()=>{ stat("profil_pdf"); window.print(); };
+
+// Lien depuis la lettre : …/test/?r=<24 réponses>&p=<prénom> réaffiche le profil complet
+(function(){
+  const q = new URLSearchParams(location.search), rr = q.get("r");
+  if(rr && /^[1-5]{24}$/.test(rr)){
+    rr.split("").forEach((c,i)=>{ reponses[i]=+c; });
+    resultat = T.calculerProfil(reponses);
+    contact.prenom = (q.get("p")||"").slice(0,60);
+    $("landing").hidden = true; $("parcours").hidden = false;
+    afficherResultat(contact.prenom);
+    $("r-mail").hidden = true;
+    stat("profil_revu",{profil:resultat.code});
+  }
+})();
 
 // Lien direct depuis l'e-mail : …/test/#rdv ouvre la demande de rendez-vous
 if(location.hash==="#rdv") ouvrirRdv();

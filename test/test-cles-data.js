@@ -11,7 +11,7 @@
 /* ---------- Réglages communs ---------- */
 const CONFIG = {
   // Lien de la vidéo (YouTube non répertoriée, par ex.). Laisser vide tant qu'elle n'est pas prête.
-  videoUrl: "",
+  videoUrl: "https://youtu.be/ghlgcOCDUbs",
   videoTitre: "Pourquoi ta peur arrive maintenant, et pas quand tu étais débutante",
   // Page du test (sert aussi au lien « réserver un appel » dans l'e-mail)
   pageTest: "https://les-cavalieres-intuitives.com/test/"
