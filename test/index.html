@@ -107,6 +107,8 @@ button.btn{border:0;cursor:pointer;font:700 1rem Lato,sans-serif;text-align:cent
 .test input:focus,.modale input:focus,.modale textarea:focus{outline:none;border-color:var(--rust)}
 .case{display:flex!important;gap:.7rem;align-items:flex-start;font-weight:400!important;font-size:.92rem;color:var(--muted);margin:1.3rem 0 1.5rem!important}
 .case input{margin-top:.3rem;width:1.1rem;height:1.1rem;accent-color:var(--rust);flex:none}
+.case-tel{margin:.8rem 0 0!important}
+.case-tel[hidden]{display:none!important}
 .erreur{color:#a33b2b;font-size:.92rem;margin-top:.6rem;display:none}
 .pot{position:absolute;left:-9999px}
 /* Résultat */
@@ -270,6 +272,7 @@ button.btn{border:0;cursor:pointer;font:700 1rem Lato,sans-serif;text-align:cent
       <input type="email" id="email" autocomplete="email" required>
       <label for="tel">Ton téléphone <span class="opt">(facultatif)</span></label>
       <input type="tel" id="tel" autocomplete="tel" placeholder="06 12 34 56 78">
+      <label class="case case-tel" id="case-tel" hidden><input type="checkbox" id="accord-tel"> <span>J'accepte que Géraldine me contacte par téléphone, SMS ou WhatsApp au sujet de mon résultat.</span></label>
       <input class="pot" type="text" id="piege" tabindex="-1" autocomplete="off" aria-hidden="true">
       <label class="case"><input type="checkbox" id="consentement"> <span>J'accepte de recevoir mon résultat et les e-mails de Géraldine (Les Cavalières Intuitives). Je peux me désinscrire à tout moment. <a href="/confidentialite.html" target="_blank">Politique de confidentialité</a></span></label>
       <button class="btn large" type="submit" id="envoyer">Voir mon profil</button>
@@ -435,7 +438,7 @@ async function envoyerResultat(prenom,email,tel){
     await fetch(REGLAGES.urlEnvoi,{
       method:"POST", keepalive:true,
       headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({prenom,email,telephone:tel,consentement:true,reponses,piege:$("piege").value})
+      body:JSON.stringify({prenom,email,telephone:tel,accordTel:!!(tel && $("accord-tel").checked),consentement:true,reponses,piege:$("piege").value})
     });
   }catch(e){ /* le résultat s'affiche quand même */ }
 }
@@ -501,6 +504,7 @@ $("formulaire").addEventListener("submit", e=>{
   afficherResultat(prenom);
 });
 
+$("tel").addEventListener("input",()=>{ $("case-tel").hidden = !$("tel").value.trim(); });
 $("r-pdf").onclick = ()=>{ stat("profil_pdf"); window.print(); };
 
 // Lien depuis la lettre : …/test/?r=<24 réponses>&p=<prénom> réaffiche le profil complet
