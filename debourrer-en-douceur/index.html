@@ -12,6 +12,7 @@
 <meta property="og:image" content="https://les-cavalieres-intuitives.com/debourrer-en-douceur/portrait.webp">
 <meta property="og:url" content="https://les-cavalieres-intuitives.com/debourrer-en-douceur/">
 <script src="/assets/consent.js" defer></script>
+<script src="/assets/capture-ressource.js" defer></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Caveat:wght@600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -100,8 +101,8 @@ footer a{color:var(--gris)}
       <p class="kicker">Un livret Mission Connexion, offert</p>
       <h1>Éduquer tôt, débourrer en douceur</h1>
       <p class="sub">Ce que la science nous apprend sur le bon moment pour éduquer un jeune cheval.</p>
-      <a class="dl" href="livret-eduquer-tot-debourrer-en-douceur.pdf" download>Télécharger le livret</a>
-      <a class="alt" href="livret-eduquer-tot-debourrer-en-douceur.pdf" target="_blank" rel="noopener">ou le lire en ligne</a>
+      <a class="dl" href="livret-eduquer-tot-debourrer-en-douceur.pdf" data-ressource="livret-debourrer" download>Télécharger le livret</a>
+      <a class="alt" href="livret-eduquer-tot-debourrer-en-douceur.pdf" data-ressource="livret-debourrer" target="_blank" rel="noopener">ou le lire en ligne</a>
       <p class="small">PDF de 12 pages, environ 15 minutes de lecture.</p>
     </div>
     <div class="illu"><img src="portrait.webp" width="480" height="439" alt="Illustration de Géraldine avec un cheval gris, et Robert assis à leurs pieds"></div>
@@ -136,7 +137,7 @@ footer a{color:var(--gris)}
 
   <section class="wrap again">
     <h2>Le bon moment pour bien faire, c'est souvent plus tôt… et plus doucement qu'on ne le croit.</h2>
-    <a class="dl" href="livret-eduquer-tot-debourrer-en-douceur.pdf" download>Télécharger le livret</a>
+    <a class="dl" href="livret-eduquer-tot-debourrer-en-douceur.pdf" data-ressource="livret-debourrer" download>Télécharger le livret</a>
   </section>
 
   <section class="wrap robert">
@@ -144,10 +145,10 @@ footer a{color:var(--gris)}
       <div>
         <h2>Et si ce qui te freine, c'était Robert ?</h2>
         <p>Derrière « quand commencer ? », il y a souvent une autre question : « et si je m'y prenais mal ? ». On lit tout, on compare tout… et on finit par ne plus oser. Cette petite voix, c'est Robert.</p>
-        <p>En 2 minutes, découvre ton profil de cavalière intuitive. Tu reçois par email une vidéo choisie pour ta situation.</p>
+        <p>En 5 minutes, le test des 4 clés te montre quelle cavalière ton cheval voit en toi. Tu reçois ensuite par email ton profil et un carnet de défi de 7 jours.</p>
         <p class="visio">Tu préfères en parler directement ? Écris-moi en message privé sur Facebook avec le mot <strong>VISIO</strong>, on cale un moment ensemble.</p>
       </div>
-      <a class="cta2" href="https://decouverte-mission-connexion.netlify.app">Découvrir mon profil</a>
+      <a class="cta2" href="/test/">Faire le test</a>
     </div>
   </section>
 </main>
@@ -163,7 +164,7 @@ document.addEventListener('click',function(e){
   var a=e.target.closest('a'); if(!a||typeof window.gtag!=='function') return;
   var h=a.getAttribute('href')||'';
   if(h.indexOf('.pdf')>-1) gtag('event','telechargement_livret',{livret:'debourrer-en-douceur',bouton:a.textContent.trim()});
-  else if(h.indexOf('decouverte-mission-connexion')>-1) gtag('event','clic_questionnaire',{depuis:'livret-debourrer-en-douceur'});
+  else if(h.indexOf('/test/')>-1) gtag('event','clic_questionnaire',{depuis:'livret-debourrer-en-douceur'});
 });
 </script>
 </body>

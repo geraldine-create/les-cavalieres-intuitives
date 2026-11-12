@@ -114,7 +114,8 @@
     <nav class="site-nav" aria-label="Navigation principale">
       <a href="/">Accueil</a>
       <a href="/blog/">Blog</a>
-      <a class="nav-cta" href="https://decouverte-mission-connexion.netlify.app">Découvrir mon profil</a>
+      <a href="/ressources-offertes/">Ressources offertes</a>
+      <a class="nav-cta" href="/test/">Faire le test</a>
     </nav>
   </div>
 </header>
@@ -172,8 +173,8 @@
   <section class="invite" aria-labelledby="invite-titre">
     <h2 id="invite-titre">Quand te faire accompagner</h2>
     <p>Je suis Géraldine, équicoach depuis plus de vingt ans. J'accompagne à distance des cavalières adultes qui ont peur à cheval, pour qu'elles retrouvent le plaisir de monter et une vraie connexion avec leur cheval.</p>
-    <p>Pour commencer, découvre ton profil de cavalière intuitive en 2 minutes : tu réponds à quelques questions sur toi et ton cheval, et tu reçois par email une vidéo choisie pour ta situation.</p>
-    <a class="btn" href="https://decouverte-mission-connexion.netlify.app">Découvrir mon profil</a>
+    <p>Pour commencer, fais le test des 4 clés : 24 questions, 5 minutes, pour découvrir quelle cavalière ton cheval voit en toi. Tu reçois ensuite par email ton profil et un carnet de défi de 7 jours.</p>
+    <a class="btn" href="/test/">Faire le test</a>
     <p class="alt">Tu préfères en parler de vive voix ? <a href="/#offre">Réserve un appel de 15 minutes</a>, gratuit et sans engagement. Tu n'as pas à affronter Robert toute seule.</p>
   </section>
 
@@ -209,7 +210,7 @@
   document.addEventListener('click', function(e){
     var a = e.target.closest('a'); if(!a || typeof window.gtag !== 'function') return;
     var h = a.getAttribute('href')||'';
-    if(h.indexOf('decouverte-mission-connexion') > -1)
+    if(h.indexOf('/test/') > -1)
       gtag('event', 'clic_questionnaire', { depuis: PAGE, bouton: a.textContent.trim() });
     else if(h === '/#offre')
       gtag('event', 'clic_appel', { depuis: PAGE });

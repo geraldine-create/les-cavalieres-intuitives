@@ -81,7 +81,8 @@
     <nav class="site-nav" aria-label="Navigation principale">
       <a href="/">Accueil</a>
       <a href="/blog/">Blog</a>
-      <a class="nav-cta" href="https://decouverte-mission-connexion.netlify.app">Découvrir mon profil</a>
+      <a href="/ressources-offertes/">Ressources offertes</a>
+      <a class="nav-cta" href="/test/">Faire le test</a>
     </nav>
   </div>
 </header>
@@ -128,8 +129,8 @@
 
   <section class="invite" aria-labelledby="invite-titre">
     <h2 id="invite-titre">Et maintenant, par où commencer ?</h2>
-    <p>Si tu te reconnais dans ces mots, réponds au questionnaire Découverte. En 2 minutes, tu découvres ton profil de cavalière intuitive, et tu reçois par email une vidéo choisie pour ta situation. Si une chute est à l'origine de ta peur, lis aussi <a href="/blog/reprendre-confiance-a-cheval-apres-une-chute/">Reprendre confiance à cheval après une chute</a>.</p>
-    <a class="btn" href="https://decouverte-mission-connexion.netlify.app">Découvrir mon profil</a>
+    <p>Si tu te reconnais dans ces mots, fais le test des 4 clés. En 5 minutes, tu découvres quelle cavalière ton cheval voit en toi, et tu reçois par email ton profil avec un carnet de défi de 7 jours. Si une chute est à l'origine de ta peur, lis aussi <a href="/blog/reprendre-confiance-a-cheval-apres-une-chute/">Reprendre confiance à cheval après une chute</a>.</p>
+    <a class="btn" href="/test/">Faire le test</a>
     <p class="alt">Tu préfères en parler directement ? Écris-moi en message privé sur Facebook avec le mot <strong>VISIO</strong>, on cale un moment ensemble.</p>
   </section>
 
@@ -157,7 +158,7 @@
   document.addEventListener('click', function(e){
     var a = e.target.closest('a'); if(!a || typeof window.gtag !== 'function') return;
     var h = a.getAttribute('href')||'';
-    if(h.indexOf('decouverte-mission-connexion') > -1)
+    if(h.indexOf('/test/') > -1)
       gtag('event', 'clic_questionnaire', { depuis: 'blog-' + ARTICLE, bouton: a.textContent.trim() });
     else if(h.indexOf('/debourrer-en-douceur/') > -1)
       gtag('event', 'clic_livret', { depuis: 'blog-' + ARTICLE });

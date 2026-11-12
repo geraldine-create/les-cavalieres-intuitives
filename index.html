@@ -64,12 +64,15 @@
 
   /* NAV */
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(253,250,247,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--rust-light); padding: 0.75rem 2rem; display: flex; align-items: center; justify-content: space-between; }
-  .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--rust); font-weight: 700; text-decoration: none; letter-spacing: 0.02em; display: flex; align-items: center; gap: 0.75rem; }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--rust); font-weight: 700; text-decoration: none; letter-spacing: 0.02em; display: flex; align-items: center; gap: 0.75rem; white-space: nowrap; flex-shrink: 0; }
   .nav-logo img { width: 52px; height: 52px; object-fit: contain; flex-shrink: 0; }
   .nav-logo span { font-family: 'Dancing Script', cursive; font-weight: 500; font-size: 0.85rem; color: var(--gray-warm); display: block; line-height: 1.1; margin-top: -2px; }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a { font-size: 0.88rem; color: var(--brown); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; opacity: 0.7; transition: opacity 0.2s, color 0.2s; }
+  .nav-links { display: flex; align-items: center; gap: 1.6rem; list-style: none; margin-left: 1.5rem; }
+  .nav-links a { white-space: nowrap; font-size: 0.88rem; color: var(--brown); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; opacity: 0.7; transition: opacity 0.2s, color 0.2s; }
   .nav-links a:hover { opacity: 1; color: var(--rust); }
+  @media (max-width: 1520px) { .nav-links { gap: 1rem; } .nav-links a { font-size: 0.76rem; letter-spacing: 0.02em; } nav { padding: 0.75rem 1.5rem; } }
+  @media (max-width: 1180px) { .nav-links li:nth-child(1), .nav-links li:nth-child(2) { display: none; } }
+  @media (max-width: 1080px) { .nav-links li:nth-child(4) { display: none; } }
   .nav-cta { background: var(--rust); color: var(--off-white) !important; padding: 0.5rem 1.25rem; border-radius: 2px; opacity: 1 !important; font-weight: 700; font-size: 0.82rem !important; transition: background 0.2s !important; }
   .nav-cta:hover { background: var(--amber) !important; }
   .nav-app-badge { display: inline-flex; align-items: center; gap: 0.35rem; font-family: 'Lato', sans-serif; font-size: 0.78rem; font-weight: 700; color: var(--rust); background: transparent; border: 1.5px solid var(--rust-light); border-radius: 20px; padding: 0.3rem 0.85rem; text-decoration: none; letter-spacing: 0.03em; transition: background 0.2s, color 0.2s, border-color 0.2s; white-space: nowrap; opacity: 1 !important; }
@@ -124,9 +127,9 @@
   .methode-card-body p { color: var(--brown); opacity: 0.85; font-size: 0.97rem; line-height: 1.75; }
 
   /* DÉCOUVERTE */
-  #decouverte { background: var(--off-white); padding: 5rem 4rem; text-align: center; border-top: 1px solid var(--rust-light); }
-  #decouverte .section-inner { max-width: 700px; }
-  #decouverte .section-title { color: var(--rust); }
+  #test-4-cles { background: var(--off-white); padding: 5rem 4rem; text-align: center; border-top: 1px solid var(--rust-light); }
+  #test-4-cles .section-inner { max-width: 700px; }
+  #test-4-cles .section-title { color: var(--rust); }
   .decouverte-text { font-size: 1.05rem; color: var(--brown); opacity: 0.85; max-width: 600px; margin: 1rem auto 2.5rem; line-height: 1.8; }
 
   /* OFFRE — 3 niveaux */
@@ -255,7 +258,7 @@
     .nav-links { display: none; }
     #hero { grid-template-columns: 1fr; padding: 6rem 1.5rem 3rem; }
     .hero-visual { display: none; }
-    #pour-toi, #methode, #decouverte, #offre, #temoignages, #apropos, #cercle { padding: 4rem 1.5rem; }
+    #pour-toi, #methode, #test-4-cles, #offre, #temoignages, #apropos, #cercle { padding: 4rem 1.5rem; }
     .pour-toi-grid { grid-template-columns: 1fr; }
     .methode-card { grid-template-columns: 50px 1fr; padding: 1.5rem; }
     .niveaux-grid { grid-template-columns: 1fr; }
@@ -326,11 +329,11 @@
   <ul class="nav-links">
     <li><a href="#pour-toi">Pour toi si…</a></li>
     <li><a href="#methode">Mon parcours</a></li>
-    <li><a href="#decouverte">Découverte</a></li>
     <li><a href="#offre">Mission Connexion</a></li>
     <li><a href="#apropos">Géraldine</a></li>
     <li><a href="/blog/">Blog</a></li>
-    <li><a href="https://decouverte-mission-connexion.netlify.app" target="_blank" rel="noopener noreferrer" class="nav-cta">Découvrir mon profil</a></li>
+    <li><a href="/ressources-offertes/">Ressources offertes</a></li>
+    <li><a href="/test/" class="nav-cta">Faire le test</a></li>
     <li><a href="https://mission-connexion.netlify.app/" target="_blank" rel="noopener noreferrer" class="nav-app-badge">✦ Espace clientes</a></li>
   </ul>
 </nav>
@@ -345,7 +348,7 @@
     </h1>
     <p class="hero-sub">Quelque chose a changé. Pas ton amour pour lui — ça, il est intact. C'est toi qui n'es plus tout à fait là. Robert a pris ta place. Ce petite voix qui prédit le pire avant même que tu aies sellé. On va s'en occuper.</p>
     <div class="hero-ctas">
-      <a href="https://decouverte-mission-connexion.netlify.app" target="_blank" rel="noopener noreferrer" class="btn-primary">→ Découvrir mon profil en 2 minutes</a>
+      <a href="/test/" class="btn-primary">→ Faire le test des 4 clés</a>
       <a href="#offre" class="btn-secondary">Découvrir Mission Connexion</a>
     </div>
   </div>
@@ -463,14 +466,15 @@
 </section>
 
 <!-- ── DÉCOUVERTE ── -->
-<section id="decouverte">
+<section id="test-4-cles">
   <div class="section-inner">
-    <span class="section-tag">Gratuit, en 2 minutes</span>
-    <h2 class="section-title reveal">Découvre ton profil de cavalière intuitive</h2>
-    <p class="decouverte-text reveal">Réponds à quelques questions sur toi et ton cheval. Tu reçois aussitôt par email une vidéo ressource choisie selon ton profil, et le mot de passe pour explorer le contenu complet — gratuit, sans engagement.</p>
+    <span class="section-tag">Gratuit, en 5 minutes</span>
+    <h2 class="section-title reveal">Quelle cavalière ton cheval voit-il en toi ?</h2>
+    <p class="decouverte-text reveal">Intention, Timing, Énergie, Posture : 24 questions pour découvrir par quelle porte ta peur se glisse entre toi et ton cheval, et par où commencer. Tu vois ton profil tout de suite, et tu reçois par email une lettre de Géraldine avec ton carnet de défi de 7 jours. Gratuit, sans engagement.</p>
     <div class="reveal">
-      <a href="https://decouverte-mission-connexion.netlify.app" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:1rem;padding:1rem 2.5rem;">→ Je commence ma découverte</a>
+      <a href="/test/" class="btn-primary" style="font-size:1rem;padding:1rem 2.5rem;">→ Je fais le test</a>
     </div>
+    <p class="decouverte-text reveal" style="margin-top:1.5rem;font-size:.95rem;">Envie d'autres outils ? Livret, vidéos, questionnaire : tout est réuni dans les <a href="/ressources-offertes/" style="color:inherit;text-decoration:underline;">ressources offertes</a>.</p>
   </div>
 </section>
 
@@ -583,9 +587,9 @@
   <div class="section-inner">
     <span class="section-tag">Et maintenant ?</span>
     <h2 class="section-title reveal">Par où commencer</h2>
-    <p class="section-sub reveal">Découvre ton profil de cavalière intuitive en 2 minutes et reçois une vidéo choisie pour ta situation. Ou parlons-en de vive voix, 15 minutes, gratuitement et sans engagement.</p>
+    <p class="section-sub reveal">Fais le test des 4 clés en 5 minutes et reçois ton carnet de défi de 7 jours. Ou parlons-en de vive voix, 15 minutes, gratuitement et sans engagement.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;" class="reveal">
-      <a href="https://decouverte-mission-connexion.netlify.app" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:1rem;padding:1rem 2.5rem;">→ Découvrir mon profil</a>
+      <a href="/test/" class="btn-primary" style="font-size:1rem;padding:1rem 2.5rem;">→ Faire le test</a>
       <a href="#offre" class="btn-secondary" style="font-size:1rem;padding:1rem 2.5rem;color:var(--off-white);border-color:rgba(253,250,247,0.5);">Réserver un appel gratuit</a>
     </div>
     <div class="cercle-lead reveal">
@@ -601,7 +605,7 @@
       <img src="assets/images/logo-128.webp" alt="Logo Les Cavalières Intuitives">
       <div>Géraldine Feron<span>et psychologue pour Robert</span></div>
     </a>
-    <p>Équicoach pour cavalières intuitives.<br>Méthode Intention – Timing – Énergie.<br>100 % distanciel.</p>
+    <p>Équicoach pour cavalières intuitives.<br>Méthode Intention – Timing – Énergie.<br>En ligne et en présentiel.</p>
     <p style="margin-top:1rem;"><a href="mailto:contactezgeraldine@gmail.com" style="color:var(--rust-light);font-size:0.875rem;">contactezgeraldine@gmail.com</a></p>
   </div>
   <div>
@@ -609,7 +613,7 @@
     <ul>
       <li><a href="#pour-toi">Pour toi si…</a></li>
       <li><a href="#methode">Mon parcours</a></li>
-      <li><a href="#decouverte">Découverte</a></li>
+      <li><a href="#test-4-cles">Le test des 4 clés</a></li>
       <li><a href="#offre">Mission Connexion</a></li>
       <li><a href="#temoignages">Témoignages</a></li>
       <li><a href="#apropos">Géraldine</a></li>
@@ -620,6 +624,7 @@
   <div>
     <h5>Liens</h5>
     <ul>
+      <li><a href="/ressources-offertes/">Ressources offertes</a></li>
       <li><a href="https://www.youtube.com/playlist?list=PL8xOk5pwxOsE3cDxtJEYeCR47wVhXR_fe" target="_blank">Formation offerte</a></li>
       <li><a href="https://mission-connexion.netlify.app/" target="_blank" rel="noopener noreferrer">Espace clientes (bêta)</a></li>
       <li><a href="confidentialite.html">Mentions légales</a></li>

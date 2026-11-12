@@ -54,7 +54,8 @@
     <nav class="site-nav" aria-label="Navigation principale">
       <a href="/">Accueil</a>
       <a href="/blog/">Blog</a>
-      <a class="nav-cta" href="https://decouverte-mission-connexion.netlify.app">Découvrir mon profil</a>
+      <a href="/ressources-offertes/">Ressources offertes</a>
+      <a class="nav-cta" href="/test/">Faire le test</a>
     </nav>
   </div>
 </header>
@@ -104,7 +105,7 @@
   <section class="invite" aria-labelledby="invite-titre">
     <h2 id="invite-titre">Et maintenant, par où commencer ?</h2>
     <p>[PHRASE QUI RELIE LE SUJET AU QUESTIONNAIRE]. En 2 minutes, tu découvres ton profil de cavalière intuitive, et tu reçois par email une vidéo choisie pour ta situation.</p>
-    <a class="btn" href="https://decouverte-mission-connexion.netlify.app">Découvrir mon profil</a>
+    <a class="btn" href="/test/">Faire le test</a>
     <p class="alt">Tu préfères en parler directement ? Écris-moi en message privé sur Facebook avec le mot <strong>VISIO</strong>, on cale un moment ensemble.</p>
   </section>
 
@@ -125,7 +126,7 @@
   var ARTICLE = '[ADRESSE]';
   document.addEventListener('click', function(e){
     var a = e.target.closest('a'); if(!a || typeof window.gtag !== 'function') return;
-    if((a.getAttribute('href')||'').indexOf('decouverte-mission-connexion') > -1)
+    if((a.getAttribute('href')||'').indexOf('/test/') > -1)
       gtag('event', 'clic_questionnaire', { depuis: 'blog-' + ARTICLE, bouton: a.textContent.trim() });
   });
   var sign = document.querySelector('.sign');

@@ -81,7 +81,8 @@
     <nav class="site-nav" aria-label="Navigation principale">
       <a href="/">Accueil</a>
       <a href="/blog/">Blog</a>
-      <a class="nav-cta" href="https://decouverte-mission-connexion.netlify.app">Découvrir mon profil</a>
+      <a href="/ressources-offertes/">Ressources offertes</a>
+      <a class="nav-cta" href="/test/">Faire le test</a>
     </nav>
   </div>
 </header>
@@ -126,7 +127,7 @@
     <h2 id="invite-titre">Pour aller plus loin</h2>
     <p>J'ai rassemblé tout ça, études à l'appui, dans un livret illustré offert : « Éduquer tôt, débourrer en douceur ». Tu y trouveras les moments où le poulain apprend le mieux, ce que la science dit vraiment de la croissance, et un calendrier en six phases, de la naissance à 4 ans.</p>
     <a class="btn" href="/debourrer-en-douceur/">Découvrir le livret</a>
-    <p class="alt">Et si ce qui te freine, c'est surtout la peur de mal faire, découvre ton profil de cavalière intuitive en 2 minutes : <a href="https://decouverte-mission-connexion.netlify.app">répondre au questionnaire Découverte</a>.</p>
+    <p class="alt">Et si ce qui te freine, c'est surtout la peur de mal faire, fais le test des 4 clés en 5 minutes : <a href="/test/">découvrir quelle cavalière ton cheval voit en toi</a>.</p>
   </section>
 
   <section class="faq" aria-labelledby="faq-titre">
@@ -153,7 +154,7 @@
   document.addEventListener('click', function(e){
     var a = e.target.closest('a'); if(!a || typeof window.gtag !== 'function') return;
     var h = a.getAttribute('href')||'';
-    if(h.indexOf('decouverte-mission-connexion') > -1)
+    if(h.indexOf('/test/') > -1)
       gtag('event', 'clic_questionnaire', { depuis: 'blog-' + ARTICLE, bouton: a.textContent.trim() });
     else if(h.indexOf('/debourrer-en-douceur/') > -1)
       gtag('event', 'clic_livret', { depuis: 'blog-' + ARTICLE });
