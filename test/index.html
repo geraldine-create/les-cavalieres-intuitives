@@ -439,7 +439,7 @@ async function envoyerResultat(prenom,email,tel){
     await fetch(REGLAGES.urlEnvoi,{
       method:"POST", keepalive:true,
       headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({prenom,email,telephone:tel,accordTel:!!(tel && $("accord-tel").checked),consentement:true,reponses,piege:$("piege").value})
+      body:JSON.stringify({prenom,email,telephone:tel,accordTel:!!(tel && $("accord-tel").checked),consentement:true,reponses,piege:$("piege").value,source:(window.lciOrigine?window.lciOrigine():"")})
     });
   }catch(e){ /* le résultat s'affiche quand même */ }
 }
@@ -525,5 +525,6 @@ $("r-pdf").onclick = ()=>{ stat("profil_pdf"); window.print(); };
 // Lien direct depuis l'e-mail : …/test/#rdv ouvre la demande de rendez-vous
 if(location.hash==="#rdv") ouvrirRdv();
 </script>
+<script src="/assets/origine.js"></script>
 </body>
 </html>
