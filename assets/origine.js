@@ -3,15 +3,23 @@
    elle est entrée sur le site, pour que le test des 4 clés puisse transmettre son origine.
    - Un lien peut porter une étiquette : ?src=post-respiration, ?src=newsletter, ?src=page-peur…
    - Sinon, on regarde le site d'où elle vient (Google, Facebook, Instagram…).
-   Rien n'est envoyé ailleurs : l'information reste dans son navigateur jusqu'au test. */
+   Rien n'est envoyé ailleurs : l'information reste dans son navigateur jusqu'au test.
+   Respect du bandeau cookies : la mémoire sur 30 jours n'est utilisée que si la visiteuse
+   a cliqué « J'accepte ». Sinon rien n'est stocké : on lit seulement l'étiquette ?src=
+   et la page d'où elle arrive, au moment du test. */
 (function () {
   'use strict';
   var CLE = 'lci_origine';
   var DUREE = 30 * 24 * 3600 * 1000; // 30 jours
   var ICI = location.hostname.replace(/^www\./, '');
 
-  function lire() { try { return JSON.parse(localStorage.getItem(CLE)); } catch (e) { return null; } }
-  function ecrire(v) { try { localStorage.setItem(CLE, JSON.stringify(v)); } catch (e) {} }
+  function accepte() {
+    try { var c = JSON.parse(localStorage.getItem('lci-cookies')); return !!(c && c.v === 'yes'); } catch (e) { return false; }
+  }
+  function lire() { if (!accepte()) return null; try { return JSON.parse(localStorage.getItem(CLE)); } catch (e) { return null; } }
+  function ecrire(v) {
+    try { if (accepte()) localStorage.setItem(CLE, JSON.stringify(v)); else localStorage.removeItem(CLE); } catch (e) {}
+  }
 
   function canalDe(ref) {
     if (!ref) return '';
@@ -36,7 +44,7 @@
   // Nouvelle arrivée de l'extérieur (ou lien étiqueté) : on note le canal et la page d'entrée
   if (src || (canal && canal !== 'interne') || perime) {
     memo = {
-      canal: src ? src : (canal && canal !== 'interne' ? canal : 'accès direct'),
+      canal: src ? src : (canal === 'interne' ? 'site' : (canal || 'accès direct')),
       entree: location.pathname,
       quand: Date.now()
     };
